@@ -369,7 +369,7 @@ export default function SoftwareAMedida() {
               <div key={index} className="bg-white rounded-xl p-8 shadow-md relative">
                 <Quote className="w-8 h-8 text-green-500 mb-4" />
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  &quto;{testimonial.content}&quot;
+                  &quot;{testimonial.content}&quot;
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">

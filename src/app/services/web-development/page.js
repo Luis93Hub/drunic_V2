@@ -355,7 +355,7 @@ export default function DesarrolloWeb() {
               <div key={index} className="bg-gray-50 rounded-xl p-8 relative">
                 <Quote className="w-8 h-8 text-blue-500 mb-4" />
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  &quto;{testimonial.content}&quot;
+                  &quot;{testimonial.content}&quot;
                 </p>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">

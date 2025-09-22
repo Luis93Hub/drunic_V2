@@ -27,7 +27,7 @@ export default function About() {
 
   const achievements = [
     { number: "6+", label: "Proyectos completados", icon: "🚀" },
-    { number: "1+", label: "Años de experiencia", icon: "📅" },
+    { number: "3+", label: "Años de experiencia", icon: "📅" },
     { number: "100%", label: "Clientes satisfechos", icon: "⭐" },
     { number: "24h", label: "Tiempo de respuesta", icon: "⚡" }
   ];
