@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Code, Palette, Smartphone, Globe, Zap, Users, ArrowRight, Star, Calendar, Tag } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Code, Palette, Smartphone, Globe, Zap, Users, ArrowRight, Star, Calendar, Tag, X } from 'lucide-react';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -20,8 +20,8 @@ const PortfolioPage = () => {
       year: "2024",
       duration: "3 meses",
       features: ["Carrito de compras", "Pagos seguros", "Panel de administración", "Responsive design"],
-      demoUrl: "#",
-      codeUrl: "#"
+      demoUrl: "https://foodshop-demo-seven.vercel.app/",
+      codeUrl: "https://github.com/Luis93Hub/foodshop-demo"
     },
     {
       id: 2,
@@ -34,8 +34,8 @@ const PortfolioPage = () => {
       year: "2024",
       duration: "1 mes",
       features: ["Animaciones suaves", "SEO optimizado", "Carga rápida", "Formulario de contacto"],
-      demoUrl: "#",
-      codeUrl: "#"
+      demoUrl: "https://nicaraguan-restaurant-demo.vercel.app/",
+      codeUrl: "https://github.com/Luis93Hub/Nicaraguan-Restaurant---Demo"
     },
     {
       id: 3,
@@ -107,6 +107,26 @@ const PortfolioPage = () => {
   const filteredProjects = selectedCategory === 'all' 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
+  
+    // Function to handle the click on view demo
+  const handleViewDemo = (e, demoUrl) => {
+    e.stopPropagation();
+    if (demoUrl && demoUrl !== '#') {
+      window.open(demoUrl, '_blank');
+    } else {
+      alert('Demo no disponible para este proyecto');
+    }
+  };
+
+  // Function to handle the click on view code
+  const handleViewCode = (e, codeUrl) => {
+    e.stopPropagation();
+    if (codeUrl && codeUrl !== '#') {
+      window.open(codeUrl, '_blank');
+    }else {
+      alert('Código no disponible para este proyecto')
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black">
@@ -169,7 +189,7 @@ const PortfolioPage = () => {
             </p>
           </div>
 
-          {/* Stats */}
+          {/* Stars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 mb-2">
@@ -248,14 +268,34 @@ const PortfolioPage = () => {
                   </div>
                   
                   {/* Overlay with actions */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <button
-                      onClick={() => setSelectedProject(project)}
-                      className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 flex items-center space-x-2"
-                    >
-                      <span>Ver detalles</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                  <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                    <div className='flex flex-col sm:flex-row gap-3 px-4'>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedProject(project)}}
+                        className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105"
+                      >
+                        <span className='text-sm font-medium'>Ver detalles</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+
+                      <button
+                        onClick={(e) => handleViewDemo(e, project.demoUrl)}
+                        className='bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105'
+                      >
+                        <ExternalLink className='w-4 h-4' />
+                        <span className='text-sm font-medium'>Demo</span>
+                      </button>
+
+                      <button
+                        onClick={(e) => handleViewCode(e, project.codeUrl)}
+                        className='bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105'
+                      >
+                        <Code className='w-4 h-4' />
+                        <span>Código</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -355,24 +395,16 @@ const PortfolioPage = () => {
                 </div>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
+                  <X className='w-6 h-6' />
                 </button>
               </div>
 
               {/* Project Image */}
               <div className="w-full h-64 bg-gradient-to-br from-red-900/20 to-gray-800 rounded-xl mb-8 flex items-center justify-center">
                 <div className="text-center text-gray-400">
-                  {selectedProject.image.map((image, index) => (
-                    <Image
-                      src={''}
-                      alt=''
-                    />
-                  ))}
-                  <Code className="w-16 h-16 mx-auto mb-4" />
+                  <Code className='w-16 h-16 mx-auto mb-4' />
                   <p>Imagen del proyecto</p>
                 </div>
               </div>
@@ -382,12 +414,11 @@ const PortfolioPage = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Descripción</h3>
                   <p className="text-gray-300 leading-relaxed mb-6">{selectedProject.description}</p>
-                  
                   <h3 className="text-xl font-semibold text-white mb-4">Características principales</h3>
                   <ul className="space-y-2">
                     {selectedProject.features.map((feature, index) => (
                       <li key={index} className="flex items-center space-x-2 text-gray-300">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"></div>
                         <span>{feature}</span>
                       </li>
                     ))}
