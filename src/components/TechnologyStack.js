@@ -1,70 +1,89 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 import { Code, Database, Shield, Zap, CheckCircle, ArrowRight, Award, } from "lucide-react";
 
 const TechnologyStack = () => {
+  const t = useTranslations('technology');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   const mainTechnologies = [
     {
-      name: "Drupal",
-      description: "CMS empresarial líder mundial para sitios web complejos y escalables",
+      name: t('mainTech.Tech1.name'),
+      description: t('mainTech.Tech1.description'),
       features: [
-        "Gestión de contenido avanzada",
-        "Multiidioma nativo",
-        "Arquitectura modular",
-        "SEO optimizado",
-        "Seguridad empresarial"
+        t('mainTech.Tech1.features.feature1'),
+        t('mainTech.Tech1.features.feature2'),
+        t('mainTech.Tech1.features.feature3'),
+        t('mainTech.Tech1.features.feature4'),
+        t('mainTech.Tech1.features.feature5'),
       ],
-      useCases: ["Sitios corporativos", "Portales web", "Intranets", "Sitios multiidioma"],
+      useCases: [
+        t('mainTech.Tech1.useCases.useCase1'),
+        t('mainTech.Tech1.useCases.useCase2'),
+        t('mainTech.Tech1.useCases.useCase3'),
+        t('mainTech.Tech1.useCases.useCase4'),
+      ],
       logo: "🏢",
       color: "blue",
-      stats: "1M+ sitios activos"
+      stats: t('mainTech.Tech1.stats')
     },
     {
-      name: "Symfony",
-      description: "Framework PHP robusto para aplicaciones web y APIs de alto rendimiento",
+      name: t('mainTech.Tech2.name'),
+      description: t('mainTech.Tech2.description'),
       features: [
-        "Componentes reutilizables",
-        "Alto rendimiento",
-        "Arquitectura MVC",
-        "Testing integrado",
-        "Documentación completa"
+        t('mainTech.Tech2.features.feature1'),
+        t('mainTech.Tech2.features.feature2'),
+        t('mainTech.Tech2.features.feature3'),
+        t('mainTech.Tech2.features.feature4'),
+        t('mainTech.Tech2.features.feature5'),
+
       ],
-      useCases: ["APIs REST", "Aplicaciones web", "Microservicios", "Backends complejos"],
+      useCases: [
+        t('mainTech.Tech2.useCases.useCase1'),
+        t('mainTech.Tech2.useCases.useCase2'),
+        t('mainTech.Tech2.useCases.useCase3'),
+        t('mainTech.Tech2.useCases.useCase4'),
+      ],
       logo: "⚡",
       color: "green",
-      stats: "600M+ descargas"
+      stats: t('mainTech.Tech2.stats')
     }
   ];
 
   const complementaryTech = [
     {
       name: "PHP 8+",
-      description: "Lenguaje base optimizado para desarrollo web moderno",
+      description: t('complementary.tech1'),
       logo: "🐘"
     },
     {
       name: "MySQL/PostgreSQL",
-      description: "Bases de datos robustas para almacenamiento seguro",
+      description: t('complementary.tech2'),
       logo: "🗄️"
     },
     {
       name: "Redis",
-      description: "Cache en memoria para máximo rendimiento",
+      description: t('complementary.tech3'),
       logo: "⚡"
     },
     {
       name: "Docker",
-      description: "Contenedores para desarrollo y despliegue eficiente",
+      description: t('complementary.tech4'),
       logo: "🐳"
     },
     {
       name: "Git",
-      description: "Control de versiones profesional",
+      description: t('complementary.tech5'),
       logo: "📂"
     },
     {
       name: "Apache/Nginx",
-      description: "Servidores web de alta performance",
+      description: t('complementary.tech6'),
       logo: "🌐"
     }
   ];
@@ -72,55 +91,71 @@ const TechnologyStack = () => {
   const advantages = [
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Máxima seguridad",
-      description: "Drupal y Symfony son reconocidos por sus robustos sistemas de seguridad, ideales para sitios empresariales"
+      title: t('advantages.items.item1.title'),
+      description: t('advantages.items.item1.description')
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Alto rendimiento",
-      description: "Optimizaciones nativas que garantizan carga rápida incluso con gran volumen de contenido"
+      title: t('advantages.items.item2.title'),
+      description: t('advantages.items.item2.description')
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Escalabilidad comprobada",
-      description: "Arquitectura que crece con tu negocio, desde sitios pequeños hasta plataformas empresariales"
+      title: t('advantages.items.item3.title'),
+      description: t('advantages.items.item3.description')
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "Flexibilidad total",
-      description: "Personalización completa para adaptar cada funcionalidad a tus necesidades específicas"
+      title: t('advantages.items.item4.title'),
+      description: t('advantages.items.item4.description')
     }
   ];
 
   const projects = [
     {
-      type: "Portal Corporativo",
+      type: t('projects.project1.type'),
       tech: "Drupal + Symfony",
-      features: ["Multiidioma", "Gestión de usuarios", "Workflow de contenido", "Integración CRM"],
-      industry: "Manufactura",
-      result: "300% más engagement"
+      features: [
+        t('projects.project1.features.feature1'), 
+        t('projects.project1.features.feature2'), 
+        t('projects.project1.features.feature3'), 
+        t('projects.project1.features.feature4')
+      ],
+      industry: t('projects.project1.industry'),
+      result: t('projects.project1.result')
     },
     {
-      type: "E-commerce Especializado", 
+      type: t('projects.project2.type'), 
       tech: "Drupal Commerce",
-      features: ["Catálogo complejo", "Múltiples monedas", "B2B/B2C", "Integración ERP"],
-      industry: "Retail",
-      result: "150% aumento en ventas"
+      features: [
+        t('projects.project2.features.feature1'),
+        t('projects.project2.features.feature2'), 
+        t('projects.project2.features.feature3'), 
+        t('projects.project2.features.feature4'),
+      ],
+      industry: t('projects.project2.industry'),
+      result: t('projects.project2.result')
     },
     {
-      type: "Sistema de Gestión",
+      type: t('projects.project3.type'),
       tech: "Symfony + API",
-      features: ["Dashboard interactivo", "Reportes avanzados", "API REST", "Integraciones"],
-      industry: "Servicios",
-      result: "60% menos tiempo operativo"
+      features: [
+        t('projects.project3.features.feature1'),
+        t('projects.project3.features.feature2'),
+        t('projects.project3.features.feature3'),
+        t('projects.project3.features.feature4'),
+        
+      ],
+      industry: t('projects.project3.industry'),
+      result: t('projects.project3.result')
     }
   ];
 
   const experienceMetrics = [
-    { number: "6+", label: "Proyectos Drupal", description: "Sitios corporativos y e-commerce" },
-    { number: "8+", label: "APIs con Symfony", description: "Backends robustos y escalables" },
-    { number: "100%", label: "Sitios optimizados", description: "SEO y rendimiento garantizado" },
-    { number: "24/7", label: "Soporte técnico", description: "Mantenimiento continuo" }
+    { number: "6+", label: t('experience.items.item1.label'), description: t('experience.items.item1.description') },
+    { number: "8+", label: t('experience.items.item2.label'), description: t('experience.items.item2.description') },
+    { number: "100%", label: t('experience.items.item3.label'), description: t('experience.items.item3.description') },
+    { number: "24/7", label: t('experience.items.item4.label'), description: t('experience.items.item4.description') }
   ];
 
   return (
@@ -136,13 +171,15 @@ const TechnologyStack = () => {
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Code className="w-8 h-8 text-blue-600" />
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Nuestro Stack Tecnológico
+              {t('title')}
             </h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto rounded-full mb-8"></div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Especializados en <strong>Drupal</strong> y <strong>Symfony</strong>, las tecnologías empresariales 
-            más robustas para crear sitios web, e-commerce y aplicaciones que escalan con tu negocio.
+            {t.rich('subtitle', {
+              drupal: <strong key={'drupal'}>{t('drupal')}</strong>,
+              symfony: <strong key={'symfony'}>{t('symfony')}</strong>
+            })}
           </p>
         </div>
 
@@ -183,7 +220,7 @@ const TechnologyStack = () => {
 
                 {/* Features */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Características principales:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">{t('subtitleMainTech')}</h4>
                   <div className="grid md:grid-cols-2 gap-2">
                     {tech.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
@@ -198,7 +235,7 @@ const TechnologyStack = () => {
 
                 {/* Use Cases */}
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Ideal para:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">{t('case')}</h4>
                   <div className="flex flex-wrap gap-2">
                     {tech.useCases.map((useCase, useCaseIndex) => (
                       <span key={useCaseIndex} className={`px-3 py-1 ${
@@ -218,10 +255,10 @@ const TechnologyStack = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              ¿Por qué elegimos estas tecnologías?
+              {t('advantages.title')}
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              No es casualidad que las empresas más grandes del mundo confíen en Drupal y Symfony
+              {t('advantages.subtitle')}
             </p>
           </div>
 
@@ -248,10 +285,10 @@ const TechnologyStack = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Tecnologías complementarias
+              {t('complementary.title')}
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Un ecosistema completo para desarrollo profesional
+              {t('complementary.subtitle')}
             </p>
           </div>
 
@@ -274,7 +311,7 @@ const TechnologyStack = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Proyectos exitosos con nuestro stack
+              {t('projects.title')}
             </h3>
           </div>
 
@@ -320,11 +357,11 @@ const TechnologyStack = () => {
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <Award className="w-8 h-8 text-blue-600" />
                 <h3 className="text-2xl font-bold text-gray-900">
-                 Nuestra experiencia en números
+                 {t('experience.title')}
                 </h3>
               </div>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Resultados medibles que respaldan nuestro trabajo
+                {t('experience.subtitle')}
               </p>
             </div>
             
@@ -352,23 +389,23 @@ const TechnologyStack = () => {
             
             <div className="relative">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                ¿Tu proyecto necesita tecnología empresarial?
+                {t('cta.title')}
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Aprovecha la potencia de Drupal y Symfony para crear soluciones robustas, seguras y escalables
+                {t('cta.description')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href='/contact'>
+                <Link href={`/${locale}/contact`}>
                   <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <span>Consultar proyecto</span>
+                    <span>{t('cta.consultProject')}</span>
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </Link>
                 
                 <Link href="#services">
                   <button className="bg-transparent border-2 border-white/30 hover:border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300">
-                    Ver todos los servicios
+                    {t('cta.viewAllServices')}
                   </button>
                 </Link>
               </div>

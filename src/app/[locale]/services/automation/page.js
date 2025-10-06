@@ -1,201 +1,40 @@
+'use client';
+
 import Link from "next/link";
 import { Settings, Workflow, Clock, TrendingUp, CheckCircle, ArrowRight, Star, Quote, Zap } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function Automatizacion() {
+  const t = useTranslations('automationService');
+  const params = useParams();
+  const locale = params.locale || 'es'
+  const automationAreas = t.raw('automationAreas');
+  const process = t.raw('processAreas');
+  const tools = t.raw('toolsAreas');
+  const testimonials = t.raw('testimonialsPeople');
+  const pricing = t.raw('pricingAutomation');
+  
   const benefits = [
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Ahorra tiempo valioso",
-      description: "Elimina tareas repetitivas y libera a tu equipo para actividades estratégicas"
+      title: t('benefits.items.item1.title'),
+      description: t('benefits.items.item1.description')
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Reduce errores humanos",
-      description: "Los procesos automatizados son consistentes y precisos las 24 horas"
+      title: t('benefits.items.item2.title'),
+      description: t('benefits.items.item2.description')
     },
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Mejora la productividad",
-      description: "Tu empresa puede procesar más con los mismos recursos"
+      title: t('benefits.items.item3.title'),
+      description: t('benefits.items.item3.description')
     },
     {
       icon: <Settings className="w-6 h-6" />,
-      title: "Escalabilidad automática",
-      description: "Los sistemas crecen con tu negocio sin requerir más personal"
-    }
-  ];
-
-  const automationAreas = [
-    {
-      title: "Gestión de clientes (CRM)",
-      description: "Automatiza el seguimiento desde el primer contacto hasta la venta",
-      automations: [
-        "Captura automática de leads",
-        "Seguimiento de correos",
-        "Asignación de vendedores",
-        "Recordatorios de seguimiento"
-      ],
-      timesSaved: "15-20 horas/semana",
-      icon: "👥"
-    },
-    {
-      title: "Facturación y cobranza",
-      description: "Genera facturas y gestiona pagos sin intervención manual",
-      automations: [
-        "Facturación automática",
-        "Recordatorios de pago",
-        "Conciliación bancaria",
-        "Reportes financieros"
-      ],
-      timesSaved: "10-15 horas/semana", 
-      icon: "💰"
-    },
-    {
-      title: "Inventario y compras",
-      description: "Mantén stock óptimo con reposición automática",
-      automations: [
-        "Alertas de stock bajo",
-        "Órdenes de compra automáticas",
-        "Actualización de precios",
-        "Control de vencimientos"
-      ],
-      timesSaved: "8-12 horas/semana",
-      icon: "📦"
-    },
-    {
-      title: "Marketing digital",
-      description: "Campañas que se ejecutan solas y se optimizan automáticamente",
-      automations: [
-        "Email marketing secuencial",
-        "Publicaciones en redes sociales",
-        "Segmentación de audiencias",
-        "Reportes de rendimiento"
-      ],
-      timesSaved: "12-18 horas/semana",
-      icon: "📈"
-    },
-    {
-      title: "Recursos humanos",
-      description: "Optimiza la gestión de personal y nóminas",
-      automations: [
-        "Registro de asistencia",
-        "Cálculo de nóminas",
-        "Evaluaciones periódicas",
-        "Solicitudes de vacaciones"
-      ],
-      timesSaved: "6-10 horas/semana",
-      icon: "👤"
-    },
-    {
-      title: "Atención al cliente",
-      description: "Responde consultas y resuelve problemas 24/7",
-      automations: [
-        "Chatbots inteligentes",
-        "Tickets automáticos",
-        "Escalamiento por prioridad",
-        "Encuestas de satisfacción"
-      ],
-      timesSaved: "20-30 horas/semana",
-      icon: "🎧"
-    }
-  ];
-
-  const process = [
-    {
-      step: "01",
-      title: "Mapeo de procesos",
-      description: "Identificamos qué tareas se pueden automatizar y priorizamos por impacto",
-      duration: "1 semana"
-    },
-    {
-      step: "02",
-      title: "Diseño de workflows",
-      description: "Creamos los flujos automatizados optimizados para tu negocio",
-      duration: "1-2 semanas"
-    },
-    {
-      step: "03",
-      title: "Implementación gradual",
-      description: "Instalamos las automatizaciones por fases para minimizar disrupciones",
-      duration: "2-4 semanas"
-    },
-    {
-      step: "04",
-      title: "Capacitación",
-      description: "Entrenamos a tu equipo para gestionar y aprovechar las automatizaciones",
-      duration: "1 semana"
-    },
-    {
-      step: "05",
-      title: "Monitoreo y optimización",
-      description: "Supervisamos el rendimiento y mejoramos continuamente",
-      duration: "Permanente"
-    }
-  ];
-
-  const tools = [
-    { name: "Zapier", use: "Conecta aplicaciones", logo: "⚡" },
-    { name: "Microsoft Power Automate", use: "Workflows empresariales", logo: "🔄" },
-    { name: "WhatsApp Business API", use: "Automatización de mensajes", logo: "💬" },
-    { name: "Sistemas personalizados", use: "Automatizaciones específicas", logo: "⚙️" },
-    { name: "APIs de integración", use: "Conecta todos tus sistemas", logo: "🔗" },
-    { name: "Inteligencia artificial", use: "Decisiones automáticas", logo: "🤖" }
-  ];
-
-  const testimonials = [
-    {
-      name: "Patricia Morales",
-      company: "Clínica Dental Sonríe",
-      content: "La automatización de citas y recordatorios ha reducido las inasistencias en un 60%. Nuestros pacientes están más satisfechos y nosotros más organizados.",
-      rating: 5,
-      result: "60% menos inasistencias"
-    },
-    {
-      name: "Jorge Castillo",
-      company: "Supermercado La Economía",
-      content: "El sistema de reposición automática mantiene nuestro inventario siempre abastecido. Ya no perdemos ventas por productos agotados.",
-      rating: 5,
-      result: "25% aumento en ventas"
-    }
-  ];
-
-  const pricing = [
-    {
-      name: "Automatización Básica",
-      price: "$500 - $1,500",
-      description: "Ideal para pequeños negocios que inician",
-      features: [
-        "1-3 procesos automatizados",
-        "Herramientas estándar",
-        "Configuración básica",
-        "1 mes de soporte"
-      ],
-      timeframe: "2-3 semanas"
-    },
-    {
-      name: "Automatización Avanzada", 
-      price: "$1,500 - $5,000",
-      description: "Para empresas con múltiples procesos",
-      features: [
-        "4-8 procesos automatizados",
-        "Integraciones personalizadas",
-        "Dashboard de monitoreo",
-        "3 meses de soporte"
-      ],
-      timeframe: "4-6 semanas",
-      popular: true
-    },
-    {
-      name: "Automatización Empresarial",
-      price: "$5,000+",
-      description: "Solución completa para grandes operaciones",
-      features: [
-        "Procesos ilimitados",
-        "IA y machine learning",
-        "Soporte 24/7",
-        "6 meses de optimización"
-      ],
-      timeframe: "6-10 semanas"
+      title: t('benefits.items.item4.title'),
+      description: t('benefits.items.item4.description')
     }
   ];
 
@@ -213,31 +52,30 @@ export default function Automatizacion() {
             <div>
               <div className="flex items-center space-x-2 mb-6">
                 <Link href="/#services" className="text-red-200 hover:text-white transition-colors">
-                  Servicios
+                  {t('navigation.backHome')}
                 </Link>
                 <span className="text-red-300">/</span>
-                <span className="text-white">Automatización</span>
+                <span className="text-white">{t('navigation.current_page')}</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Automatiza tu negocio
-                <span className="block text-red-200">trabaja más inteligente</span>
+                {t('title')}
+                <span className="block text-red-200">{t('titleHighlight')}</span>
               </h1>
               
               <p className="text-xl text-red-100 mb-8 leading-relaxed">
-                Implementamos soluciones que automatizan procesos repetitivos, 
-                reducen errores y liberan tiempo valioso para que te enfoques en hacer crecer tu negocio.
+                {t('description')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="#contacto">
                   <button className="bg-white text-red-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Automatizar ahora
+                    {t('ctaAutomate')}
                   </button>
                 </Link>
                 <Link href="#areas">
                   <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-                    Ver qué automatizar
+                    {(t('ctaSeeAreas'))}
                   </button>
                 </Link>
               </div>
@@ -247,24 +85,24 @@ export default function Automatizacion() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-center mb-6">
                   <Zap className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">Resultados típicos</h3>
+                  <h3 className="text-2xl font-bold mb-4">{t('results.title')}</h3>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-lg">Tiempo ahorrado</span>
-                    <span className="text-yellow-400 font-bold text-xl">40-60%</span>
+                    <span className="text-lg">{t('results.stats.timeSaved.label')}</span>
+                    <span className="text-yellow-400 font-bold text-xl">{t('results.stats.timeSaved.value')}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg">Reducción de errores</span>
-                    <span className="text-yellow-400 font-bold text-xl">80%+</span>
+                    <span className="text-lg">{t('results.stats.errorReduction.label')}</span>
+                    <span className="text-yellow-400 font-bold text-xl">{t('results.stats.errorReduction.value')}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg">ROI típico</span>
-                    <span className="text-yellow-400 font-bold text-xl">300%</span>
+                    <span className="text-lg">{t('results.stats.roi.label')}</span>
+                    <span className="text-yellow-400 font-bold text-xl">{t('results.stats.roi.value')}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg">Recuperación inversión</span>
-                    <span className="text-yellow-400 font-bold text-xl">3-6 meses</span>
+                    <span className="text-lg">{t('results.stats.investmentRecovery.label')}</span>
+                    <span className="text-yellow-400 font-bold text-xl">{t('results.stats.investmentRecovery.value')}</span>
                   </div>
                 </div>
               </div>
@@ -278,10 +116,10 @@ export default function Automatizacion() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              ¿Por qué automatizar tu negocio?
+              {t('benefits.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              La automatización no es solo tecnología, es la clave para un crecimiento sostenible y eficiente
+              {t('benefits.description')}
             </p>
           </div>
 
@@ -310,10 +148,10 @@ export default function Automatizacion() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Áreas que podemos automatizar
+              {t('areas.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Desde ventas hasta recursos humanos, automatizamos los procesos que más tiempo te consumen
+              {t('areas.description')}
             </p>
           </div>
 
@@ -330,7 +168,7 @@ export default function Automatizacion() {
                 
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-semibold text-gray-700">Tiempo ahorrado:</span>
+                    <span className="text-sm font-semibold text-gray-700">{t('timesSaved')}</span>
                     <span className="text-sm font-bold text-red-600">{area.timesSaved}</span>
                   </div>
                 </div>
@@ -354,10 +192,10 @@ export default function Automatizacion() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Cómo implementamos la automatización
+              {t('process.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Proceso gradual y sin interrupciones para tu operación diaria
+              {t('process.description')}
             </p>
           </div>
 
@@ -395,10 +233,10 @@ export default function Automatizacion() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Herramientas que utilizamos
+              {t('tools.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Combinamos las mejores plataformas con desarrollos personalizados
+              {t('tools.description')}
             </p>
           </div>
 
@@ -419,7 +257,7 @@ export default function Automatizacion() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Casos de éxito
+              {t('testimonials.title')}
             </h2>
           </div>
 
@@ -464,10 +302,10 @@ export default function Automatizacion() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Inversión en automatización
+              {t('pricing.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Paquetes diseñados para diferentes niveles de automatización
+              {t('pricing.description')}
             </p>
           </div>
 
@@ -477,7 +315,7 @@ export default function Automatizacion() {
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Más popular
+                      {t('pricing.popular')}
                     </span>
                   </div>
                 )}
@@ -511,7 +349,7 @@ export default function Automatizacion() {
                     ? 'bg-red-500 hover:bg-red-600 text-white shadow-lg hover:shadow-xl transform hover:scale-105' 
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                 }`}>
-                  Solicitar cotización
+                  {t('pricing.cta')}
                 </button>
               </div>
             ))}
@@ -520,14 +358,14 @@ export default function Automatizacion() {
           <div className="text-center mt-12">
             <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                ¿No estás seguro qué automatizar?
+                {t('pricing.consultationTitle')}
               </h3>
               <p className="text-lg text-gray-700 mb-6">
-                Ofrecemos una consulta gratuita para identificar las mejores oportunidades de automatización en tu negocio
+                {t('pricing.consultationDescription')}
               </p>
               <Link href="#contacto">
                 <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-                  Solicitar consulta gratuita
+                  {t('pricing.consultationButton')}
                 </button>
               </Link>
             </div>
@@ -539,22 +377,22 @@ export default function Automatizacion() {
       <section id="contacto" className="py-20 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            ¿Listo para automatizar tu negocio?
+            {t('cta.title')}
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Comienza a trabajar más inteligente, no más duro. Conversemos sobre cómo la automatización puede transformar tu operación
+            {t('cta.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <button className="bg-white text-red-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-50 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
-                <span>Iniciar automatización</span>
+                <span>{t('cta.automateButton')}</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
             
             <a href="tel:+50557517432" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-              Llamar ahora
+              {t('cta.callButton')}
             </a>
           </div>
         </div>

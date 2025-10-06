@@ -1,148 +1,40 @@
+'use client';
+
 import Link from "next/link";
 import { Code, Database, Users, BarChart, CheckCircle, ArrowRight, Star, Quote, Lightbulb } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function SoftwareAMedida() {
+  const t = useTranslations('customSoftware');
+  const params = useParams();
+  const locale = params.locale || 'es';
+  const solutions = t.raw('solutions');
+  const process = t.raw('process');
+  const technologies = t.raw('technologies')
+  const testimonials = t.raw('testimonials');
+  const pricingFactors = t.raw('pricing_factors');
+
   const benefits = [
     {
       icon: <Code className="w-6 h-6" />,
-      title: "Diseñado para tu negocio",
-      description: "Desarrollamos funcionalidades específicas que se adaptan a tus procesos únicos"
+      title: t('benefits.benefit1.title'),
+      description: t('benefits.benefit1.description'),
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Integración completa",
-      description: "Conectamos todos tus sistemas para que trabajen en perfecta sincronía"
+      title: t('benefits.benefit2.title'),
+      description: t('benefits.benefit2.description')
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Fácil de usar",
-      description: "Interfaces intuitivas que tu equipo puede dominar desde el primer día"
+      title: t('benefits.benefit3.title'),
+      description: t('benefits.benefit3.description')
     },
     {
       icon: <BarChart className="w-6 h-6" />,
-      title: "Reportes en tiempo real",
-      description: "Toma decisiones informadas con datos actualizados al instante"
-    }
-  ];
-
-  const solutions = [
-    {
-      title: "Sistema de Gestión de Ventas",
-      description: "Controla todo el proceso desde el lead hasta la facturación",
-      features: ["CRM integrado", "Seguimiento de clientes", "Automatización de cotizaciones", "Dashboard de ventas"],
-      icon: "💼"
-    },
-    {
-      title: "Control de Inventarios",
-      description: "Mantén el control exacto de tu stock y movimientos",
-      features: ["Alertas de stock bajo", "Códigos de barras", "Múltiples almacenes", "Reportes de rotación"],
-      icon: "📦"
-    },
-    {
-      title: "Sistema de Facturación",
-      description: "Automatiza tu facturación y cumple con regulaciones fiscales",
-      features: ["Facturación electrónica", "Múltiples impuestos", "Pagos recurrentes", "Integración contable"],
-      icon: "📄"
-    },
-    {
-      title: "Gestión de Proyectos",
-      description: "Organiza equipos, tareas y tiempos de manera eficiente",
-      features: ["Cronogramas visuales", "Asignación de tareas", "Control de tiempo", "Colaboración en equipo"],
-      icon: "🎯"
-    },
-    {
-      title: "Sistema de RRHH",
-      description: "Gestiona tu talento humano de forma integral",
-      features: ["Control de asistencia", "Nóminas automatizadas", "Evaluaciones", "Portal del empleado"],
-      icon: "👥"
-    },
-    {
-      title: "Plataforma de E-learning",
-      description: "Capacita a tu equipo o monetiza conocimiento",
-      features: ["Cursos interactivos", "Seguimiento de progreso", "Certificaciones", "Gamificación"],
-      icon: "🎓"
-    }
-  ];
-
-  const process = [
-    {
-      step: "01",
-      title: "Análisis profundo",
-      description: "Estudiamos tus procesos actuales y identificamos oportunidades de mejora",
-      duration: "1-2 semanas"
-    },
-    {
-      step: "02", 
-      title: "Diseño de solución",
-      description: "Creamos la arquitectura y flujos de trabajo personalizados",
-      duration: "1-2 semanas"
-    },
-    {
-      step: "03",
-      title: "Desarrollo iterativo",
-      description: "Construimos el software con entregas parciales para tu validación",
-      duration: "4-12 semanas"
-    },
-    {
-      step: "04",
-      title: "Implementación",
-      description: "Instalamos, configuramos y capacitamos a tu equipo",
-      duration: "1-2 semanas"
-    },
-    {
-      step: "05",
-      title: "Soporte continuo",
-      description: "Acompañamos el crecimiento con actualizaciones y mejoras",
-      duration: "Permanente"
-    }
-  ];
-
-  const technologies = [
-    { name: "React/Next.js", category: "Frontend" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Python", category: "Backend" },
-    { name: "PostgreSQL", category: "Base de datos" },
-    { name: "MongoDB", category: "Base de datos" },
-    { name: "AWS/DigitalOcean", category: "Hosting" }
-  ];
-
-  const testimonials = [
-    {
-      name: "Roberto Sánchez",
-      company: "Distribuidora El Norte",
-      content: "El sistema de inventarios ha revolucionado nuestro negocio. Ahora sabemos exactamente qué productos tenemos y cuáles necesitamos pedir.",
-      rating: 5,
-      result: "30% reducción en productos agotados"
-    },
-    {
-      name: "Ana Patricia López",
-      company: "Constructora Moderna",
-      content: "El software de gestión de proyectos nos permite coordinar mejor los equipos. Los proyectos se entregan a tiempo y dentro del presupuesto.",
-      rating: 5,
-      result: "25% mejora en tiempos de entrega"
-    }
-  ];
-
-  const pricingFactors = [
-    {
-      factor: "Complejidad funcional",
-      description: "Número de módulos y características específicas",
-      impact: "$$-$$$"
-    },
-    {
-      factor: "Integraciones",
-      description: "Conexión con sistemas existentes o servicios externos",
-      impact: "$-$$"
-    },
-    {
-      factor: "Número de usuarios",
-      description: "Capacidad simultánea y roles de usuario",
-      impact: "$-$$"
-    },
-    {
-      factor: "Personalización",
-      description: "Nivel de adaptación a procesos específicos",
-      impact: "$$-$$$"
+      title: t('benefits.benefit4.title'),
+      description: t('benefits.benefit4.description')
     }
   ];
 
@@ -159,32 +51,31 @@ export default function SoftwareAMedida() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <Link href="/#services" className="text-green-200 hover:text-white transition-colors">
-                  Servicios
+                <Link href={`/${locale}/#services`} className="text-green-200 hover:text-white transition-colors">
+                  {t('navigation.backHome')}
                 </Link>
                 <span className="text-green-300">/</span>
-                <span className="text-white">Software a la Medida</span>
+                <span className="text-white">{t('navigation.current_page')}</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Software que se adapta
-                <span className="block text-green-200">a tu negocio</span>
+                {t('title')}
+                <span className="block text-green-200">{t('titleHighlight')}</span>
               </h1>
               
               <p className="text-xl text-green-100 mb-8 leading-relaxed">
-                Desarrollamos sistemas personalizados que optimizan tus procesos, 
-                automatizan tareas repetitivas y hacen que tu equipo sea más productivo.
+                {t('description')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="#contacto">
+                <Link href={"#contacto"}>
                   <button className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Solicitar cotización
+                    {t('cta_quote')}
                   </button>
                 </Link>
                 <Link href="#soluciones">
                   <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-                    Ver soluciones
+                    {t('cta_solutions')}
                   </button>
                 </Link>
               </div>
@@ -193,24 +84,24 @@ export default function SoftwareAMedida() {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-4">¿Por qué software personalizado?</h3>
+                  <h3 className="text-2xl font-bold mb-4">{t('why_title')}</h3>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">100% adaptado a tus procesos</span>
+                    <span className="text-lg">{t('why_points.point1')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">Escalable con tu crecimiento</span>
+                    <span className="text-lg">{t('why_points.point2')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">Mayor productividad del equipo</span>
+                    <span className="text-lg">{t('why_points.point3')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">ROI comprobable</span>
+                    <span className="text-lg">{t('why_points.point4')}</span>
                   </div>
                 </div>
               </div>
@@ -224,10 +115,10 @@ export default function SoftwareAMedida() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Ventajas del software personalizado
+              {t('benefits.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A diferencia de las soluciones genéricas, nuestro software se diseña específicamente para tu negocio
+              {t('benefits.description')}
             </p>
           </div>
 
@@ -256,10 +147,10 @@ export default function SoftwareAMedida() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Tipos de software que desarrollamos
+              {t('solutionsSection.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Sistemas especializados para diferentes áreas de tu negocio
+              {t('solutionsSection.description')}
             </p>
           </div>
 
@@ -292,10 +183,10 @@ export default function SoftwareAMedida() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Nuestro proceso de desarrollo
+              {t('processSection.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Metodología probada que garantiza resultados exitosos
+              {t('processSection.description')}
             </p>
           </div>
 
@@ -333,10 +224,10 @@ export default function SoftwareAMedida() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Tecnologías que utilizamos
+              {t('technologiesSection.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Herramientas modernas y confiables para crear software robusto y escalable
+              {t('technologiesSection.description')}
             </p>
           </div>
 
@@ -360,7 +251,7 @@ export default function SoftwareAMedida() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Casos de éxito
+              {t('successfully.title')}
             </h2>
           </div>
 
@@ -405,10 +296,10 @@ export default function SoftwareAMedida() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              ¿Cómo determinamos el precio?
+              {t('pricing.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              El costo depende de varios factores que analizamos en conjunto contigo
+              {t('pricing.description')}
             </p>
           </div>
 
@@ -416,19 +307,19 @@ export default function SoftwareAMedida() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Inversión típica
+                  {t('pricing.title2')}
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-gray-700">Sistema básico</span>
+                    <span className="text-gray-700">{t('pricing.system1')}</span>
                     <span className="font-semibold text-green-600">$1,500 - $3,000</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">Sistema intermedio</span>
+                    <span className="text-gray-700">{t('pricing.system2')}</span>
                     <span className="font-semibold text-green-600">$3,000 - $7,000</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">Sistema avanzado</span>
+                    <span className="text-gray-700">{t('pricing.system3')}</span>
                     <span className="font-semibold text-green-600">$7,000 - $15,000+</span>
                   </div>
                 </div>
@@ -436,7 +327,7 @@ export default function SoftwareAMedida() {
               <div className="text-center">
                 <Lightbulb className="w-16 h-16 text-green-500 mx-auto mb-4" />
                 <p className="text-lg text-gray-700">
-                  <strong>Consulta gratuita:</strong> Te ayudamos a definir el alcance y presupuesto ideal para tu proyecto
+                  <strong>{t('pricing.consultation')}</strong> {t('pricing.consultationDescription')}
                 </p>
               </div>
             </div>
@@ -466,22 +357,22 @@ export default function SoftwareAMedida() {
       <section id="contacto" className="py-20 bg-gradient-to-r from-green-600 to-green-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            ¿Listo para optimizar tu negocio?
+            {t('cta.title')}
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Conversemos sobre cómo el software personalizado puede transformar la eficiencia de tu empresa
+            {t('cta.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <button className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
-                <span>Solicitar cotización</span>
+                <span>{t('cta.cta_quote')}</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
             
             <a href="tel:+50557517432" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-              Llamar ahora
+              {t('cta.cta_call')}
             </a>
           </div>
         </div>

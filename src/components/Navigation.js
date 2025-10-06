@@ -1,20 +1,28 @@
 'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import { Menu, X, Facebook, Instagram, Linkedin, ExternalLink } from "lucide-react";
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
+  const t = useTranslations('navigation');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   const menuItems = [
-    { href: '#home', label: 'Inicio' },
-    { href: '#about', label: 'Nosotros' },
-    { href: '#services', label: 'Servicios' },
-    { href: '#contact', label: 'Contacto' },
-    { href: '/portfolio', label: 'Portafolio', external: true }
+    { href: '#home', label: t('home') },
+    { href: '#about', label: t('about') },
+    { href: '#services', label: t('services') },
+    { href: '#contact', label: t('contact') },
+    { href: `/${locale}/portfolio`, label: t('portfolio'), external: true }
   ];
 
   const socialLinks = [
@@ -99,7 +107,7 @@ export default function Navigation() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           
           {/* Logo */}
@@ -113,7 +121,7 @@ export default function Navigation() {
                 <div className="absolute inset-0 bg-red-500/20 rounded-full blur-md group-hover:bg-red-500/30 transition-all duration-300"></div>
                 <Image
                   src="/logo.png"
-                  alt="Drunic Logo"
+                  alt={locale === 'es' ? "Drunic Logo" : "Logo Drunic"}
                   width={48}
                   height={48}
                   className="relative z-10 w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
@@ -127,7 +135,7 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex">
-            <ul className="flex items-center space-x-8">
+            <ul className="flex items-center space-x-2">
               {menuItems.map((item) => (
                 <li key={item.href}>
                   {item.external ? (
@@ -163,7 +171,9 @@ export default function Navigation() {
           </nav>
 
           {/* Desktop Social Icons & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-2">
+            {/* Language Switcher */}
+
             {/* Social Icons */}
             <div className="flex items-center space-x-3">
               {socialLinks.map((social) => {
@@ -182,13 +192,18 @@ export default function Navigation() {
                 );
               })}
             </div>
-
+            
+            <div className="flex items-center space-x-2 ml-4">
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  {t('contact')}
+                </button>
+              </Link>
+              <div className="flex items-center h-full">
+                <LanguageSwitcher />
+              </div>
+            </div>
             {/* CTA Button */}
-            <Link href="/contact">
-              <button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-4">
-                Contactar
-              </button>
-            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -236,6 +251,11 @@ export default function Navigation() {
               ))}
             </ul>
 
+            {/* Mobile Language Switcher */}
+            <div className="px-4 mt-6 pt-6 border-t border-white/10">
+              <LanguageSwitcher className="w-full" />
+            </div>
+
             {/* Mobile Social Icons */}
             <div className="flex justify-center space-x-4 mt-6 pt-6 border-t border-white/10 mx-4">
               {socialLinks.map((social) => {
@@ -257,12 +277,12 @@ export default function Navigation() {
 
             {/* Mobile CTA */}
             <div className="px-4 mt-6">
-              <Link href="/contact">
+              <Link href={`/${locale}/contact`}>
                 <button 
                   onClick={handleMenuClick}
                   className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 shadow-lg"
                 >
-                  Contactar ahora
+                  {t('contact')}
                 </button>
               </Link>
             </div>

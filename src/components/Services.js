@@ -1,18 +1,26 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 import { Globe, Code, Settings, ArrowRight, CheckCircle } from "lucide-react";
 
 const Services = () => {
+  const t = useTranslations('services');
+  const params = useParams();
+  const locale = params.locale || 'es';
+  
   const services = [
     {
-      title: "Diseño y desarrollo web",
+      title: t('service1.title'),
       shortTitle: "Web-Development",
-      description: "Creamos páginas web modernas, rápidas y optimizadas que conectan con tu audiencia y generan resultados reales para tu negocio",
+      description: t('service1.description'),
       features: [
-        "Diseño responsive y moderno",
-        "Optimización para buscadores (SEO)",
-        "Velocidad de carga optimizada",
-        "Panel de administración intuitivo"
+        t('service1.feature1'),
+        t('service1.feature2'),
+        t('service1.feature3'),
+        t('service1.feature4')
       ],
       icon: <Globe className="w-8 h-8 text-white" />,
       gradient: "from-blue-500 to-blue-600",
@@ -22,14 +30,14 @@ const Services = () => {
       textColor: "text-blue-600"
     },
     {
-      title: "Software a la medida",
+      title: t('service2.title'),
       shortTitle: "Custom software",
-      description: "Desarrollamos sistemas personalizados que se adaptan perfectamente a los procesos únicos de tu empresa, mejorando la productividad",
+      description: t('service2.description'),
       features: [
-        "Sistemas de gestión empresarial",
-        "Control de inventarios",
-        "Facturación automatizada",
-        "Reportes y análisis en tiempo real"
+        t('service2.feature1'),
+        t('service2.feature2'),
+        t('service2.feature3'),
+        t('service2.feature4')
       ],
       icon: <Code className="w-8 h-8 text-white" />,
       gradient: "from-green-500 to-green-600",
@@ -39,14 +47,14 @@ const Services = () => {
       textColor: "text-green-600"
     },
     {
-      title: "Automatización y tecnología",
+      title: t('service3.title'),
       shortTitle: "automation",
-      description: "Implementamos soluciones tecnológicas que automatizan procesos repetitivos, ahorrando tiempo y reduciendo errores operativos",
+      description: t('service3.description'),
       features: [
-        "Automatización de procesos",
-        "Integración de sistemas",
-        "Workflows inteligentes",
-        "Monitoreo y alertas automáticas"
+        t('service3.feature1'),
+        t('service3.feature2'),
+        t('service3.feature3'),
+        t('service3.feature4')
       ],
       icon: <Settings className="w-8 h-8 text-white" />,
       gradient: "from-red-500 to-red-600",
@@ -60,23 +68,23 @@ const Services = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Análisis",
-      description: "Entendemos tus necesidades y objetivos específicos"
+      title: t('process.step1.title'),
+      description: t('process.step1.description')
     },
     {
       number: "02",
-      title: "Propuesta",
-      description: "Diseñamos una solución personalizada para tu caso"
+      title: t('process.step2.title'),
+      description: t('process.step2.description')
     },
     {
       number: "03",
-      title: "Desarrollo",
-      description: "Construimos tu solución con las mejores tecnologías"
+      title: t('process.step3.title'),
+      description: t('process.step3.description')
     },
     {
       number: "04",
-      title: "Entrega",
-      description: "Implementamos y capacitamos a tu equipo"
+      title: t('process.step4.title'),
+      description: t('process.step4.description')
     }
   ];
 
@@ -91,11 +99,11 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Nuestros servicios
+            {t('title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transformamos ideas en soluciones digitales que impulsan el crecimiento de tu negocio
+            {t('subtitle')}
           </p>
         </div>
 
@@ -145,7 +153,7 @@ const Services = () => {
                   {/* CTA Button */}
                   <Link href={`/services/${service.shortTitle.toLowerCase().replace(/\s+/g, '-')}`}>
                     <button className={`w-full bg-gradient-to-r ${service.gradient} hover:bg-gradient-to-r hover:${service.hoverGradient} text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center justify-center space-x-2`}>
-                      <span>Más información</span>
+                      <span>{t('moreInfo')}</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </Link>
@@ -165,10 +173,10 @@ const Services = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Nuestro proceso de trabajo
+              {t('process.title')}
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Un enfoque estructurado que garantiza resultados exitosos en cada proyecto
+              {t('process.subtitle')}
             </p>
           </div>
 
@@ -206,16 +214,16 @@ const Services = () => {
           
           <div className="relative">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              ¿Listo para impulsar tu negocio?
+              {t('cta.title')}
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Conversemos sobre cómo nuestros servicios pueden transformar la manera en que operas y vendes
+              {t('cta.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href='/contact'>
+              <Link href={`/${locale}/contact`}>
                 <button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Iniciar proyecto</span>
+                  <span>{t('cta.startProject')}</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </Link>
@@ -224,7 +232,7 @@ const Services = () => {
                 href="tel:+50557517432"
                 className="bg-transparent border-2 border-white/30 hover:border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
-                Llamar ahora
+                {t('cta.callNow')}
               </a>
             </div>
           </div>

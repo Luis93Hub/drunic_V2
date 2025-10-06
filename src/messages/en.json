@@ -1,0 +1,1165 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "badge": "6+ successful projects",
+    "title": "BOOST YOUR",
+    "titleHighlight": "BUSINESS",
+    "subtitle": "with custom-built technology",
+    "description": "We create {web}, {apps} and {solutions} that transform ideas into measurable results.",
+    "web": "websites",
+    "apps": "applications",
+    "solutions": "digital solutions",
+    "satisfiedClients": "Satisfied clients",
+    "successRate": "Success rate",
+    "startProject": "Start project",
+    "viewPortfolio": "View portfolio",
+    "trustUs": "Trust us:",
+    "companies": "companies",
+    "online": "Online",
+    "learnMore": "Learn more",
+    "services": {
+      "web": {
+        "title": "Your own website",
+        "description": "Unique and functional designs"
+      },
+      "mobile": {
+        "title": "Mobile apps",
+        "description": "Native and hybrid"
+      },
+      "software": {
+        "title": "Custom software",
+        "description": "Personalized solutions"
+      }
+    }
+  },
+  "about": {
+    "title": "Who we are?",
+    "description": "We are a software development company committed to excellence. We design and implement high-impact digital solutions, combining innovation, quality and technological experience.",
+    "mission": {
+      "title": "Our mission",
+      "description": "We drive business and entrepreneur growth through technology, transforming ideas into concrete digital results."
+    },
+    "experience": {
+      "title": "Experience that transforms",
+      "description": "Our clients value our closeness and the proactive way we work. We are characterized by a fresh and bold vision, always focused on delivering solutions that really make a difference."
+    },
+    "capabilities": {
+      "title": "What we do:",
+      "item1": "Modern and responsive web development",
+      "item2": "Custom software for your business",
+      "item3": "Business process automation",
+      "item4": "Integration with existing systems",
+      "item5": "Specialized technology consulting",
+      "item6": "Continuous technical support"
+    },
+    "values": {
+      "title": "Our values",
+      "subtitle": "The principles that guide every decision and project we develop",
+      "value1": {
+          "title": "Results focused",
+          "description": "Every project is oriented to generate real impact on your business"
+        },
+      "value2": {
+          "title": "Closeness and communication",
+          "description": "We work with you collaboratively at every stage"
+        },
+      "value3": {
+          "title": "Constant innovation",
+          "description": "We apply the latest technologies to keep you competitive"
+        },
+      "value4": {
+          "title": "Guaranteed quality",
+          "description": "We deliver robust and scalable solutions that endure"
+        }
+    },
+    "solutions": {
+      "title": "Solutions that drive results",
+      "description": "We create modern and functional websites, develop custom software and design solutions that optimize processes, systems and business operations.",
+      "purpose": "Our purpose is for businesses of all sizes to leverage technology to sell more, operate more efficiently and simplify their daily operations."
+    },
+    "stats": {
+      "title": "Numbers that speak for us",
+      "subtitle": "Every project is an opportunity to create real and lasting impact",
+      "item1": {
+        "label": "Completed projects"
+      },
+      "item2": {
+        "label": "Years of experience"
+      },
+      "item3": {
+        "label": "Satisfied clients"
+      },
+      "item4": {
+        "label": "Response time"
+      }
+    },
+    "cta": {
+      "title": "Ready to transform your business?",
+      "description": "Let's talk about how technology can drive your company's growth",
+      "startProject": "Start project",
+      "viewServices": "View services"
+    },
+    "buttons": {
+      "viewServices": "View our services"
+    }
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "We transform ideas into digital solutions that drive your business growth",
+    "service1": {
+      "title": "Web design and development",
+      "shortTitle": "web-development",
+      "description": "We create modern, fast and optimized websites that connect with your audience and generate real results for your business",
+      "feature1": "Responsive and modern design",
+      "feature2": "Search engine optimization (SEO)",
+      "feature3": "Optimized loading speed",
+      "feature4": "Intuitive administration panel"
+    },
+    "service2": {
+      "title": "Custom software",
+      "shortTitle": "custom-software",
+      "description": "We develop personalized systems that adapt perfectly to your company's unique processes, improving productivity",
+      "feature1": "Business management systems",
+      "feature2": "Inventory control",
+      "feature3": "Automated billing",
+      "feature4": "Real-time reports and analytics"
+      },
+    "service3": {
+      "title": "Automation and technology",
+      "shortTitle": "automation",
+      "description": "We implement technological solutions that automate repetitive processes, saving time and reducing operational errors",
+      "feature1": "Process automation",
+      "feature2": "System integration",
+      "feature3": "Smart workflows",
+      "feature4": "Automatic monitoring and alerts"
+    },
+    "process": {
+      "title": "Our work process",
+      "subtitle": "A structured approach that guarantees successful results in every project",
+      "step1": {
+        "title": "Analysis",
+        "description": "We understand your specific needs and objectives"
+      },
+      "step2": {
+        "title": "Proposal",
+        "description": "We design a customized solution for your case"
+      },
+      "step3": {
+        "title": "Development",
+        "description": "We build your solution with the best technologies"
+      },
+      "step4": {
+        "title": "Delivery",
+        "description": "We implement and train your team"
+      }
+    },
+    "cta": {
+      "title": "Ready to boost your business?",
+      "description": "Let's talk about how our services can transform the way you operate and sell",
+      "startProject": "Start project",
+      "callNow": "Call now"
+    },
+    "moreInfo": "More information"
+  },
+  "contact": {
+    "title": "Get in",
+    "titleHighlight": "touch with us",
+    "subtitle": "Let's create incredible things together.",
+    "description": "Tell us what you need and we'll find the best digital solution for you. It's not just about creating a website, but offering the best digital experience that connects with customers.",
+    "phone": "+505 57517432",
+    "email": "contact.drunic@gmail.com",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+505 0000 0000",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "service": "Service of interest",
+      "servicePlaceholder": "Select a service",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project, objectives, timeline and any relevant details...",
+      "submit": "Send message",
+      "submitting": "Sending message...",
+      "services": {
+        "service1": "Web Development",
+        "service2": "Mobile Applications",
+        "service3": "E-commerce",
+        "service4": "Custom Software",
+        "service5": "Automation",
+        "service6": "Digital Consulting",
+        "service7": "Other"
+      },
+      "success": {
+        "title": "Message sent successfully!",
+        "description": "We will contact you within the next 24 hours."
+      },
+      "error": {
+        "title": "Error sending",
+        "description": "Please try again or contact us directly."
+      },
+      "required": "*"
+    }
+  },
+  "footer": {
+    "company": {
+      "description": "We transform ideas into digital solutions. We design websites, develop custom software and automate processes to boost your business."
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "description": "Let's talk about how we can help you grow digitally",
+      "button": "Start project"
+    },
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "followUs": "Follow us",
+    "copyright": "All rights reserved.",
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "phone": "Phone",
+    "location": "Location"
+  },
+  "technology": {
+    "title": "Our Technology Stack",
+    "subtitle": "Specialized in {drupal} and {symfony}, the most robust enterprise technologies to create websites, e-commerce and applications that scale with your business.",
+    "drupal": "Drupal",
+    "symfony": "Symfony",
+    "subtitleMainTech": "Main features:",
+    "mainTech": {
+      "Tech1":
+      {
+        "name": "Drupal",
+        "description": "World-leading enterprise CMS for complex and scalable websites",
+        "features": {
+          "feature1": "Advanced content management",
+          "feature2": "Native multilanguage",
+          "feature3": "Modular architecture",
+          "feature4": "SEO optimized",
+          "feature5": "Enterprise security"
+        },
+        "useCases": {
+          "useCase1": "Corporate sites",
+          "useCase2": "Web portals",
+          "useCase3": "Intranets",
+          "useCase4": "Multilingual sites"
+        },
+        "stats": "1M+ active sites"
+      },
+      "Tech2":
+      {
+        "name": "Symfony",
+        "description": "Robust PHP framework for high-performance web applications and APIs",
+        "features": {
+          "feature1": "Reusable components",
+          "feature2": "High performance",
+          "feature3": "MVC architecture",
+          "feature4": "Integrated testing",
+          "feature5": "Complete documentation"
+        },
+        "useCases": {
+          "useCase1": "REST APIs", 
+          "useCase2": "Web applications", 
+          "useCase3": "Microservices", 
+          "useCase4": "Complex backends"
+        },
+        "stats": "600M+ downloads"
+      }
+    },
+    "case": "Ideal for:",
+    "advantages": {
+      "title": "Why do we choose these technologies?",
+      "subtitle": "It's no coincidence that the world's largest companies trust Drupal and Symfony",
+      "items": {
+        "item1": {
+          "title": "Maximum security",
+          "description": "Drupal and Symfony are recognized for their robust security systems, ideal for enterprise sites"
+        },
+        "item2": {
+          "title": "High performance",
+          "description": "Native optimizations that guarantee fast loading even with high content volume"
+        },
+        "item3": {
+          "title": "Proven scalability",
+          "description": "Architecture that grows with your business, from small sites to enterprise platforms"
+        },
+        "item4": {
+          "title": "Total flexibility",
+          "description": "Complete customization to adapt every functionality to your specific needs"
+        }
+      }
+    },
+    "complementary": {
+      "title": "Complementary technologies",
+      "subtitle": "A complete ecosystem for professional development",
+      "tech1": "Base language optimized for modern web development",
+      "tech2": "Robust databases for secure storage",
+      "tech3": "In-memory cache for maximum performance",
+      "tech4": "Containers for efficient development and deployment",
+      "tech5": "Professional version control",
+      "tech6": "High-performance web servers"
+    },
+    "experience": {
+      "title": "Our experience in numbers",
+      "subtitle": "Measurable results that back up our work",
+      "items": {
+        "item1": {
+          "number": "6+",
+          "label": "Drupal Projects",
+          "description": "Corporate sites and e-commerce"
+        },
+        "item2": {
+          "number": "8+",
+          "label": "APIs with Symfony",
+          "description": "Robust and scalable backends"
+        },
+        "item3": {
+          "number": "100%",
+          "label": "Optimized sites",
+          "description": "SEO and performance guaranteed"
+        },
+        "item4": {
+          "number": "24/7",
+          "label": "Technical support",
+          "description": "Continuous maintenance"
+        }
+      }
+    },
+    "projects": {
+      "title": "Successful projects with our stack",
+      "project1": {
+        "type": "Corporate Portal",
+        "features": {
+          "feature1": "Multilanguage",
+          "feature2": "User management",
+          "feature3": "Content Workflow",
+          "feature4": "CRM Integration"
+        },
+        "industry": "Manufacture",
+        "result": "300% more engagement"
+      },
+      "project2": {
+        "type": "Specialized E-commerce",
+        "features": {
+          "feature1": "Complex catalogo",
+          "feature2": "Multiple currencies",
+          "feature3": "B2B/B2C",
+          "feature4": "ERP Integration"
+        },
+        "industry": "Reatil",
+        "result": "150% more engagement"
+      },
+      "project3": {
+        "type": "Management System",
+        "features": {
+          "feature1": "Interactive Dashboard",
+          "feature2": "Advanced reports",
+          "feature3": "API REST",
+          "feature4": "Integrations"
+        },
+        "industry": "Services",
+        "result": "60% less operating time"
+      }
+    },
+    "cta": {
+      "title": "Does your project need enterprise technology?",
+      "description": "Harness the power of Drupal and Symfony to create robust, secure and scalable solutions",
+      "consultProject": "Consult project",
+      "viewAllServices": "View all services"
+    }
+  },
+  "portfolio": {
+    "navigation": {
+      "backHome": "Back to home",
+      "allProjects": "All projects"
+    },
+    "hero": {
+      "title": "Our",
+      "titleHighlight": "Projects",
+      "description": "Each project tells a story of innovation, creativity, and outstanding results."
+    },
+    "stats": {
+      "projects": "Projects completed",
+      "satisfaction": "Client satisfaction",
+      "response": "Response time"
+    },
+    "filters": {
+      "all": "All",
+      "ecommerce": "E-commerce",
+      "landing": "Landing Pages",
+      "webapp": "Web Applications",
+      "mobile": "Mobile Apps",
+      "automation": "Automation"
+    },
+    "cards": {
+      "viewDetails": "View details",
+      "viewDemo": "View demo",
+      "viewCode": "View code",
+      "preview": "Project preview"
+    },
+    "modal": {
+      "description": "Description",
+      "features": "Main features",
+      "technologies": "Technologies used",
+      "client": "Client",
+      "duration": "Duration",
+      "year": "Year",
+      "viewProject": "View project",
+      "similarProject": "Similar project"
+    },
+    "cta": {
+      "title": "Ready for your next",
+      "titleHighlight": "big project?",
+      "subtitle": "Join our satisfied clients and bring your digital vision to life.",
+      "startProject": "Start my project",
+      "viewServices": "View services"
+    },
+    "alerts": {
+      "demoUnavailable": "Demo not available for this project",
+      "codeUnavailable": "Code not available for this project"
+    },
+    "projects": [
+      {
+        "id": 1,
+        "title": "Modern E-commerce",
+        "category": "ecommerce",
+        "description": "E-commerce platform with integrated payment system and real-time inventory management.",
+        "image": "/images/portfolio/e-commerce.png",
+        "technologies": ["React", "Next.js", "Stripe", "MongoDB"],
+        "client": "Food Store",
+        "year": "2024",
+        "duration": "3 months",
+        "features": [
+          "Shopping cart",
+          "Secure payments",
+          "Admin panel",
+          "Responsive design"
+        ],
+        "demoUrl": "https://foodshop-demo-seven.vercel.app/",
+        "codeUrl": "https://github.com/Luis93Hub/foodshop-demo"
+      },
+      {
+        "id": 2,
+        "title": "Landing Page",
+        "category": "landing",
+        "description": "Corporate website with smooth animations and SEO optimization for maximum online visibility.",
+        "image": "/images/portfolio/landing-page.png",
+        "technologies": ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
+        "client": "Tech Solutions",
+        "year": "2024",
+        "duration": "1 month",
+        "features": [
+          "Smooth animations",
+          "SEO optimized",
+          "Fast loading",
+          "Contact form"
+        ],
+        "demoUrl": "https://nicaraguan-restaurant-demo.vercel.app/",
+        "codeUrl": "https://github.com/Luis93Hub/Nicaraguan-Restaurant---Demo"
+      },
+      {
+        "id": 3,
+        "title": "SaaS Web Application",
+        "category": "webapp",
+        "description": "Business management system with interactive dashboard and real-time reports.",
+        "image": "/images/portfolio/web-aplication.png",
+        "technologies": ["React", "Node.js", "PostgreSQL", "Chart.js"],
+        "client": "Business Corp",
+        "year": "2024",
+        "duration": "4 months",
+        "features": [
+          "Interactive dashboard",
+          "Advanced reports",
+          "Multi-user",
+          "REST API"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      },
+      {
+        "id": 4,
+        "title": "Delivery Mobile App",
+        "category": "mobile",
+        "description": "Mobile app for delivery service with real-time tracking and push notifications.",
+        "image": "/images/portfolio/mobile-app.png",
+        "technologies": ["React Native", "Firebase", "Google Maps", "Stripe"],
+        "client": "Food Delivery",
+        "year": "2024",
+        "duration": "5 months",
+        "features": [
+          "GPS tracking",
+          "Push notifications",
+          "Integrated payments",
+          "Live chat"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      },
+      {
+        "id": 5,
+        "title": "Automation System",
+        "category": "automation",
+        "description": "Business process automation platform with external API integration.",
+        "image": "/images/portfolio/automation.png",
+        "technologies": ["Python", "Django", "Celery", "Redis"],
+        "client": "Manufacturing Co",
+        "year": "2023",
+        "duration": "6 months",
+        "features": [
+          "Task automation",
+          "API integrations",
+          "Automatic reports",
+          "Smart alerts"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      },
+      {
+        "id": 6,
+        "title": "Educational Platform",
+        "category": "webapp",
+        "description": "Online learning system with video classes, tests, and progress tracking.",
+        "image": "/images/portfolio/education-platform.png",
+        "technologies": ["Vue.js", "Laravel", "WebRTC", "MySQL"],
+        "client": "EduTech",
+        "year": "2023",
+        "duration": "4 months",
+        "features": [
+          "Virtual classes",
+          "Online tests",
+          "Student progress",
+          "Certificates"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      }
+    ],
+    "modalOverview": {
+      "imagePlaceholder": "Project image",
+      "description": "Description",
+      "features": "Main features",
+      "technologies": "Technologies used",
+      "client": "Client:",
+      "duration": "Duration:",
+      "year": "Year:",
+      "viewProject": "View project",
+      "similarProject": "Similar project"
+    }
+  },
+  "contactpage": {
+    "navigation":{
+      "backToHome": "Back to Home"
+    },
+    "hero": {
+      "title": "Let's talk about your ",
+      "titleHighlight": "next project",
+      "subtitle": "We transform ideas into digital solutions that boost your business growth"
+    },
+    "stats": {
+      "clients": "Happy clients",
+      "projects": "Completed projects",
+      "responseTime": "Response time"
+    },
+    "section": {
+      "title": "We are here ",
+      "titleHighlight": "to help you",
+      "intro1": "Do you have a brilliant idea? Need to modernize your business? Want to automate processes?",
+      "intro2": "No matter the size of your project, we are ready to turn your goals into digital reality."
+    },
+    "contactMethods": {
+      "callUs": "Call us",
+      "emailUs": "Email us",
+      "location": "Location",
+      "hours": "Mon - Fri, 8:00 AM - 6:00 PM",
+      "responseTime": "Response within 24h",
+      "place": "Nicaragua",
+      "remote": "Remote service available"
+    },
+    "social": {
+      "followUs": "Follow us on social media"
+    },
+    "form": {
+      "title": "Tell us about your project",
+      "subtitle": "Fill out the form and we will get in touch with you soon"
+    }
+  },
+  "automationService": {
+    "navigation": {
+        "backHome":"Services",
+        "current_page": "Automation"
+      },
+    "breadcrumbServices": "Services",
+    "breadcrumbCurrent": "Automation",
+    "title": "Automate your business",
+    "titleHighlight": "work smarter",
+    "description": "We implement solutions that automate repetitive processes, reduce errors, and free up valuable time so you can focus on growing your business.",
+    "ctaAutomate": "Automate now",
+    "ctaSeeAreas": "See what to automate",
+    "results": {
+      "title": "Typical Results",
+      "stats": {
+        "timeSaved": {
+          "label": "Time Saved",
+          "value": "40-60%"
+        },
+        "errorReduction": {
+          "label": "Error Reduction",
+          "value": "80%+"
+        },
+        "roi": {
+          "label": "Typical ROI",
+          "value": "300%"
+        },
+        "investmentRecovery": {
+          "label": "Investment Recovery",
+          "value": "3-6 months"
+        }
+      }
+    },
+    "benefits": {
+      "title": "Why automate your business?",
+      "description": "Automation is not just technology, it’s the key to sustainable and efficient growth",
+      "items": {
+        "item1": {
+          "title": "Save valuable time",
+          "description": "Eliminate repetitive tasks and free your team for strategic activities"
+        },
+        "item2": {
+          "title": "Reduce human errors",
+          "description": "Automated processes are consistent and accurate 24/7"
+        },
+        "item3": {
+          "title": "Increase productivity",
+          "description": "Your company can process more with the same resources"
+        },
+        "item4": {
+          "title": "Automatic scalability",
+          "description": "Systems grow with your business without needing extra staff"
+        }
+      }
+    },
+    "areas": {
+      "title": "Areas we can automate",
+      "description": "From sales to HR, we automate the processes that consume the most time"
+    },
+    "timesSaved": "Time saved:",
+    "automationAreas": [
+      {   
+        "title": "Customer Management (CRM)",
+        "description": "Automate follow-ups from first contact to sale",
+        "automations": [
+          "Automatic lead capture",
+          "Email follow-ups",
+          "Salesperson assignment",
+          "Follow-up reminders"
+        ],
+        "timesSaved": "15-20 hours/week",
+        "icon": "👥"
+      },
+      {
+        "title": "Billing and Collections",
+        "description": "Generate invoices and manage payments without manual intervention",
+        "automations": [
+          "Automatic invoicing",
+          "Payment reminders",
+          "Bank reconciliation",
+          "Financial reports"
+        ],
+        "timesSaved": "10-15 hours/week",
+        "icon": "💰"
+      },
+      {
+        "title": "Inventory and Procurement",
+        "description": "Maintain optimal stock with automatic replenishment",
+        "automations": [
+          "Low stock alerts",
+          "Automatic purchase orders",
+          "Price updates",
+          "Expiry control"
+        ],
+        "timesSaved": "8-12 hours/week",
+        "icon": "📦"
+      },
+      {
+        "title": "Digital Marketing",
+        "description": "Campaigns run automatically and optimize themselves",
+        "automations": [
+          "Sequential email marketing",
+          "Social media posts",
+          "Audience segmentation",
+          "Performance reports"
+        ],
+        "timesSaved": "12-18 hours/week",
+        "icon": "📈"
+      },
+      {
+        "title": "Human Resources",
+        "description": "Optimize personnel management and payroll",
+        "automations": [
+          "Attendance tracking",
+          "Payroll calculation",
+          "Periodic evaluations",
+          "Vacation requests"
+        ],
+        "timesSaved": "6-10 hours/week",
+        "icon": "👤"
+      },
+      {
+        "title": "Customer Support",
+        "description": "Respond to inquiries and solve problems 24/7",
+        "automations": [
+          "Intelligent chatbots",
+          "Automatic tickets",
+          "Priority escalation",
+          "Satisfaction surveys"
+        ],
+        "timesSaved": "20-30 hours/week",
+        "icon": "🎧"
+      }
+    ],
+    "process": {
+      "title": "How we implement automation",
+      "description": "Gradual process without interruptions for your daily operation"
+    },
+    "processAreas": [
+      {
+        "step": "01",
+        "title": "Process Mapping",
+        "description": "We identify which tasks can be automated and prioritize by impact",
+        "duration": "1 week"
+      },
+      {
+        "step": "02",
+        "title": "Workflow Design",
+        "description": "We create optimized automated flows tailored to your business",
+        "duration": "1–2 weeks"
+      },
+      {
+        "step": "03",
+        "title": "Gradual Implementation",
+        "description": "We install automation in phases to minimize disruptions",
+        "duration": "2–4 weeks"
+      },
+      {
+        "step": "04",
+        "title": "Training",
+        "description": "We train your team to manage and leverage automations effectively",
+        "duration": "1 week"
+      },
+      {
+        "step": "05",
+        "title": "Monitoring and Optimization",
+        "description": "We continuously monitor performance and improve over time",
+        "duration": "Ongoing"
+      }
+    ],
+    "tools": {
+      "title": "Tools we use",
+      "description": "We combine the best platforms with custom developments"
+    },
+    "toolsAreas": [
+      { 
+        "name": "Zapier", 
+        "use": "Connects applications", 
+        "logo": "⚡" 
+      },
+      { 
+        "name": "Microsoft Power Automate", 
+        "use": "Enterprise workflows", 
+        "logo": "🔄" 
+      },
+      { 
+        "name": "WhatsApp Business API", 
+        "use": "Message automation", 
+        "logo": "💬" 
+      },
+      { 
+        "name": "Custom systems", 
+        "use": "Specific automations", 
+        "logo": "⚙️" 
+      },
+      { 
+        "name": "Integration APIs", 
+        "use": "Connect all your systems", 
+        "logo": "🔗" 
+      },
+      { 
+        "name": "Artificial intelligence", 
+        "use": "Automated decisions", 
+        "logo": "🤖" 
+      }
+    ],
+    "testimonials": {
+      "title": "Success stories"
+    },
+  "testimonialsPeople": [
+    {
+      "name": "Patricia Morales",
+      "company": "Smile Dental Clinic",
+      "content": "The automation of appointments and reminders has reduced no-shows by 60%. Our patients are happier and we are more organized.",
+      "rating": 5,
+      "result": "60% fewer no-shows"
+    },
+    {
+      "name": "Jorge Castillo",
+      "company": "Supermarket La Economía",
+      "content": "The automatic restocking system keeps our inventory always supplied. We no longer lose sales due to out-of-stock products.",
+      "rating": 5,
+      "result": "25% increase in sales"
+    }
+  ],
+    "pricing": {
+      "title": "Automation investment",
+      "description": "Packages designed for different levels of automation",
+      "popular": "Most popular",
+      "cta": "Request quote",
+      "consultationTitle": "Not sure what to automate?",
+      "consultationDescription": "We offer a free consultation to identify the best automation opportunities in your business",
+      "consultationButton": "Request free consultation"
+    },
+    "pricingAutomation": [
+      {
+        "name": "Basic Automation",
+        "price": "$500 - $1,500",
+        "description": "Ideal for small businesses getting started",
+        "features": [
+          "1-3 automated processes",
+          "Standard tools",
+          "Basic setup",
+          "1 month of support"
+        ],
+        "timeframe": "2-3 weeks",
+        "popular": false
+      },
+      {
+        "name": "Advanced Automation",
+        "price": "$1,500 - $5,000",
+        "description": "For companies with multiple processes",
+        "features": [
+          "4-8 automated processes",
+          "Custom integrations",
+          "Monitoring dashboard",
+          "3 months of support"
+        ],
+        "timeframe": "4-6 weeks",
+        "popular": true
+      },
+      {
+        "name": "Enterprise Automation",
+        "price": "$5,000+",
+        "description": "Complete solution for large operations",
+        "features": [
+          "Unlimited processes",
+          "AI and machine learning",
+          "24/7 support",
+          "6 months of optimization"
+        ],
+        "timeframe": "6-10 weeks",
+        "popular": false
+      }
+    ],
+    "cta": {
+      "title": "Ready to automate your business?",
+      "description": "Start working smarter, not harder. Let’s discuss how automation can transform your operation",
+      "automateButton": "Start automation",
+      "callButton": "Call now"
+    }
+  },
+  "customSoftware": {
+      "navigation": {
+        "backHome":"Services",
+        "current_page": "Custom Software"
+      },
+      "title": "Software that adapts",
+      "titleHighlight": "to your business",
+      "description": "We develop custom systems that optimize your processes, automate repetitive tasks, and make your team more productive.",
+      "cta_quote": "Request a quote",
+      "cta_solutions": "View solutions",
+      "why_title": "Why custom software?",
+      "why_points": {
+        "point1": "100% tailored to your processes",
+        "point2": "Scalable with your growth",
+        "point3": "Higher team productivity",
+        "point4": "Proven ROI"
+      },
+    "benefits": {
+      "title": "Advantages of custom software",
+      "description": "Unlike generic solutions, our software is designed specifically for your business.",
+      "benefit1": {
+        "title": "Designed for your business",
+        "description": "We develop specific features that adapt to your unique processes"
+      },
+      "benefit2": {
+        "title": "Full integration",
+        "description": "We connect all your systems to work in perfect sync"
+      },
+      "benefit3": {
+        "title": "Easy to use",
+        "description": "Intuitive interfaces your team can master from day one"
+      },
+      "benefit4": {
+        "title": "Real-time reports",
+        "description": "Make informed decisions with up-to-date data"
+      }
+    },
+    "solutionsSection": {
+      "title": "Types of software we develop",
+      "description": "Specialized systems for different areas of your business"
+     },
+    "solutions": [
+      {
+        "title": "Sales Management System",
+        "description": "Control the entire process from lead to invoicing",
+        "features": ["Integrated CRM", "Client tracking", "Quotation automation", "Sales dashboard"],
+        "icon": "💼"
+      },
+      {
+        "title": "Inventory Control",
+        "description": "Maintain accurate control of your stock and movements",
+        "features": ["Low stock alerts", "Barcodes", "Multiple warehouses", "Turnover reports"],
+        "icon": "📦"
+      },
+      {
+        "title": "Billing System",
+        "description": "Automate your billing and comply with tax regulations",
+        "features": ["Electronic invoicing", "Multiple taxes", "Recurring payments", "Accounting integration"],
+        "icon": "📄"
+      },
+      {
+        "title": "Project Management",
+        "description": "Organize teams, tasks, and schedules efficiently",
+        "features": ["Visual timelines", "Task assignment", "Time tracking", "Team collaboration"],
+        "icon": "🎯"
+      },
+      {
+        "title": "HR System",
+        "description": "Manage your human talent comprehensively",
+        "features": ["Attendance control", "Automated payrolls", "Evaluations", "Employee portal"],
+        "icon": "👥"
+      },
+      {
+        "title": "E-learning Platform",
+        "description": "Train your team or monetize knowledge",
+        "features": ["Interactive courses", "Progress tracking", "Certifications", "Gamification"],
+        "icon": "🎓"
+      }
+    ],
+    "processSection": {
+      "title": "Our development process",
+      "description": "Proven methodology that guarantees successful results"
+    },
+    "process": [
+      { "step": "01", "title": "In-depth analysis", "description": "We study your current processes and identify improvement opportunities", "duration": "1-2 weeks" },
+      { "step": "02", "title": "Solution design", "description": "We create architecture and custom workflows", "duration": "1-2 weeks" },
+      { "step": "03", "title": "Iterative development", "description": "We build the software with partial deliveries for validation", "duration": "4-12 weeks" },
+      { "step": "04", "title": "Implementation", "description": "We install, configure, and train your team", "duration": "1-2 weeks" },
+      { "step": "05", "title": "Ongoing support", "description": "We accompany growth with updates and improvements", "duration": "Ongoing" }
+    ],
+    "technologiesSection": {
+      "title": "Technologies we use",
+      "description": "Modern and reliable tools for creating robust and scalable software"
+    },
+    "technologies": [
+      { "name": "React/Next.js", "category": "Frontend" },
+      { "name": "Node.js", "category": "Backend" },
+      { "name": "Python", "category": "Backend" },
+      { "name": "PostgreSQL", "category": "Database" },
+      { "name": "MongoDB", "category": "Database" },
+      { "name": "AWS/DigitalOcean", "category": "Hosting" }
+    ],
+    "successfully": {
+      "title": "Success stories"
+    },
+    "testimonials": [
+      {
+        "name": "Roberto Sánchez",
+        "company": "Distribuidora El Norte",
+        "content": "The inventory system has revolutionized our business. We now know exactly what products we have and which ones to reorder.",
+        "rating": 5,
+        "result": "30% reduction in out-of-stock items"
+      },
+      {
+        "name": "Ana Patricia López",
+        "company": "Constructora Moderna",
+        "content": "The project management software allows us to coordinate teams better. Projects are delivered on time and within budget.",
+        "rating": 5,
+        "result": "25% improvement in delivery times"
+      }
+    ],
+    "pricing": {
+      "title": "How do we determine the price?",
+      "description": "The cost depends on several factors that we analyze together with you.",
+      "title2": "Typical investment",
+      "system1": "Basic system",
+      "system2": "Intermediate system",
+      "system3": "Advanced system",
+      "consultation": "Free consultation:",
+      "consultationDescription": "We help you define the ideal scope and budget for your project"
+    },
+    "pricing_factors": [
+      { "factor": "Functional complexity", "description": "Number of modules and specific features", "impact": "$$-$$$" },
+      { "factor": "Integrations", "description": "Connection with existing systems or external services", "impact": "$-$$" },
+      { "factor": "Number of users", "description": "Simultaneous capacity and user roles", "impact": "$-$$" },
+      { "factor": "Customization", "description": "Level of adaptation to specific processes", "impact": "$$-$$$" }
+    ],
+
+    "cta": {
+      "title": "Ready to optimize your business?",
+      "description": "Let’s talk about how custom software can transform your company’s efficiency",
+      "cta_quote": "Request a quote",
+      "cta_call": "Call now"
+    }
+  },
+  "webDevelopment": {
+    "navigation": {
+      "backHome":"Services",
+      "current_page": "Web Development"
+    },
+    "title_main": "Web Development that",
+    "title_highlight": "Delivers Results",
+    "description": "We create modern, fast, and optimized websites that connect with your audience and turn visitors into real customers.",
+    "cta_start": "Start project",
+    "cta_pricing": "View pricing",
+    "features": {
+      "feature1": "Responsive design guaranteed",
+      "feature2": "Search engine optimized (SEO)",
+      "feature3": "Fast and secure loading",
+      "feature4": "Technical support included"
+    },
+    "features_section": {
+      "title": "Why choose us for your website?",
+      "description": "We combine attractive design with technical functionality to create websites that truly perform.",
+      "items": {
+        "item1": {
+          "title": "Responsive Design", 
+          "description": "Your website will look perfect on any device: phones, tablets, and computers" 
+        },
+        "item2": {
+          "title": "SEO Optimized", 
+          "description": "We configure your site to appear in Google's top positions" 
+        },
+        "item3": { 
+          "title": "Ultra-Fast Loading", 
+          "description": "We optimize performance so your visitors don't wait or leave" 
+        },
+        "item4": { 
+          "title": "Admin Panel", 
+          "description": "Easily manage your content with no technical knowledge needed" 
+        }
+      }
+    },
+    "process_section": {
+      "title": "Our development process",
+      "description": "A structured approach that guarantees quality results on time and within scope",
+      "process": [
+        {
+          "step": "01",
+          "title": "Initial consultation",
+          "description": "We understand your business, goals, and target audience",
+          "details": ["Competitor analysis", "Goal definition", "Content strategy"]
+        },
+        {
+          "step": "02",
+          "title": "Design and prototype",
+          "description": "We create the visual design and site structure",
+          "details": ["Wireframes and mockups", "Color and typography selection", "User experience (UX)"]
+        },
+        {
+          "step": "03",
+          "title": "Development",
+          "description": "We build your website with the best technologies",
+          "details": ["Frontend and backend development", "Feature integration", "Performance optimization"]
+        },
+        {
+          "step": "04",
+          "title": "Launch and support",
+          "description": "We publish your site and guide you through the process",
+          "details": ["Hosting setup", "Training", "Ongoing support"]
+        }
+      ]
+    },
+    "packages_section": {
+      "title": "Packages and pricing",
+      "description": "Plans designed for different needs and budgets",
+      "most_popular": "Most popular",
+      "choose_plan": "Choose plan",
+      "packages": [
+        {
+          "name": "Basic Site",
+          "price": "From $299",
+          "description": "Perfect for small businesses and entrepreneurs",
+          "features": ["Up to 5 pages", "Responsive design", "Contact form", "Basic SEO", "1 month of support"],
+          "popular": false
+        },
+        {
+          "name": "Professional Site",
+          "price": "From $599",
+          "description": "Ideal for growing businesses",
+          "features": ["Up to 10 pages", "Admin panel", "Integrated blog", "Advanced SEO", "Social media integration", "3 months of support"],
+          "popular": true
+        },
+        {
+          "name": "E-commerce",
+          "price": "From $999",
+          "description": "For selling products online",
+          "features": ["Complete online store", "Payment system", "Inventory management", "Sales dashboard", "WhatsApp integration", "6 months of support"],
+          "popular": false
+
+        }
+      ]
+    },
+    "testimonials_section": {
+      "title": "What our clients say",
+      "testimonials": [
+        {
+          "name": "María González",
+          "company": "Boutique Elena",
+          "content": "Our website increased sales by 40%. Customers can now view our products and order online.",
+          "rating": 5
+        },
+        {
+          "name": "Carlos Mendoza",
+          "company": "Ferretería Central",
+          "content": "The admin panel is super easy to use. I can update prices and products without technical help.",
+          "rating": 5
+        }
+      ]
+    },
+    "faq_section": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How long does it take to develop a website?",
+          "answer": "A basic site takes 2–3 weeks, a professional one 4–6 weeks, and an e-commerce site 6–8 weeks."
+        },
+        {
+          "question": "Does it include hosting and domain?",
+          "answer": "We help you set up hosting and domain, but annual costs are separate (approximately $100–150/year)."
+        },
+        {
+          "question": "Can I update the content myself?",
+          "answer": "Yes, we include an easy-to-use admin panel and train you to manage your site independently."
+        },
+        {
+          "question": "What if I need changes later?",
+          "answer": "We include support during the specified period. After that, we offer maintenance plans or one-time updates."
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "Ready to create your website?",
+      "description": "Let's talk about your project and discover how we can help you build a successful digital presence.",
+      "cta_start": "Start project",
+      "cta_call": "Call now"
+    }
+  }
+}

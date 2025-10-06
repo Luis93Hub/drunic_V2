@@ -1,132 +1,39 @@
+'use client'
+
 import Link from "next/link";
 import { Globe, Smartphone, Search, Zap, CheckCircle, ArrowRight, Star, Quote } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function DesarrolloWeb() {
+  const t = useTranslations('webDevelopment');
+  const params = useParams();
+  const locale = params.locale || 'es'
+  const process = t.raw('process_section.process');
+  const packages = t.raw('packages_section.packages');
+  const testimonials = t.raw('testimonials_section.testimonials');
+  const faq = t.raw('faq_section.items');
+
   const features = [
     {
       icon: <Smartphone className="w-6 h-6" />,
-      title: "Diseño Responsive",
-      description: "Tu sitio web se verá perfecto en cualquier dispositivo: móviles, tablets y computadoras"
+      title: t('features_section.items.item1.title'),
+      description: t('features_section.items.item1.description')
     },
     {
       icon: <Search className="w-6 h-6" />,
-      title: "SEO Optimizado",
-      description: "Configuramos tu sitio para que aparezca en las primeras posiciones de Google"
+      title: t('features_section.items.item2.title'),
+      description: t('features_section.items.item2.description')
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Carga Ultrarrápida",
-      description: "Optimizamos el rendimiento para que tus visitantes no esperen y no se vayan"
+      title: t('features_section.items.item3.title'),
+      description: t('features_section.items.item3.description')
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Panel de Administración",
-      description: "Gestiona tu contenido fácilmente sin necesidad de conocimientos técnicos"
-    }
-  ];
-
-  const process = [
-    {
-      step: "01",
-      title: "Consulta inicial",
-      description: "Entendemos tu negocio, objetivos y audiencia objetivo",
-      details: ["Análisis de competencia", "Definición de objetivos", "Estrategia de contenido"]
-    },
-    {
-      step: "02",
-      title: "Diseño y prototipo",
-      description: "Creamos el diseño visual y la estructura de tu sitio",
-      details: ["Wireframes y mockups", "Selección de colores y tipografía", "Experiencia de usuario (UX)"]
-    },
-    {
-      step: "03",
-      title: "Desarrollo",
-      description: "Construimos tu sitio web con las mejores tecnologías",
-      details: ["Desarrollo frontend y backend", "Integración de funcionalidades", "Optimización de rendimiento"]
-    },
-    {
-      step: "04",
-      title: "Lanzamiento y soporte",
-      description: "Publicamos tu sitio y te acompañamos en el proceso",
-      details: ["Configuración de hosting", "Capacitación", "Soporte continuo"]
-    }
-  ];
-
-  const packages = [
-    {
-      name: "Sitio Básico",
-      price: "Desde $299",
-      description: "Perfect para pequeños negocios y emprendedores",
-      features: [
-        "Hasta 5 páginas",
-        "Diseño responsive",
-        "Formulario de contacto",
-        "SEO básico",
-        "1 mes de soporte"
-      ],
-      popular: false
-    },
-    {
-      name: "Sitio Profesional",
-      price: "Desde $599",
-      description: "Ideal para empresas en crecimiento",
-      features: [
-        "Hasta 10 páginas",
-        "Panel de administración",
-        "Blog integrado",
-        "SEO avanzado",
-        "Integración con redes sociales",
-        "3 meses de soporte"
-      ],
-      popular: true
-    },
-    {
-      name: "E-commerce",
-      price: "Desde $999",
-      description: "Para vender productos online",
-      features: [
-        "Tienda online completa",
-        "Sistema de pagos",
-        "Gestión de inventario",
-        "Panel de ventas",
-        "Integración con WhatsApp",
-        "6 meses de soporte"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "María González",
-      company: "Boutique Elena",
-      content: "Nuestro sitio web ha aumentado las ventas en un 40%. Los clientes ahora pueden ver nuestros productos y hacer pedidos online.",
-      rating: 5
-    },
-    {
-      name: "Carlos Mendoza",
-      company: "Ferretería Central",
-      content: "El panel de administración es muy fácil de usar. Puedo actualizar precios y productos sin ayuda técnica.",
-      rating: 5
-    }
-  ];
-
-  const faq = [
-    {
-      question: "¿Cuánto tiempo toma desarrollar un sitio web?",
-      answer: "Un sitio básico toma de 2-3 semanas, uno profesional de 4-6 semanas, y un e-commerce de 6-8 semanas."
-    },
-    {
-      question: "¿Incluye el hosting y dominio?",
-      answer: "Te ayudamos a configurar el hosting y dominio, pero los costos anuales van por separado (aproximadamente $100-150/año)."
-    },
-    {
-      question: "¿Puedo actualizar el contenido yo mismo?",
-      answer: "Sí, incluimos un panel de administración fácil de usar y te capacitamos para que manejes tu sitio independientemente."
-    },
-    {
-      question: "¿Qué pasa si necesito cambios después?",
-      answer: "Incluimos soporte durante el período especificado. Después, ofrecemos planes de mantenimiento mensual o cambios puntuales."
+      title: t('features_section.items.item4.title'),
+      description: t('features_section.items.item4.description')
     }
   ];
 
@@ -143,32 +50,31 @@ export default function DesarrolloWeb() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <Link href="/#services" className="text-blue-200 hover:text-white transition-colors">
-                  Servicios
+                <Link href={`/${locale}/#services`} className="text-blue-200 hover:text-white transition-colors">
+                  {t('navigation.backHome')}
                 </Link>
                 <span className="text-blue-300">/</span>
-                <span className="text-white">Desarrollo Web</span>
+                <span className="text-white">{t('navigation.current_page')}</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Desarrollo Web que
-                <span className="block text-blue-200">Genera Resultados</span>
+                {t('title_main')}
+                <span className="block text-blue-200">{t('title_highlight')}</span>
               </h1>
               
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Creamos sitios web modernos, rápidos y optimizados que conectan con tu audiencia 
-                y convierten visitantes en clientes reales.
+                {t('description')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="#contacto">
                   <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Iniciar proyecto
+                    {t('cta_start')}
                   </button>
                 </Link>
                 <Link href="#paquetes">
                   <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-                    Ver precios
+                    {t('cta_pricing')}
                   </button>
                 </Link>
               </div>
@@ -179,19 +85,19 @@ export default function DesarrolloWeb() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">Diseño responsive garantizado</span>
+                    <span className="text-lg">{t('features.feature1')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">Optimizado para buscadores (SEO)</span>
+                    <span className="text-lg">{t('features.feature2')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">Carga rápida y segura</span>
+                    <span className="text-lg">{t('features.feature3')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">Soporte técnico incluido</span>
+                    <span className="text-lg">{t('features.feature4')}</span>
                   </div>
                 </div>
               </div>
@@ -205,10 +111,10 @@ export default function DesarrolloWeb() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              ¿Por qué elegirnos para tu sitio web?
+              {t('features_section.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Combinamos diseño atractivo con funcionalidad técnica para crear sitios que realmente funcionan
+              {t('features_section.description')}
             </p>
           </div>
 
@@ -237,10 +143,10 @@ export default function DesarrolloWeb() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Nuestro proceso de desarrollo
+              {t('process_section.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Un enfoque estructurado que garantiza resultados de calidad en tiempo y forma
+              {t('process_section.description')}
             </p>
           </div>
 
@@ -289,10 +195,10 @@ export default function DesarrolloWeb() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Paquetes y precios
+              {t('packages_section.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Planes diseñados para diferentes necesidades y presupuestos
+              {t('packages_section.description')}
             </p>
           </div>
 
@@ -302,7 +208,7 @@ export default function DesarrolloWeb() {
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Más popular
+                      {t('packages_section.most_popular')}
                     </span>
                   </div>
                 )}
@@ -333,7 +239,7 @@ export default function DesarrolloWeb() {
                     ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:shadow-xl transform hover:scale-105' 
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                 }`}>
-                  Elegir plan
+                  {t('packages_section.choose_plan')}
                 </button>
               </div>
             ))}
@@ -346,7 +252,7 @@ export default function DesarrolloWeb() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Lo que dicen nuestros clientes
+              {t('testimonials_section.title')}
             </h2>
           </div>
 
@@ -384,7 +290,7 @@ export default function DesarrolloWeb() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Preguntas frecuentes
+              {t('faq_section.title')}
             </h2>
           </div>
 
@@ -407,22 +313,22 @@ export default function DesarrolloWeb() {
       <section id="contacto" className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            ¿Listo para crear tu sitio web?
+            {t('cta_section.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Conversemos sobre tu proyecto y descubre cómo podemos ayudarte a tener presencia digital exitosa
+            {t('cta_section.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
-                <span>Iniciar proyecto</span>
+                <span>{t('cta_section.cta_start')}</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
             </Link>
             
             <a href="tel:+50557517432" className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-              Llamar ahora
+              {t('cta_section.cta_call')}
             </a>
           </div>
         </div>

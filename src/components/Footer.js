@@ -1,8 +1,16 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Facebook, Instagram, Send, Linkedin } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function Footer() {
+  const t = useTranslations('footer');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Main content of the footer */}
@@ -27,20 +35,20 @@ export default function Footer() {
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Transformamos ideas en soluciones digitales. Diseñamos páginas web, desarrollamos software a medida y automatizamos procesos para impulsar tu negocio.
+              {t('company.description')}
             </p>
 
             {/* Call to action */}
             <div className="bg-gradient-to-r from-red-500/10 to-red-600/10 border border-red-500/20 rounded-xl p-4 mb-6">
               <h5 className="text-lg font-semibold text-white mb-2">
-                ¿Tienes un proyecto en mente?
+                {t('cta.title')}
               </h5>
               <p className="text-gray-300 text-sm mb-3">
-                Conversemos sobre cómo podemos ayudarte a crecer digitalmente
+                {t('cta.description')}
               </p>
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 text-sm">
-                  Iniciar proyecto
+                  {t('cta.button')}
                 </button>
               </Link>
             </div>
@@ -49,15 +57,15 @@ export default function Footer() {
           {/* Quick links */}
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">
-              Enlaces rápidos
+              {t('quickLinks')}
             </h4>
             <ul className="space-y-3">
               {[
-                { name: 'Inicio', href: '#home' },
-                { name: 'Servicios', href: '#services' },
-                { name: 'Sobre nosotros', href: '#about' },
-                { name: 'Contacto', href: '/contact' },
-                { name: 'Portafolio', href: '/portfolio' }
+                { name: t('home'), href: '#home' },
+                { name: t('services'), href: '#services' },
+                { name: t('about'), href: '#about' },
+                { name: t('contact'), href: '/contact' },
+                { name: t('portfolio'), href: '/portfolio' }
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -75,7 +83,7 @@ export default function Footer() {
           {/* Contact Information */}
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">
-              Contacto
+              {t('contact')}
             </h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3 group cursor-pointer">
@@ -98,7 +106,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5 text-red-400" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400 mb-1">Teléfono</p>
+                  <p className="text-sm text-gray-400 mb-1">{t('phone')}</p>
                   <a 
                     href="tel:+50557517432"
                     className="text-gray-300 hover:text-white transition-colors duration-300"
@@ -113,7 +121,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-red-400" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400 mb-1">Ubicación</p>
+                  <p className="text-sm text-gray-400 mb-1">{t('location')}</p>
                   <p className="text-gray-300">
                     Nicaragua
                   </p>
@@ -124,40 +132,41 @@ export default function Footer() {
             {/* Social red */}
             <div className="mt-8">
               <h5 className="text-lg font-semibold mb-4 text-white">
-                Síguenos
+                {t('followUs')}
               </h5>
               <div className="flex space-x-4">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61579682131905"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-600/20 hover:bg-blue-600/30 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                   aria-label="Facebook"
                 >
-                  <Facebook className="w-5 h-5 text-blue-400" />
+                  <Facebook className="w-4 h-4 text-blue-400" />
                 </a>
                 <a
                   href="https://www.instagram.com/drunicservices/"
                   target="_blank"
                   rel="noopener noreferrer" 
-                  className="w-12 h-12 bg-pink-600/20 hover:bg-pink-600/30 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 bg-pink-600/20 hover:bg-pink-600/30 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-5 h-5 text-pink-400" />
+                  <Instagram className="w-4 h-4 text-pink-400" />
                 </a>
                 <a 
                   href="mailto:contact.drunic@gmail.com"
-                  className="w-12 h-12 bg-red-600/20 hover:bg-red-600/30 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 bg-red-600/20 hover:bg-red-600/30 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                   aria-label="Email"
                 >
-                  <Send className="w-5 h-5 text-red-400" />
+                  <Send className="w-4 h-4 text-red-400" />
                 </a>
                                 <a 
                   href="https://www.linkedin.com/company/108809658"
-                  className="w-12 h-12 bg-blue-600/20 hover:bg-blue-600/30 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                  rel="noopener noreferrer"
                   aria-label="Linkedin"
                 >
-                  <Linkedin className="w-5 h-5 text-red-400" />
+                  <Linkedin className="w-4 h-4 text-blue-400" />
                 </a>
               </div>
             </div>
@@ -171,7 +180,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                &copy; 2025 <span className="text-white font-semibold">Drunic</span>. Todos los derechos reservados.
+                &copy; 2025 <span className="text-white font-semibold">Drunic</span>. {t('copyright')}
               </p>
             </div>
           </div>

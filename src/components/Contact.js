@@ -2,9 +2,15 @@
 
 import ContactForm from "@/components/ContactForm"
 import Image from 'next/image';
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 
  const Contact = () => {
+  const t = useTranslations('contact');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   return (
     <section id='contact' className="relative min-h-screen overflow-hidden">
       {/* Background with bubble effect */}
@@ -34,19 +40,19 @@ import Image from 'next/image';
             {/* Left side - Information */}
             <div className="text-white">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                Comunícate
+                {t('title')}
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-white">
-                  con nosotros
+                  {t('titleHighlight')}
                 </span>
               </h2>
               
               <div className="space-y-6 mb-4">
                 <p className="text-lg text-gray-200 leading-relaxed">
-                  Creemos juntos cosas increbiles.
+                  {t('subtitle')}
                 </p>
                 <p className="text-lg text-gray-200 leading-relaxed">
-                  Cuéntanos lo que necesitas y encontraremos la mejor solución digital para ti, no solo es crear una pagina web, sino ofrecer la mejor experiencia digital que conecte con los clientes.
+                  {t('description')}
                 </p>
               </div>
 
@@ -58,7 +64,7 @@ import Image from 'next/image';
                       src={`/images/email_icon.png`}
                       width={80}
                       height={80}
-                      alt='email_icon'
+                      alt={locale === 'es' ? 'email_icon' : "icon email"}
                     />
                   </div>
                 </div>

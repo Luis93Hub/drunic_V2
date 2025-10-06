@@ -1,107 +1,28 @@
 'use client';
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Code, Palette, Smartphone, Globe, Zap, Users, ArrowRight, Star, Calendar, Tag, X } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 const PortfolioPage = () => {
+  const t = useTranslations('portfolio');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
-
-  const projects = [
-    {
-      id: 1,
-      title: "E-commerce Moderno",
-      category: "ecommerce",
-      description: "Plataforma de comercio electrónico con sistema de pagos integrado y gestión de inventario en tiempo real.",
-      image: "/images/portfolio/e-commerce.png",
-      technologies: ["React", "Next.js", "Stripe", "MongoDB"],
-      client: "Food Store",
-      year: "2024",
-      duration: "3 meses",
-      features: ["Carrito de compras", "Pagos seguros", "Panel de administración", "Responsive design"],
-      demoUrl: "https://foodshop-demo-seven.vercel.app/",
-      codeUrl: "https://github.com/Luis93Hub/foodshop-demo"
-    },
-    {
-      id: 2,
-      title: "Landing Page",
-      category: "landing",
-      description: "Sitio web corporativo con animaciones fluidas y optimización SEO para máxima visibilidad online.",
-      image: "/images/portfolio/landing-page.png",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
-      client: "Tech Solutions",
-      year: "2024",
-      duration: "1 mes",
-      features: ["Animaciones suaves", "SEO optimizado", "Carga rápida", "Formulario de contacto"],
-      demoUrl: "https://nicaraguan-restaurant-demo.vercel.app/",
-      codeUrl: "https://github.com/Luis93Hub/Nicaraguan-Restaurant---Demo"
-    },
-    {
-      id: 3,
-      title: "Aplicación Web SaaS",
-      category: "webapp",
-      description: "Sistema de gestión empresarial con dashboard interactivo y reportes en tiempo real.",
-      image: "/images/portfolio/web-aplication.png",
-      technologies: ["React", "Node.js", "PostgreSQL", "Chart.js"],
-      client: "Business Corp",
-      year: "2024",
-      duration: "4 meses",
-      features: ["Dashboard interactivo", "Reportes avanzados", "Multi-usuario", "API REST"],
-      demoUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: 4,
-      title: "App Móvil Delivery",
-      category: "mobile",
-      description: "Aplicación móvil para servicio de delivery con tracking en tiempo real y notificaciones push.",
-      image: "/images/portfolio/mobile-app.png",
-      technologies: ["React Native", "Firebase", "Google Maps", "Stripe"],
-      client: "Food Delivery",
-      year: "2024",
-      duration: "5 meses",
-      features: ["Tracking GPS", "Notificaciones", "Pagos integrados", "Chat en vivo"],
-      demoUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Sistema de Automatización",
-      category: "automation",
-      description: "Plataforma de automatización de procesos empresariales con integración de APIs externas.",
-      image: "/images/portfolio/automation.png",
-      technologies: ["Python", "Django", "Celery", "Redis"],
-      client: "Manufacturing Co",
-      year: "2023",
-      duration: "6 meses",
-      features: ["Automatización de tareas", "Integraciones API", "Reportes automáticos", "Alertas inteligentes"],
-      demoUrl: "#",
-      codeUrl: "#"
-    },
-    {
-      id: 6,
-      title: "Plataforma Educativa",
-      category: "webapp",
-      description: "Sistema de aprendizaje online con videoconferencias, evaluaciones y seguimiento de progreso.",
-      image: "/images/portfolio/education-platform.png",
-      technologies: ["Vue.js", "Laravel", "WebRTC", "MySQL"],
-      client: "EduTech",
-      year: "2023",
-      duration: "4 meses",
-      features: ["Clases virtuales", "Evaluaciones online", "Progreso del estudiante", "Certificaciones"],
-      demoUrl: "#",
-      codeUrl: "#"
-    }
-  ];
+  const projects = t.raw('projects');
 
   const categories = [
-    { id: 'all', name: 'Todos los proyectos', icon: Globe },
-    { id: 'ecommerce', name: 'E-commerce', icon: Zap },
-    { id: 'landing', name: 'Landing Pages', icon: Palette },
-    { id: 'webapp', name: 'Aplicaciones Web', icon: Code },
-    { id: 'mobile', name: 'Apps Móviles', icon: Smartphone },
-    { id: 'automation', name: 'Automatización', icon: Users }
+    { id: 'all', name: t('filters.all'), icon: Globe },
+    { id: 'ecommerce', name: t('filters.ecommerce'), icon: Zap },
+    { id: 'landing', name: t('filters.landing'), icon: Palette },
+    { id: 'webapp', name: t('filters.webapp'), icon: Code },
+    { id: 'mobile', name: t('filters.mobile'), icon: Smartphone },
+    { id: 'automation', name: t('filters.automation'), icon: Users }
   ];
 
   const filteredProjects = selectedCategory === 'all' 
@@ -114,7 +35,7 @@ const PortfolioPage = () => {
     if (demoUrl && demoUrl !== '#') {
       window.open(demoUrl, '_blank');
     } else {
-      alert('Demo no disponible para este proyecto');
+      alert(t('alerts.demoUnavailable'));
     }
   };
 
@@ -124,7 +45,7 @@ const PortfolioPage = () => {
     if (codeUrl && codeUrl !== '#') {
       window.open(codeUrl, '_blank');
     }else {
-      alert('Código no disponible para este proyecto')
+      alert(t('alerts.codeUnavailable'))
     }
   };
 
@@ -136,7 +57,7 @@ const PortfolioPage = () => {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 group">
               <ArrowLeft className="w-5 h-5 text-red-400 group-hover:text-red-300 transition-colors" />
-              <span className="text-white group-hover:text-red-300 transition-colors">Volver al inicio</span>
+              <span className="text-white group-hover:text-red-300 transition-colors">{t('navigation.backHome')}</span>
             </Link>
             
             <div className="flex items-center space-x-3">
@@ -178,14 +99,14 @@ const PortfolioPage = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Nuestros
+              {t('hero.title')}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600">
-                Proyectos
+                {t('hero.titleHighlight')}
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Cada proyecto cuenta una historia de innovación, creatividad y resultados excepcionales
+              {t('hero.description')}
             </p>
           </div>
 
@@ -195,19 +116,19 @@ const PortfolioPage = () => {
               <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 mb-2">
                 6+
               </div>
-              <p className="text-gray-300 text-lg">Proyectos Completados</p>
+              <p className="text-gray-300 text-lg">{t('stats.projects')}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 mb-2">
                 98%
               </div>
-              <p className="text-gray-300 text-lg">Satisfacción del Cliente</p>
+              <p className="text-gray-300 text-lg">{t('stats.satisfaction')}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 mb-2">
                 24h
               </div>
-              <p className="text-gray-300 text-lg">Tiempo de Respuesta</p>
+              <p className="text-gray-300 text-lg">{t('stats.response')}</p>
             </div>
           </div>
         </div>
@@ -262,7 +183,7 @@ const PortfolioPage = () => {
                           className="object-cover z-0 opacity-30"
                         />
                         <Code className="w-12 h-12 mx-auto mb-2" />
-                        <p className="text-sm">Vista previa del proyecto</p>
+                        <p className="text-sm">{t('cards.preview')}</p>
                       </div>
                     </div>
                   </div>
@@ -276,7 +197,7 @@ const PortfolioPage = () => {
                           setSelectedProject(project)}}
                         className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105"
                       >
-                        <span className='text-sm font-medium'>Ver detalles</span>
+                        <span className='text-sm font-medium'>{t('cards.viewDetails')}</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
 
@@ -285,7 +206,7 @@ const PortfolioPage = () => {
                         className='bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105'
                       >
                         <ExternalLink className='w-4 h-4' />
-                        <span className='text-sm font-medium'>Demo</span>
+                        <span className='text-sm font-medium'>{t('cards.viewDemo')}</span>
                       </button>
 
                       <button
@@ -293,7 +214,7 @@ const PortfolioPage = () => {
                         className='bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105'
                       >
                         <Code className='w-4 h-4' />
-                        <span>Código</span>
+                        <span>{t('cards.viewCode')}</span>
                       </button>
                     </div>
                   </div>
@@ -358,24 +279,24 @@ const PortfolioPage = () => {
       <section className="py-20 bg-gradient-to-r from-red-900/20 to-transparent">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            ¿Listo para el siguiente
+            {t('cta.title')}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
-              gran proyecto?
+              {t('cta.titleHighlight')}
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Únete a nuestros clientes satisfechos y dale vida a tu visión digital
+            {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                Iniciar mi proyecto
+                {t('cta.startProject')}
               </button>
             </Link>
             <Link href="/#services">
               <button className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300">
-                Ver servicios
+                {t('cta.viewServices')}
               </button>
             </Link>
           </div>
@@ -405,16 +326,16 @@ const PortfolioPage = () => {
               <div className="w-full h-64 bg-gradient-to-br from-red-900/20 to-gray-800 rounded-xl mb-8 flex items-center justify-center">
                 <div className="text-center text-gray-400">
                   <Code className='w-16 h-16 mx-auto mb-4' />
-                  <p>Imagen del proyecto</p>
+                  <p>{t('modalOverview.imagePlaceholder')}</p>
                 </div>
               </div>
 
               {/* Project Details */}
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Descripción</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">{t('modalOverview.description')}</h3>
                   <p className="text-gray-300 leading-relaxed mb-6">{selectedProject.description}</p>
-                  <h3 className="text-xl font-semibold text-white mb-4">Características principales</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">{t('modalOverview.features')}</h3>
                   <ul className="space-y-2">
                     {selectedProject.features.map((feature, index) => (
                       <li key={index} className="flex items-center space-x-2 text-gray-300">
@@ -426,7 +347,7 @@ const PortfolioPage = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Tecnologías utilizadas</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">{t('modalOverview.technologies')}</h3>
                   <div className="flex flex-wrap gap-3 mb-8">
                     {selectedProject.technologies.map((tech) => (
                       <span
@@ -440,15 +361,15 @@ const PortfolioPage = () => {
 
                   <div className="space-y-4">
                     <div className="flex items-center justify-between py-3 border-b border-gray-700">
-                      <span className="text-gray-300">Cliente:</span>
+                      <span className="text-gray-300">{t('modalOverview.client')}</span>
                       <span className="text-white font-medium">{selectedProject.client}</span>
                     </div>
                     <div className="flex items-center justify-between py-3 border-b border-gray-700">
-                      <span className="text-gray-300">Duración:</span>
+                      <span className="text-gray-300">{t('modalOverview.duration')}</span>
                       <span className="text-white font-medium">{selectedProject.duration}</span>
                     </div>
                     <div className="flex items-center justify-between py-3 border-b border-gray-700">
-                      <span className="text-gray-300">Año:</span>
+                      <span className="text-gray-300">{t('modalOverview.year')}</span>
                       <span className="text-white font-medium">{selectedProject.year}</span>
                     </div>
                   </div>
@@ -459,11 +380,11 @@ const PortfolioPage = () => {
               <div className="flex gap-4 mt-8 pt-8 border-t border-gray-700">
                 <button className="flex-1 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center justify-center space-x-2">
                   <ExternalLink className="w-5 h-5" />
-                  <span>Ver proyecto</span>
+                  <span>{t('modalOverview.viewProject')}</span>
                 </button>
-                <Link href="/contact" className="flex-1">
+                <Link href={`/${locale}/contact`} className="flex-1">
                   <button className="w-full bg-white/10 border border-white/20 text-white px-6 py-3 rounded-xl font-medium hover:bg-white/20 transition-all duration-300">
-                    Proyecto similar
+                    {t('modalOverview.similarProject')}
                   </button>
                 </Link>
               </div>

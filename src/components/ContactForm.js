@@ -1,8 +1,14 @@
 "use client";
 import { useState } from "react";
 import { CheckCircle, XCircle, Send } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function ContactForm() {
+  const t = useTranslations('contact');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -65,13 +71,13 @@ export default function ContactForm() {
   };
 
   const services = [
-    'Desarrollo Web',
-    'Aplicaciones Móviles', 
-    'E-commerce',
-    'Software a Medida',
-    'Automatización',
-    'Consultoría Digital',
-    'Otro'
+    t('form.services.service1'),
+    t('form.services.service2'),
+    t('form.services.service3'),
+    t('form.services.service4'),
+    t('form.services.service5'),
+    t('form.services.service6'),
+    t('form.services.service7'),
   ];
 
   return (
@@ -80,14 +86,14 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label className="block text-white text-sm font-medium mb-3">
-            Nombre completo *
+            {t('form.name')} *
           </label>
           <input
             type="text"
             name="name"
             onChange={handleChange}
             value={formData.name}
-            placeholder="Tu nombre"
+            placeholder={t('form.namePlaceholder')}
             required
             disabled={isSubmitting}
             className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
@@ -96,14 +102,14 @@ export default function ContactForm() {
 
         <div>
           <label className="block text-white text-sm font-medium mb-3">
-            Email *
+            {t('form.email')} *
           </label>
           <input
             type="email"
             name="email"
             onChange={handleChange}
             value={formData.email}
-            placeholder="tu@email.com"
+            placeholder={t('form.emailPlaceholder')}
             required
             disabled={isSubmitting}
             className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
@@ -115,14 +121,14 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label className="block text-white text-sm font-medium mb-3">
-            Teléfono
+            {t('form.phone')}
           </label>
           <input
             type="tel"
             name="phone"
             onChange={handleChange}
             value={formData.phone}
-            placeholder="+505 0000 0000"
+            placeholder={t('form.phonePlaceholder')}
             disabled={isSubmitting}
             className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
           />
@@ -130,14 +136,14 @@ export default function ContactForm() {
 
         <div>
           <label className="block text-white text-sm font-medium mb-3">
-            Empresa
+            {t('form.company')}
           </label>
           <input
             type="text"
             name="company"
             onChange={handleChange}
             value={formData.company}
-            placeholder="Nombre de tu empresa"
+            placeholder={t('form.companyPlaceholder')}
             disabled={isSubmitting}
             className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
           />
@@ -147,7 +153,7 @@ export default function ContactForm() {
       {/* Service Select */}
       <div>
         <label className="block text-white text-sm font-medium mb-3">
-          Servicio de interés
+          {t('form.service')}
         </label>
         <select
           name="service"
@@ -156,7 +162,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 appearance-none cursor-pointer"
         >
-          <option value="" className="bg-gray-900">Selecciona un servicio</option>
+          <option value="" className="bg-gray-900">{t('form.servicePlaceholder')}</option>
           {services.map((service) => (
             <option key={service} value={service} className="bg-gray-900">
               {service}
@@ -168,13 +174,13 @@ export default function ContactForm() {
       {/* Message */}
       <div>
         <label className="block text-white text-sm font-medium mb-3">
-          Mensaje *
+          {t('form.message')} *
         </label>
         <textarea
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Cuéntanos sobre tu proyecto, objetivos, timeline y cualquier detalle relevante..."
+          placeholder={t('form.messagePlaceholder')}
           required
           rows={6}
           disabled={isSubmitting}
@@ -195,11 +201,11 @@ export default function ContactForm() {
         {isSubmitting ? (
           <div className="flex items-center justify-center space-x-3">
             <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-            <span>Enviando mensaje...</span>
+            <span>{t('form.submitting')}</span>
           </div>
         ) : (
           <div className="flex items-center justify-center space-x-2">
-            <span>Enviar mensaje</span>
+            <span>{t('form.submit')}</span>
             <Send className="w-5 h-5" />
           </div>
         )}
@@ -210,9 +216,9 @@ export default function ContactForm() {
         <div className="bg-green-500/20 border border-green-400/50 text-green-100 px-6 py-4 rounded-xl text-center animate-fadeIn">
           <div className="flex items-center justify-center space-x-2">
             <CheckCircle className='w-6 h-6 text-green-400' />
-            <span className="font-semibold">¡Mensaje enviado con éxito!</span>
+            <span className="font-semibold">{t("form.success.title")}</span>
           </div>
-          <p className="mt-2 text-sm">Te contactaremos dentro de las próximas 24 horas.</p>
+          <p className="mt-2 text-sm">{t("form.success.description")}</p>
         </div>
       )}
       
@@ -220,7 +226,7 @@ export default function ContactForm() {
         <div className="bg-red-500/20 border border-red-400/50 text-red-100 px-6 py-4 rounded-xl text-center animate-fadeIn">
           <div className="flex items-center justify-center space-x-2">
             <XCircle className='w-6 h-6 text-green-400' />
-            <span className="font-semibold">Error al enviar</span>
+            <span className="font-semibold">{t('form.error.title')}</span>
           </div>
           <p className="mt-2 text-sm">{errorMessage ||'Por favor, intenta de nuevo o contáctanos directamente.'}</p>
         </div>

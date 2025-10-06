@@ -1,44 +1,64 @@
+'use client';
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import { Target, Users, Lightbulb, Award, ArrowRight, CheckCircle } from "lucide-react";
 
 export default function About() {
+  const t = useTranslations('about');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   const values = [
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Enfoque en resultados",
-      description: "Cada proyecto está orientado a generar impacto real en tu negocio"
+      title: t('values.value1.title'),
+      description: t('values.value1.description')
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Cercanía y comunicación",
-      description: "Trabajamos contigo de manera colaborativa en cada etapa"
+      title: t('values.value2.title'),
+      description: t('values.value2.description')
     },
     {
       icon: <Lightbulb className="w-6 h-6" />,
-      title: "Innovación constante",
-      description: "Aplicamos las últimas tecnologías para mantenerte competitivo"
+      title: t('values.value3.title'),
+      description: t('values.value3.description')
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Calidad garantizada",
-      description: "Entregamos soluciones robustas y escalables que perduran"
+      title: t('values.value4.title'),
+      description: t('values.value4.description')
     }
   ];
 
   const achievements = [
-    { number: "6+", label: "Proyectos completados", icon: "🚀" },
-    { number: "3+", label: "Años de experiencia", icon: "📅" },
-    { number: "100%", label: "Clientes satisfechos", icon: "⭐" },
-    { number: "24h", label: "Tiempo de respuesta", icon: "⚡" }
+    { number: "6+", 
+      label: t('stats.item1.label'), 
+      icon: "🚀" 
+    },
+    { number: "3+", 
+      label: t('stats.item2.label'), 
+      icon: "📅" 
+    },
+    { number: "100%", 
+      label: t('stats.item3.label'), 
+      icon: "⭐" 
+    },
+    { number: "24h", 
+      label: t('stats.item4.label'), 
+      icon: "⚡" 
+    }
   ];
 
   const capabilities = [
-    "Desarrollo web moderno y responsivo",
-    "Software personalizado para tu negocio",
-    "Automatización de procesos empresariales",
-    "Integración con sistemas existentes",
-    "Consultoría tecnológica especializada",
-    "Soporte técnico continuo"
+    t('capabilities.item1'),
+    t('capabilities.item2'),
+    t('capabilities.item3'),
+    t('capabilities.item4'),
+    t('capabilities.item5'),
+    t('capabilities.item6'),
   ];
 
   return (
@@ -52,13 +72,11 @@ export default function About() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            ¿Quiénes somos?
+            {t('title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full mb-8"></div>
           <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            Somos una empresa de desarrollo de software comprometida con la excelencia. 
-            Diseñamos e implementamos soluciones digitales de alto impacto, combinando 
-            innovación, calidad y experiencia tecnológica.
+            {t('description')}
           </p>
         </div>
 
@@ -67,11 +85,10 @@ export default function About() {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-600"></div>
           <div className="text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Nuestra misión
+              {t('mission.title')}
             </h3>
             <p className="text-xl text-gray-800 font-medium leading-relaxed">
-              Impulsamos el crecimiento de negocios y emprendedores a través de la tecnología, 
-              transformando ideas en resultados digitales concretos.
+              {t('mission.description')}
             </p>
           </div>
         </div>
@@ -86,7 +103,7 @@ export default function About() {
                 src='/images/about/about-1.png'
                 width={500}
                 height={500}
-                alt="Equipo trabajando en desarrollo de software"
+                alt={locale === 'es' ? "Equipo trabajando en desarrollo de software" : "Team working on software development"}
                 className="w-full h-auto rounded-xl"
                 priority
               />
@@ -97,19 +114,17 @@ export default function About() {
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Experiencia que transforma
+                {t('experience.title')}
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Nuestros clientes valoran nuestra cercanía y la manera proactiva en que trabajamos. 
-                Nos caracteriza una visión fresca y audaz, siempre enfocados en entregar soluciones 
-                que realmente marquen la diferencia.
+                {t('experience.description')}
               </p>
             </div>
 
             {/* Capabilities list */}
             <div className="space-y-3">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Lo que hacemos:</h4>
-              {capabilities.slice(0, 3).map((capability, index) => (
+              <h4 className="text-xl font-semibold text-gray-900 mb-4">{t('capabilities.title')}</h4>
+              {capabilities.slice(0,3).map((capability, index) => (
                 <div key={index} className="flex items-center space-x-3 group">
                   <div className="w-2 h-2 bg-red-500 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
                   <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
@@ -120,7 +135,7 @@ export default function About() {
             </div>
 
             <button className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              <span>Ver nuestros servicios</span>
+              <span>{t('buttons.viewServices')}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -130,10 +145,10 @@ export default function About() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Nuestros valores
+              {t('values.title')}
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Los principios que guían cada decisión y proyecto que desarrollamos
+              {t('values.subtitle')}
             </p>
           </div>
 
@@ -164,15 +179,13 @@ export default function About() {
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Soluciones que impulsan resultados
+                {t('solutions.title')}
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Creamos sitios web modernos y funcionales, desarrollamos software a la medida 
-                y diseñamos soluciones que optimizan procesos, sistemas y operaciones empresariales.
+                {t('solutions.description')}
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Nuestro propósito es que empresas de todos los tamaños aprovechen la tecnología 
-                para vender más, operar con mayor eficiencia y simplificar su día a día.
+                {t('solutions.purpose')}
               </p>
             </div>
 
@@ -197,7 +210,7 @@ export default function About() {
                 src='/images/about/about-2.png'
                 width={500}
                 height={500}
-                alt="Desarrollo de soluciones digitales"
+                alt={locale === 'es' ? "Desarrollo de soluciones digitales" : "Digital solutions development"}
                 className="w-full h-auto rounded-xl transform group-hover:scale-[1.02] transition-transform duration-500"
               />
             </div>
@@ -213,10 +226,10 @@ export default function About() {
           <div className="relative">
             <div className="text-center mb-10">
               <h3 className="text-3xl font-bold text-white mb-4">
-                Números que hablan por nosotros
+                {t('stats.title')}
               </h3>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Cada proyecto es una oportunidad de crear impacto real y duradero
+                {t('stats.subtitle')}
               </p>
             </div>
 
@@ -244,24 +257,24 @@ export default function About() {
         {/* Call to action */}
         <div className="text-center mt-20">
           <h3 className="text-3xl font-bold text-gray-900 mb-6">
-            ¿Listo para transformar tu negocio?
+            {t('cta.title')}
           </h3>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Conversemos sobre cómo la tecnología puede impulsar el crecimiento de tu empresa
+            {t('cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
               className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              <span>Iniciar proyecto</span>
+              <span>{t('cta.startProject')}</span>
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
               href="#services"
               className="inline-flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-300 hover:border-red-500 text-gray-700 hover:text-red-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              <span>Ver servicios</span>
+              <span>{t('cta.viewServices')}</span>
             </a>
           </div>
         </div>

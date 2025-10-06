@@ -1,0 +1,1148 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "portfolio": "Portafolio"
+  },
+  "hero": {
+    "badge": "Más de 6 proyectos exitosos",
+    "title": "IMPULSA TU",
+    "titleHighlight": "NEGOCIO",
+    "subtitle": "con tecnología hecha a tu medida",
+    "description": "Creamos {web}, {apps} y {solutions} que transforman ideas en resultados medibles.",
+    "web": "páginas web",
+    "apps": "aplicaciones",
+    "solutions": "soluciones digitales",
+    "satisfiedClients": "Clientes satisfechos",
+    "successRate": "Tasa de éxito",
+    "startProject": "Comenzar proyecto",
+    "viewPortfolio": "Ver portafolio",
+    "trustUs": "Confían en nosotros:",
+    "companies": "empresas",
+    "online": "En línea",
+    "learnMore": "Conoce más",
+    "services": {
+      "web": {
+        "title": "Tu propia web",
+        "description": "Diseños únicos y funcionales"
+      },
+      "mobile": {
+        "title": "Apps móviles", 
+        "description": "Nativas e híbridas"
+      },
+      "software": {
+        "title": "Software a medida",
+        "description": "Soluciones personalizadas"
+      }
+    }
+  },
+  "about": {
+    "title": "¿Quiénes somos?",
+    "description": "Somos una empresa de desarrollo de software comprometida con la excelencia. Diseñamos e implementamos soluciones digitales de alto impacto, combinando innovación, calidad y experiencia tecnológica.",
+    "mission": {
+      "title": "Nuestra misión",
+      "description": "Impulsamos el crecimiento de negocios y emprendedores a través de la tecnología, transformando ideas en resultados digitales concretos."
+    },
+    "experience": {
+      "title": "Experiencia que transforma",
+      "description": "Nuestros clientes valoran nuestra cercanía y la manera proactiva en que trabajamos. Nos caracteriza una visión fresca y audaz, siempre enfocados en entregar soluciones que realmente marquen la diferencia."
+    },
+    "capabilities": {
+      "title": "Lo que hacemos:",
+      "item1": "Desarrollo web moderno y responsivo",
+      "item2": "Software personalizado para tu negocio", 
+      "item3":  "Automatización de procesos empresariales",
+      "item4":  "Integración con sistemas existentes",
+      "item5":  "Consultoría tecnológica especializada",
+      "item6":  "Soporte técnico continuo"
+    },
+    "values": {
+      "title": "Nuestros valores",
+      "subtitle": "Los principios que guían cada decisión y proyecto que desarrollamos",
+      "value1": {
+        "title": "Enfoque en resultados",
+        "description": "Cada proyecto está orientado a generar impacto real en tu negocio"
+      },
+      "value2": {
+        "title": "Cercanía y comunicación", 
+        "description": "Trabajamos contigo de manera colaborativa en cada etapa"
+      },
+      "value3": {
+        "title": "Innovación constante",
+        "description": "Aplicamos las últimas tecnologías para mantenerte competitivo"
+      },
+      "value4": {
+        "title": "Calidad garantizada",
+        "description": "Entregamos soluciones robustas y escalables que perduran"
+      }
+    },
+    "solutions": {
+      "title": "Soluciones que impulsan resultados",
+      "description": "Creamos sitios web modernos y funcionales, desarrollamos software a la medida y diseñamos soluciones que optimizan procesos, sistemas y operaciones empresariales.",
+      "purpose": "Nuestro propósito es que empresas de todos los tamaños aprovechen la tecnología para vender más, operar con mayor eficiencia y simplificar su día a día."
+    },
+    "stats": {
+      "title": "Números que hablan por nosotros", 
+      "subtitle": "Cada proyecto es una oportunidad de crear impacto real y duradero",
+      "item1": {
+        "label": "Proyectos completados"
+      },
+      "item2": {
+        "label": "Años de experiencia"
+      },
+      "item3": {
+        "label": "Clientes satisfechos"
+      },
+      "item4": {
+        "label": "Tiempo de respuesta"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para transformar tu negocio?",
+      "description": "Conversemos sobre cómo la tecnología puede impulsar el crecimiento de tu empresa",
+      "startProject": "Iniciar proyecto",
+      "viewServices": "Ver servicios"
+    },
+    "buttons": {
+      "viewServices": "Ver nuestros servicios"
+    }
+  },
+  "services": {
+    "title": "Nuestros servicios",
+    "subtitle": "Transformamos ideas en soluciones digitales que impulsan el crecimiento de tu negocio",
+    "service1": {
+      "title": "Diseño y desarrollo web",
+      "shortTitle": "web-development",
+      "description": "Creamos páginas web modernas, rápidas y optimizadas que conectan con tu audiencia y generan resultados reales para tu negocio",
+      "feature1": "Diseño responsive y moderno",
+      "feature2": "Optimización para buscadores (SEO)",
+      "feature3": "Velocidad de carga optimizada",
+      "feature4": "Panel de administración intuitivo"
+    },
+    "service2": {
+      "title": "Software a la medida",
+      "shortTitle": "custom-software",
+      "description": "Desarrollamos sistemas personalizados que se adaptan perfectamente a los procesos únicos de tu empresa, mejorando la productividad",
+      "feature1": "Sistemas de gestión empresarial",
+      "feature2": "Control de inventarios",
+      "feature3": "Facturación automatizada",
+      "feature4": "Reportes y análisis en tiempo real"
+    },
+    "service3": {
+      "title": "Automatización y tecnología",
+      "shortTitle": "automation",
+      "description": "Implementamos soluciones tecnológicas que automatizan procesos repetitivos, ahorrando tiempo y reduciendo errores operativos",
+      "feature1": "Automatización de procesos",
+      "feature2": "Integración de sistemas",
+      "feature3": "Workflows inteligentes",
+      "feature4": "Monitoreo y alertas automáticas"
+    },
+    "process": {
+      "title": "Nuestro proceso de trabajo",
+      "subtitle": "Un enfoque estructurado que garantiza resultados exitosos en cada proyecto",
+      "step1": {
+        "title": "Análisis",
+        "description": "Entendemos tus necesidades y objetivos específicos"
+      },
+      "step2": {
+        "title": "Propuesta",
+        "description": "Diseñamos una solución personalizada para tu caso"
+      },
+      "step3": {
+        "title": "Desarrollo",
+        "description": "Construimos tu solución con las mejores tecnologías"
+      },
+      "step4": {
+        "title": "Entrega",
+        "description": "Implementamos y capacitamos a tu equipo"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para impulsar tu negocio?",
+      "description": "Conversemos sobre cómo nuestros servicios pueden transformar la manera en que operas y vendes",
+      "startProject": "Iniciar proyecto",
+      "callNow": "Llamar ahora"
+    },
+    "moreInfo": "Más información"
+  },
+  "contact": {
+    "title": "Comunícate",
+    "titleHighlight": "con nosotros",
+    "subtitle": "Creemos juntos cosas increíbles.",
+    "description": "Cuéntanos lo que necesitas y encontraremos la mejor solución digital para ti, no solo es crear una página web, sino ofrecer la mejor experiencia digital que conecte con los clientes.",
+    "phone": "+505 57517432",
+    "email": "contact.drunic@gmail.com",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono", 
+      "phonePlaceholder": "+505 0000 0000",
+      "company": "Empresa",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "service": "Servicio de interés",
+      "servicePlaceholder": "Selecciona un servicio",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto, objetivos, timeline y cualquier detalle relevante...",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando mensaje...",
+      "services": {
+        "service1": "Desarrollo Web",
+        "service2": "Aplicaciones Móviles",
+        "service3": "E-commerce", 
+        "service4": "Software a Medida",
+        "service5": "Automatización",
+        "service6": "Consultoría Digital",
+        "service7": "Otro"
+      },
+      "success": {
+        "title": "¡Mensaje enviado con éxito!",
+        "description": "Te contactaremos dentro de las próximas 24 horas."
+      },
+      "error": {
+        "title": "Error al enviar",
+        "description": "Por favor, intenta de nuevo o contáctanos directamente."
+      },
+      "required": "*"
+    }
+  },
+  "footer": {
+    "company": {
+      "description": "Transformamos ideas en soluciones digitales. Diseñamos páginas web, desarrollamos software a medida y automatizamos procesos para impulsar tu negocio."
+    },
+    "cta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "description": "Conversemos sobre cómo podemos ayudarte a crecer digitalmente",
+      "button": "Iniciar proyecto"
+    },
+    "quickLinks": "Enlaces rápidos",
+    "contact": "Contacto",
+    "followUs": "Síguenos",
+    "copyright": "Todos los derechos reservados.",
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "portfolio": "Portafolio",
+    "phone": "Teléfono",
+    "location": "Ubicación"
+  },
+  "technology": {
+    "title": "Nuestro Stack Tecnológico",
+    "subtitle": "Especializados en {drupal} y {symfony}, las tecnologías empresariales más robustas para crear sitios web, e-commerce y aplicaciones que escalan con tu negocio.",
+    "drupal": "Drupal",
+    "symfony": "Symfony",
+    "subtitleMainTech": "Características principales:",
+    "mainTech": {
+      "Tech1": {
+        "name": "Drupal",
+        "description": "CMS empresarial líder mundial para sitios web complejos y escalables",
+        "features": {
+          "feature1": "Gestión de contenido avanzada",
+          "feature2": "Multiidioma nativo", 
+          "feature3": "Arquitectura modular",
+          "feature4": "SEO optimizado",
+          "feature5": "Seguridad empresarial"
+        },
+        "useCases": {
+          "useCase1": "Sitios corporativos",
+          "useCase2": "Portales web",
+          "useCase3": "Intranets",
+          "useCase4": "Sitios multiidioma"
+        },
+        "stats": "1M+ sitios activos"
+      },
+      "Tech2": {
+        "name": "Symfony",
+        "description": "Framework PHP robusto para aplicaciones web y APIs de alto rendimiento",
+        "features": {
+          "feature1": "Componentes reutilizables",
+          "feature2": "Alto rendimiento",
+          "feature3": "Arquitectura MVC", 
+          "feature4": "Testing integrado",
+          "feature5": "Documentación completa"
+        },
+        "useCases": {
+          "useCase1": "APIs REST",
+          "useCase2": "Aplicaciones web",
+          "useCase3": "Microservicios",
+          "useCase4": "Backends complejos"
+        },
+        "stats": "600M+ descargas"
+      }
+    },
+    "case": "Ideal para:",
+    "advantages": {
+      "title": "¿Por qué elegimos estas tecnologías?",
+      "subtitle": "No es casualidad que las empresas más grandes del mundo confíen en Drupal y Symfony",
+      "items": {
+        "item1": {
+          "title": "Máxima seguridad",
+          "description": "Drupal y Symfony son reconocidos por sus robustos sistemas de seguridad, ideales para sitios empresariales"
+        },
+        "item2": {
+          "title": "Alto rendimiento",
+          "description": "Optimizaciones nativas que garantizan carga rápida incluso con gran volumen de contenido"
+        },
+        "item3": {
+          "title": "Escalabilidad comprobada", 
+          "description": "Arquitectura que crece con tu negocio, desde sitios pequeños hasta plataformas empresariales"
+        },
+        "item4": {
+          "title": "Flexibilidad total",
+          "description": "Personalización completa para adaptar cada funcionalidad a tus necesidades específicas"
+        }
+      }
+    },
+    "complementary": {
+      "title": "Tecnologías complementarias",
+      "subtitle": "Un ecosistema completo para desarrollo profesional",
+      "tech1": "Lenguaje base optimizado para desarrollo web moderno",
+      "tech2": "Bases de datos robustas para almacenamiento seguro",
+      "tech3": "Cache en memoria para máximo rendimiento",
+      "tech4": "Contenedores para desarrollo y despliegue eficiente",
+      "tech5": "Control de versiones profesional",
+      "tech6": "Servidores web de alta performance"
+    },
+    "experience": {
+      "title": "Nuestra experiencia en números",
+      "subtitle": "Resultados medibles que respaldan nuestro trabajo",
+      "items": {
+        "item1": {
+          "number": "6+",
+          "label": "Proyectos Drupal",
+          "description": "Sitios corporativos y e-commerce"
+        },
+        "item2": {
+          "number": "8+",
+          "label": "APIs con Symfony",
+          "description": "Backends robustos y escalables"
+        },
+        "item3": {
+          "number": "100%",
+          "label": "Sitios optimizados",
+          "description": "SEO y rendimiento garantizado"
+        },
+        "item4": {
+          "number": "24/7",
+          "label": "Soporte técnico",
+          "description": "Mantenimiento continuo"
+        }
+      }
+    },
+    "projects": {
+      "title": "Proyectos exitosos con nuestro stack",
+      "project1": {
+        "type": "Portal Corporativo",
+        "features": {
+          "feature1": "Multiidioma",
+          "feature2": "Gestión de usuarios",
+          "feature3": "Workflow de contenido",
+          "feature4": "Integración CRM"
+        },
+        "industry": "Manufactura",
+        "result": "300% más engagement"
+      },
+      "project2": {
+        "type": "E-commerce Especializado",
+        "features": {
+          "feature1": "Catálogo complejo",
+          "feature2": "Múltiples monedas",
+          "feature3": "B2B/B2C",
+          "feature4": "Integración ERP"
+        },
+        "industry": "Minorista",
+        "result": "150% más engagement"
+      },
+      "project3": {
+        "type": "Sistema de Gestión",
+        "features": {
+          "feature1": "Dashboard interactivo",
+          "feature2": "Reportes avanzados",
+          "feature3": "API REST",
+          "feature4": "Integraciones"
+        },
+        "industry": "Servicios",
+        "result": "60% menos tiempo operativo"
+      }
+    },
+    "cta": {
+      "title": "¿Tu proyecto necesita tecnología empresarial?",
+      "description": "Aprovecha la potencia de Drupal y Symfony para crear soluciones robustas, seguras y escalables",
+      "consultProject": "Consultar proyecto",
+      "viewAllServices": "Ver todos los servicios"
+    }
+  },
+  "portfolio": {
+    "navigation": {
+      "backHome": "Volver al inicio",
+      "allProjects": "Todos los proyectos"
+    },
+    "hero": {
+      "title": "Nuestros",
+      "titleHighlight": "Proyectos",
+      "description": "Cada proyecto cuenta una historia de innovación, creatividad y resultados excepcionales."
+    },
+    "stats": {
+      "projects": "Proyectos completados",
+      "satisfaction": "Satisfacción del cliente",
+      "response": "Tiempo de respuesta"
+    },
+    "filters": {
+      "all": "Todos",
+      "ecommerce": "E-commerce",
+      "landing": "Landing Pages",
+      "webapp": "Aplicaciones Web",
+      "mobile": "Apps Móviles",
+      "automation": "Automatización"
+    },
+    "cards": {
+      "viewDetails": "Ver detalles",
+      "viewDemo": "Ver demo",
+      "viewCode": "Ver código",
+      "preview": "Vista previa del proyecto"
+    },
+    "modal": {
+      "description": "Descripción",
+      "features": "Características principales",
+      "technologies": "Tecnologías utilizadas",
+      "client": "Cliente",
+      "duration": "Duración",
+      "year": "Año",
+      "viewProject": "Ver proyecto",
+      "similarProject": "Proyecto similar"
+    },
+    "cta": {
+      "title": "¿Listo para el siguiente",
+      "titleHighlight": "gran proyecto?",
+      "subtitle": "Únete a nuestros clientes satisfechos y dale vida a tu visión digital.",
+      "startProject": "Iniciar mi proyecto",
+      "viewServices": "Ver servicios"
+    },
+    "alerts": {
+      "demoUnavailable": "Demo no disponible para este proyecto",
+      "codeUnavailable": "Código no disponible para este proyecto"
+    },
+    "projects": [
+      {
+        "id": 1,
+        "title": "E-commerce Moderno",
+        "category": "ecommerce",
+        "description": "Plataforma de comercio electrónico con sistema de pagos integrado y gestión de inventario en tiempo real.",
+        "image": "/images/portfolio/e-commerce.png",
+        "technologies": ["React", "Next.js", "Stripe", "MongoDB"],
+        "client": "Food Store",
+        "year": "2024",
+        "duration": "3 meses",
+        "features": [
+          "Carrito de compras",
+          "Pagos seguros",
+          "Panel de administración",
+          "Responsive design"
+        ],
+        "demoUrl": "https://foodshop-demo-seven.vercel.app/",
+        "codeUrl": "https://github.com/Luis93Hub/foodshop-demo"
+      },
+      {
+        "id": 2,
+        "title": "Landing Page",
+        "category": "landing",
+        "description": "Sitio web corporativo con animaciones fluidas y optimización SEO para máxima visibilidad online.",
+        "image": "/images/portfolio/landing-page.png",
+        "technologies": ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
+        "client": "Tech Solutions",
+        "year": "2024",
+        "duration": "1 mes",
+        "features": [
+          "Animaciones suaves",
+          "SEO optimizado",
+          "Carga rápida",
+          "Formulario de contacto"
+        ],
+        "demoUrl": "https://nicaraguan-restaurant-demo.vercel.app/",
+        "codeUrl": "https://github.com/Luis93Hub/Nicaraguan-Restaurant---Demo"
+      },
+      {
+        "id": 3,
+        "title": "Aplicación Web SaaS",
+        "category": "webapp",
+        "description": "Sistema de gestión empresarial con dashboard interactivo y reportes en tiempo real.",
+        "image": "/images/portfolio/web-aplication.png",
+        "technologies": ["React", "Node.js", "PostgreSQL", "Chart.js"],
+        "client": "Business Corp",
+        "year": "2024",
+        "duration": "4 meses",
+        "features": [
+          "Dashboard interactivo",
+          "Reportes avanzados",
+          "Multi-usuario",
+          "API REST"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      },
+      {
+        "id": 4,
+        "title": "App Móvil Delivery",
+        "category": "mobile",
+        "description": "Aplicación móvil para servicio de delivery con tracking en tiempo real y notificaciones push.",
+        "image": "/images/portfolio/mobile-app.png",
+        "technologies": ["React Native", "Firebase", "Google Maps", "Stripe"],
+        "client": "Food Delivery",
+        "year": "2024",
+        "duration": "5 meses",
+        "features": [
+          "Tracking GPS",
+          "Notificaciones",
+          "Pagos integrados",
+          "Chat en vivo"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      },
+      {
+        "id": 5,
+        "title": "Sistema de Automatización",
+        "category": "automation",
+        "description": "Plataforma de automatización de procesos empresariales con integración de APIs externas.",
+        "image": "/images/portfolio/automation.png",
+        "technologies": ["Python", "Django", "Celery", "Redis"],
+        "client": "Manufacturing Co",
+        "year": "2023",
+        "duration": "6 meses",
+        "features": [
+          "Automatización de tareas",
+          "Integraciones API",
+          "Reportes automáticos",
+          "Alertas inteligentes"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      },
+      {
+        "id": 6,
+        "title": "Plataforma Educativa",
+        "category": "webapp",
+        "description": "Sistema de aprendizaje online con videoconferencias, evaluaciones y seguimiento de progreso.",
+        "image": "/images/portfolio/education-platform.png",
+        "technologies": ["Vue.js", "Laravel", "WebRTC", "MySQL"],
+        "client": "EduTech",
+        "year": "2023",
+        "duration": "4 meses",
+        "features": [
+          "Clases virtuales",
+          "Evaluaciones online",
+          "Progreso del estudiante",
+          "Certificaciones"
+        ],
+        "demoUrl": "#",
+        "codeUrl": "#"
+      }
+    ],
+    "modalOverview": {
+      "imagePlaceholder": "Imagen del proyecto",
+      "description": "Descripción",
+      "features": "Características principales",
+      "technologies": "Tecnologías utilizadas",
+      "client": "Cliente:",
+      "duration": "Duración:",
+      "year": "Año:",
+      "viewProject": "Ver proyecto",
+      "similarProject": "Proyecto similar"
+    }
+  },
+  "contactpage": {
+    "navigation":{
+      "backToHome": "Volver al inicio"
+    },
+    "hero": {
+      "title": "Hablemos de tu ",
+      "titleHighlight":"próximo proyecto",
+      "subtitle": "Transformamos ideas en soluciones digitales que impulsan el crecimiento de tu negocio"
+    },
+    "stats": {
+      "clients": "Clientes satisfechos",
+      "projects": "Proyectos completados",
+      "responseTime": "Tiempo de respuesta"
+    },
+    "section": {
+      "title": "Estamos aquí ",
+      "titleHighlight": "para ayudarte",
+      "intro1": "¿Tienes una idea brillante? ¿Necesitas modernizar tu negocio? ¿Quieres automatizar procesos?",
+      "intro2": "No importa el tamaño de tu proyecto, estamos listos para convertir tus objetivos en realidad digital."
+    },
+    "contactMethods": {
+      "callUs": "Llámanos",
+      "emailUs": "Escríbenos",
+      "location": "Ubicación",
+      "hours": "Lun - Vie, 8:00 AM - 6:00 PM",
+      "responseTime": "Respuesta en menos de 24h",
+      "place": "Nicaragua",
+      "remote": "Servicio remoto disponible"
+    },
+    "social": {
+      "followUs": "Síguenos en redes"
+    },
+    "form": {
+      "title": "Cuéntanos tu proyecto",
+      "subtitle": "Completa el formulario y nos pondremos en contacto contigo pronto"
+    }
+  },
+  "automationService": {
+    "navigation": {
+      "backHome":"Servicios",
+      "current_page": "Automatización"
+    },
+    "breadcrumbServices": "Servicios",
+    "breadcrumbCurrent": "Automatización",
+    "title": "Automatiza tu negocio",
+    "titleHighlight": "trabaja más inteligente",
+    "description": "Implementamos soluciones que automatizan procesos repetitivos, reducen errores y liberan tiempo valioso para que te enfoques en hacer crecer tu negocio.",
+    "ctaAutomate": "Automatizar ahora",
+    "ctaSeeAreas": "Ver qué automatizar",
+    "results": {
+      "title": "Resultados típicos",
+      "stats": {
+        "timeSaved": {
+          "label": "Tiempo ahorrado",
+          "value": "40-60%"
+        },
+        "errorReduction": {
+          "label": "Reducción de errores",
+          "value": "80%+"
+        },
+        "roi": {
+          "label": "ROI típico",
+          "value": "300%"
+        },
+        "investmentRecovery": {
+          "label": "Recuperación inversión",
+          "value": "3-6 meses"
+        }
+      }
+    },
+    "benefits": {
+      "title": "¿Por qué automatizar tu negocio?",
+      "description": "La automatización no es solo tecnología, es la clave para un crecimiento sostenible y eficiente",
+      "items": {
+        "item1": {
+          "title": "Ahorra tiempo valioso",
+          "description": "Elimina tareas repetitivas y libera a tu equipo para actividades estratégicas"
+        },
+        "item2": {
+          "title": "Reduce errores humanos",
+          "description": "Los procesos automatizados son consistentes y precisos las 24 horas"
+        },
+        "item3": {
+          "title": "Mejora la productividad",
+          "description": "Tu empresa puede procesar más con los mismos recursos"
+        },
+        "item4": {
+          "title": "Escalabilidad automática",
+          "description": "Los sistemas crecen con tu negocio sin requerir más personal"
+        }
+      }
+    },
+    "areas": {
+      "title": "Áreas que podemos automatizar",
+      "description": "Desde ventas hasta recursos humanos, automatizamos los procesos que más tiempo te consumen"
+    },
+    "timesSaved": "Tiempo ahorrado:",
+    "automationAreas": [
+      {
+        "title": "Gestión de clientes (CRM)",
+        "description": "Automatiza el seguimiento desde el primer contacto hasta la venta",
+        "automations": [
+          "Captura automática de leads",
+          "Seguimiento de correos",
+          "Asignación de vendedores",
+          "Recordatorios de seguimiento"
+        ],
+        "timesSaved": "15-20 horas/semana",
+        "icon": "👥"
+      },
+      {
+        "title": "Facturación y cobranza",
+        "description": "Genera facturas y gestiona pagos sin intervención manual",
+        "automations": [
+          "Facturación automática",
+          "Recordatorios de pago",
+          "Conciliación bancaria",
+          "Reportes financieros"
+        ],
+        "timesSaved": "10-15 horas/semana", 
+        "icon": "💰"
+      },
+      {
+        "title": "Inventario y compras",
+        "description": "Mantén stock óptimo con reposición automática",
+        "automations": [
+          "Alertas de stock bajo",
+          "Órdenes de compra automáticas",
+          "Actualización de precios",
+          "Control de vencimientos"
+        ],
+        "timesSaved": "8-12 horas/semana",
+        "icon": "📦"
+      },
+      {
+        "title": "Marketing digital",
+        "description": "Campañas que se ejecutan solas y se optimizan automáticamente",
+        "automations": [
+          "Email marketing secuencial",
+          "Publicaciones en redes sociales",
+          "Segmentación de audiencias",
+          "Reportes de rendimiento"
+        ],
+        "timesSaved": "12-18 horas/semana",
+        "icon": "📈"
+      },
+      {
+        "title": "Recursos humanos",
+        "description": "Optimiza la gestión de personal y nóminas",
+        "automations": [
+          "Registro de asistencia",
+          "Cálculo de nóminas",
+          "Evaluaciones periódicas",
+          "Solicitudes de vacaciones"
+        ],
+        "timesSaved": "6-10 horas/semana",
+        "icon": "👤"
+      },
+      {
+        "title": "Atención al cliente",
+        "description": "Responde consultas y resuelve problemas 24/7",
+        "automations": [
+          "Chatbots inteligentes",
+          "Tickets automáticos",
+          "Escalamiento por prioridad",
+          "Encuestas de satisfacción"
+        ],
+        "timesSaved": "20-30 horas/semana",
+        "icon": "🎧"
+      }
+    ],
+    "process": {
+      "title": "Cómo implementamos la automatización",
+      "description": "Proceso gradual y sin interrupciones para tu operación diaria"
+    },
+    "processAreas": [
+      {
+        "step": "01",
+        "title": "Mapeo de procesos",
+        "description": "Identificamos qué tareas se pueden automatizar y priorizamos por impacto",
+        "duration": "1 semana"
+      },
+      {
+        "step": "02",
+        "title": "Diseño de workflows",
+        "description": "Creamos los flujos automatizados optimizados para tu negocio",
+        "duration": "1-2 semanas"
+      },
+      {
+        "step": "03",
+        "title": "Implementación gradual",
+        "description": "Instalamos las automatizaciones por fases para minimizar disrupciones",
+        "duration": "2-4 semanas"
+      },
+      {
+        "step": "04",
+        "title": "Capacitación",
+        "description": "Entrenamos a tu equipo para gestionar y aprovechar las automatizaciones",
+        "duration": "1 semana"
+      },
+      {
+        "step": "05",
+        "title": "Monitoreo y optimización",
+        "description": "Supervisamos el rendimiento y mejoramos continuamente",
+        "duration": "Permanente"
+      }
+    ],
+    "tools": {
+      "title": "Herramientas que utilizamos",
+      "description": "Combinamos las mejores plataformas con desarrollos personalizados"
+    },
+    "toolsAreas": [
+      { 
+        "name": "Zapier", 
+        "use": "Conecta aplicaciones", 
+        "logo": "⚡" 
+      },
+      { 
+        "name": "Microsoft Power Automate", 
+        "use": "Workflows empresariales", 
+        "logo": "🔄" 
+      },
+      { 
+        "name": "WhatsApp Business API", 
+        "use": "Automatización de mensajes", 
+        "logo": "💬" 
+      },
+      { 
+        "name": "Sistemas personalizados", 
+        "use": "Automatizaciones específicas", 
+        "logo": "⚙️" },
+      { 
+        "name": "APIs de integración", 
+        "use": "Conecta todos tus sistemas", 
+        "logo": "🔗" 
+      },
+      { 
+        "name": "Inteligencia artificial", 
+        "use": "Decisiones automáticas", 
+        "logo": "🤖" 
+      }
+    ],
+    "testimonials": {
+      "title": "Casos de éxito"
+    },
+    "testimonialsPeople": [
+      {
+        "name": "Patricia Morales",
+        "company": "Clínica Dental Sonríe",
+        "content": "La automatización de citas y recordatorios ha reducido las inasistencias en un 60%. Nuestros pacientes están más satisfechos y nosotros más organizados.",
+        "rating": 5,
+        "result": "60% menos inasistencias"
+      },
+      {
+        "name": "Jorge Castillo",
+        "company": "Supermercado La Economía",
+        "content": "El sistema de reposición automática mantiene nuestro inventario siempre abastecido. Ya no perdemos ventas por productos agotados.",
+        "rating": 5,
+        "result": "25% aumento en ventas"
+      }
+    ],
+    "pricing": {
+      "title": "Inversión en automatización",
+      "description": "Paquetes diseñados para diferentes niveles de automatización",
+      "popular": "Más popular",
+      "cta": "Solicitar cotización",
+      "consultationTitle": "¿No estás seguro qué automatizar?",
+      "consultationDescription": "Ofrecemos una consulta gratuita para identificar las mejores oportunidades de automatización en tu negocio",
+      "consultationButton": "Solicitar consulta gratuita"
+    },
+    "pricingAutomation": [
+      {
+        "name": "Automatización Básica",
+        "price": "$500 - $1,500",
+        "description": "Ideal para pequeños negocios que inician",
+        "features": [
+          "1-3 procesos automatizados",
+          "Herramientas estándar",
+          "Configuración básica",
+          "1 mes de soporte"
+        ],
+        "timeframe": "2-3 semanas",
+        "popular": false
+      },
+      {
+        "name": "Automatización Avanzada",
+        "price": "$1,500 - $5,000",
+        "description": "Para empresas con múltiples procesos",
+        "features": [
+          "4-8 procesos automatizados",
+          "Integraciones personalizadas",
+          "Dashboard de monitoreo",
+          "3 meses de soporte"
+        ],
+        "timeframe": "4-6 semanas",
+        "popular": true
+      },
+      {
+        "name": "Automatización Empresarial",
+        "price": "$5,000+",
+        "description": "Solución completa para grandes operaciones",
+        "features": [
+          "Procesos ilimitados",
+          "IA y machine learning",
+          "Soporte 24/7",
+          "6 meses de optimización"
+        ],
+        "timeframe": "6-10 semanas",
+        "popular": false
+      }
+    ],
+    "cta": {
+      "title": "¿Listo para automatizar tu negocio?",
+      "description": "Comienza a trabajar más inteligente, no más duro. Conversemos sobre cómo la automatización puede transformar tu operación",
+      "automateButton": "Iniciar automatización",
+      "callButton": "Llamar ahora"
+    }
+  },
+  "customSoftware":  {
+      "navigation": {
+        "backHome":"Servicios",
+        "current_page": "Software a la Medida"
+      },
+      "title": "Software que se adapta",
+      "titleHighlight": "a tu negocio",
+      "description": "Desarrollamos sistemas personalizados que optimizan tus procesos, automatizan tareas repetitivas y hacen que tu equipo sea más productivo.",
+      "cta_quote": "Solicitar cotización",
+      "cta_solutions": "Ver soluciones",
+      "why_title": "¿Por qué software personalizado?",
+      "why_points": {
+        "point1": "100% adaptado a tus procesos",
+        "point2": "Escalable con tu crecimiento",
+        "point3": "Mayor productividad del equipo",
+        "point4": "ROI comprobable"
+      },
+    "benefits": {
+      "title": "Ventajas del software personalizado",
+      "description": "A diferencia de las soluciones genéricas, nuestro software se diseña específicamente para tu negocio",
+      "benefit1": {
+        "title": "Diseñado para tu negocio",
+        "description": "Desarrollamos funcionalidades específicas que se adaptan a tus procesos únicos"
+      },
+      "benefit2": {
+        "title": "Integración completa",
+        "description": "Conectamos todos tus sistemas para que trabajen en perfecta sincronía"
+      },
+      "benefit3": {
+        "title": "Fácil de usar",
+        "description": "Interfaces intuitivas que tu equipo puede dominar desde el primer día"
+      },
+      "benefit4": {
+        "title": "Reportes en tiempo real",
+        "description": "Toma decisiones informadas con datos actualizados al instante"
+      }
+    },
+    "solutionsSection": {
+      "title": "Tipos de software que desarrollamos",
+      "description": "Sistemas especializados para diferentes áreas de tu negocio"
+    },
+    "solutions": [
+      {
+        "title": "Sistema de Gestión de Ventas",
+        "description": "Controla todo el proceso desde el lead hasta la facturación",
+        "features": ["CRM integrado", "Seguimiento de clientes", "Automatización de cotizaciones", "Dashboard de ventas"],
+        "icon": "💼"
+      },
+      {
+        "title": "Control de Inventarios",
+        "description": "Mantén el control exacto de tu stock y movimientos",
+        "features": ["Alertas de stock bajo", "Códigos de barras", "Múltiples almacenes", "Reportes de rotación"],
+        "icon": "📦"
+      },
+      {
+        "title": "Sistema de Facturación",
+        "description": "Automatiza tu facturación y cumple con regulaciones fiscales",
+        "features": ["Facturación electrónica", "Múltiples impuestos", "Pagos recurrentes", "Integración contable"],
+        "icon": "📄"
+      },
+      {
+        "title": "Gestión de Proyectos",
+        "description": "Organiza equipos, tareas y tiempos de manera eficiente",
+        "features": ["Cronogramas visuales", "Asignación de tareas", "Control de tiempo", "Colaboración en equipo"],
+        "icon": "🎯"
+      },
+      {
+        "title": "Sistema de RRHH",
+        "description": "Gestiona tu talento humano de forma integral",
+        "features": ["Control de asistencia", "Nóminas automatizadas", "Evaluaciones", "Portal del empleado"],
+        "icon": "👥"
+      },
+      {
+        "title": "Plataforma de E-learning",
+        "description": "Capacita a tu equipo o monetiza conocimiento",
+        "features": ["Cursos interactivos", "Seguimiento de progreso", "Certificaciones", "Gamificación"],
+        "icon": "🎓"
+      }
+    ],
+    "processSection": {
+      "title": "Nuestro proceso de desarrollo",
+      "description": "Metodología probada que garantiza resultados exitosos"
+    },
+    "process": [
+      { "step": "01", "title": "Análisis profundo", "description": "Estudiamos tus procesos actuales y identificamos oportunidades de mejora", "duration": "1-2 semanas" },
+      { "step": "02", "title": "Diseño de solución", "description": "Creamos la arquitectura y flujos de trabajo personalizados", "duration": "1-2 semanas" },
+      { "step": "03", "title": "Desarrollo iterativo", "description": "Construimos el software con entregas parciales para tu validación", "duration": "4-12 semanas" },
+      { "step": "04", "title": "Implementación", "description": "Instalamos, configuramos y capacitamos a tu equipo", "duration": "1-2 semanas" },
+      { "step": "05", "title": "Soporte continuo", "description": "Acompañamos el crecimiento con actualizaciones y mejoras", "duration": "Permanente" }
+    ],
+    "technologiesSection": {
+      "title": "Tecnologías que utilizamos",
+      "description": "Herramientas modernas y confiables para crear software robusto y escalable"
+    },
+    "technologies": [
+      { "name": "React/Next.js", "category": "Frontend" },
+      { "name": "Node.js", "category": "Backend" },
+      { "name": "Python", "category": "Backend" },
+      { "name": "PostgreSQL", "category": "Base de datos" },
+      { "name": "MongoDB", "category": "Base de datos" },
+      { "name": "AWS/DigitalOcean", "category": "Hosting" }
+    ],
+    "successfully": {
+      "title": "Casos de éxito"
+    },
+    "testimonials": [
+      {
+        "name": "Roberto Sánchez",
+        "company": "Distribuidora El Norte",
+        "content": "El sistema de inventarios ha revolucionado nuestro negocio. Ahora sabemos exactamente qué productos tenemos y cuáles necesitamos pedir.",
+        "rating": 5,
+        "result": "30% reducción en productos agotados"
+      },
+      {
+        "name": "Ana Patricia López",
+        "company": "Constructora Moderna",
+        "content": "El software de gestión de proyectos nos permite coordinar mejor los equipos. Los proyectos se entregan a tiempo y dentro del presupuesto.",
+        "rating": 5,
+        "result": "25% mejora en tiempos de entrega"
+      }
+    ],
+    "pricing": {
+      "title": "¿Cómo determinamos el precio?",
+      "description": "El costo depende de varios factores que analizamos en conjunto contigo",
+      "title2": "Inversión típica",
+      "system1": "Sistema básico",
+      "system2": "Sistema intermedio",
+      "system3": "Sistema avanzado",
+      "consultation": "Consulta gratuita: ",
+      "consultationDescription": "Te ayudamos a definir el alcance y presupuesto ideal para tu proyecto"
+    },
+    "pricing_factors": [
+      { "factor": "Complejidad funcional", "description": "Número de módulos y características específicas", "impact": "$$-$$$" },
+      { "factor": "Integraciones", "description": "Conexión con sistemas existentes o servicios externos", "impact": "$-$$" },
+      { "factor": "Número de usuarios", "description": "Capacidad simultánea y roles de usuario", "impact": "$-$$" },
+      { "factor": "Personalización", "description": "Nivel de adaptación a procesos específicos", "impact": "$$-$$$" }
+    ],
+
+    "cta": {
+      "title": "¿Listo para optimizar tu negocio?",
+      "description": "Conversemos sobre cómo el software personalizado puede transformar la eficiencia de tu empresa",
+      "cta_quote": "Solicitar cotización",
+      "cta_call": "Llamar ahora"
+    }
+  },
+  "webDevelopment": {
+    "navigation": {
+      "backHome": "Servicios",
+      "current_page": "Desarrollo Web"
+    },
+    "title_main": "Desarrollo Web que",
+    "title_highlight": "Genera Resultados",
+    "description": "Creamos sitios web modernos, rápidos y optimizados que conectan con tu audiencia y convierten visitantes en clientes reales.",
+    "cta_start": "Iniciar proyecto",
+    "cta_pricing": "Ver precios",
+    "features": {
+      "feature1": "Diseño responsive garantizado",
+      "feature2": "Optimizado para buscadores (SEO)",
+      "feature3": "Carga rápida y segura",
+      "feature4": "Soporte técnico incluido"
+    },
+    "features_section": {
+      "title": "¿Por qué elegirnos para tu sitio web?",
+      "description": "Combinamos diseño atractivo con funcionalidad técnica para crear sitios que realmente funcionan",
+      "items": {
+        "item1": { "title": "Diseño Responsive", "description": "Tu sitio web se verá perfecto en cualquier dispositivo: móviles, tablets y computadoras" },
+        "item2": { "title": "SEO Optimizado", "description": "Configuramos tu sitio para que aparezca en las primeras posiciones de Google" },
+        "item3": { "title": "Carga Ultrarrápida", "description": "Optimizamos el rendimiento para que tus visitantes no esperen y no se vayan" },
+        "item4": { "title": "Panel de Administración", "description": "Gestiona tu contenido fácilmente sin necesidad de conocimientos técnicos" }
+      }
+    },
+    "process_section": {
+      "title": "Nuestro proceso de desarrollo",
+      "description": "Un enfoque estructurado que garantiza resultados de calidad en tiempo y forma",
+      "process": [
+        {
+          "step": "01",
+          "title": "Consulta inicial",
+          "description": "Entendemos tu negocio, objetivos y audiencia objetivo",
+          "details": ["Análisis de competencia", "Definición de objetivos", "Estrategia de contenido"]
+        },
+        {
+          "step": "02",
+          "title": "Diseño y prototipo",
+          "description": "Creamos el diseño visual y la estructura de tu sitio",
+          "details": ["Wireframes y mockups", "Selección de colores y tipografía", "Experiencia de usuario (UX)"]
+        },
+        {
+          "step": "03",
+          "title": "Desarrollo",
+          "description": "Construimos tu sitio web con las mejores tecnologías",
+          "details": ["Desarrollo frontend y backend", "Integración de funcionalidades", "Optimización de rendimiento"]
+        },
+        {
+          "step": "04",
+          "title": "Lanzamiento y soporte",
+          "description": "Publicamos tu sitio y te acompañamos en el proceso",
+          "details": ["Configuración de hosting", "Capacitación", "Soporte continuo"]
+        }
+      ]
+    },
+    "packages_section": {
+      "title": "Paquetes y precios",
+      "description": "Planes diseñados para diferentes necesidades y presupuestos",
+      "most_popular": "Más popular",
+      "choose_plan": "Elegir plan",
+      "packages": [
+        {
+          "name": "Sitio Básico",
+          "price": "Desde $299",
+          "description": "Perfecto para pequeños negocios y emprendedores",
+          "features": ["Hasta 5 páginas", "Diseño responsive", "Formulario de contacto", "SEO básico", "1 mes de soporte"],
+          "popular": false
+        },
+        {
+          "name": "Sitio Profesional",
+          "price": "Desde $599",
+          "description": "Ideal para empresas en crecimiento",
+          "features": ["Hasta 10 páginas", "Panel de administración", "Blog integrado", "SEO avanzado", "Integración con redes sociales", "3 meses de soporte"],
+          "popular": true
+        },
+        {
+          "name": "E-commerce",
+          "price": "Desde $999",
+          "description": "Para vender productos online",
+          "features": ["Tienda online completa", "Sistema de pagos", "Gestión de inventario", "Panel de ventas", "Integración con WhatsApp", "6 meses de soporte"],
+          "popular": false
+        }
+      ]
+    },
+    "testimonials_section": {
+      "title": "Lo que dicen nuestros clientes",
+      "testimonials": [
+        {
+          "name": "María González",
+          "company": "Boutique Elena",
+          "content": "Nuestro sitio web ha aumentado las ventas en un 40%. Los clientes ahora pueden ver nuestros productos y hacer pedidos online."
+        },
+        {
+          "name": "Carlos Mendoza",
+          "company": "Ferretería Central",
+          "content": "El panel de administración es muy fácil de usar. Puedo actualizar precios y productos sin ayuda técnica."
+        }
+      ]
+    },
+    "faq_section": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Cuánto tiempo toma desarrollar un sitio web?",
+          "answer": "Un sitio básico toma de 2-3 semanas, uno profesional de 4-6 semanas, y un e-commerce de 6-8 semanas."
+        },
+        {
+          "question": "¿Incluye el hosting y dominio?",
+          "answer": "Te ayudamos a configurar el hosting y dominio, pero los costos anuales van por separado (aproximadamente $100-150/año)."
+        },
+        {
+          "question": "¿Puedo actualizar el contenido yo mismo?",
+          "answer": "Sí, incluimos un panel de administración fácil de usar y te capacitamos para que manejes tu sitio independientemente."
+        },
+        {
+          "question": "¿Qué pasa si necesito cambios después?",
+          "answer": "Incluimos soporte durante el período especificado. Después, ofrecemos planes de mantenimiento mensual o cambios puntuales."
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "¿Listo para crear tu sitio web?",
+      "description": "Conversemos sobre tu proyecto y descubre cómo podemos ayudarte a tener presencia digital exitosa",
+      "cta_start": "Iniciar proyecto",
+      "cta_call": "Llamar ahora"
+    }
+  }
+
+}

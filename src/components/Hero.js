@@ -2,9 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import { ArrowRight, Play, Star, Users, Award, ChevronDown } from "lucide-react";
 
 export default function Hero() {
+  const t = useTranslations('hero');
+  const params = useParams();
+  const locale = params.locale || 'es';
+
   // Function for smooth scrolling
   const handleScrollToServices = () => {
     const servicesSection = document.getElementById('services');
@@ -32,46 +38,49 @@ export default function Hero() {
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium text-white/90 w-fit mx-auto lg:mx-0">
             <div className="flex items-center space-x-1">
               <Star className="w-4 h-4 text-yellow-400 fill-current" />
-              <span>Más de 6 proyectos exitosos</span>
+              <span>{t('badge')}</span>
             </div>
           </div>
 
           {/* Main title */}
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              <span className="block">IMPULSA TU</span>
+              <span className="block">{t('title')}</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600">
-                NEGOCIO
+                {t('titleHighlight')}
               </span>
             </h1>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300">
-              con tecnología hecha a tu medida
+              {t('subtitle')}
             </h2>
           </div>
           
           {/* Description */}
           <p className="text-lg md:text-xl lg:text-2xl text-gray-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-            Creamos <span className="text-red-400 font-semibold">páginas web</span>, <span className="text-red-400 font-semibold">aplicaciones</span> y 
-            <span className="text-red-400 font-semibold"> soluciones digitales</span> que transforman ideas en resultados medibles.
+            {t.rich('description', {
+              web: <span key={'web'} className="text-red-400 font-semibold">{t('web')}</span>,
+              apps: <span key={'apps'} className="text-red-400 font-semibold">{t('apps')}</span>,
+              solutions: <span key={'solutions'} className="text-red-400 font-semibold">{t('solutions')}</span>
+            })}
           </p>
 
           {/* Quick Statistics */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start text-center lg:text-left">
             <div className="flex items-center space-x-2 justify-center lg:justify-start">
               <Users className="w-5 h-5 text-red-400" />
-              <span className="text-sm text-gray-300">4+ Clientes satisfechos</span>
+              <span className="text-sm text-gray-300">4+ {t('satisfiedClients')}</span>
             </div>
             <div className="flex items-center space-x-2 justify-center lg:justify-start">
               <Award className="w-5 h-5 text-red-400" />
-              <span className="text-sm text-gray-300">98% Tasa de éxito</span>
+            <span className="text-sm text-gray-300">98% {t('successRate')}</span>
             </div>
           </div>
           
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <button className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-4 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px]">
-                <span>Comenzar proyecto</span>
+                <span>{t('startProject')}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </Link>
@@ -79,14 +88,14 @@ export default function Hero() {
             <Link href="/portfolio">
               <button className="group bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:border-white/40 text-white px-4 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px]">
                 <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                <span>Ver portafolio</span>
+                <span>{t('viewPortfolio')}</span>
               </button>
             </Link>
           </div>
 
           {/* Trust indicator */}
           <div className="flex items-center space-x-4 text-sm text-gray-400 justify-center lg:justify-start mt-6">
-            <span>Confían en nosotros:</span>
+            <span>{t('trustUs')}</span>
             <div className="flex items-center space-x-2">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map((i) => (
@@ -98,7 +107,7 @@ export default function Hero() {
                   </div>
                 ))}
               </div>
-              <span className="text-white font-medium">+3 empresas</span>
+              <span className="text-white font-medium">+3 {t('companies')}</span>
             </div>
           </div>
         </div>
@@ -119,7 +128,7 @@ export default function Hero() {
             <div className="relative z-10 transform group-hover:scale-105 transition-transform duration-500">
               <Image 
                 src='/images/hero-image.png' 
-                alt="Desarrollo web y tecnología digital"
+                alt={locale === 'es' ? "Desarrollo web y tecnología digital" : "Web development and digital technology"}
                 width={500}
                 height={500}
                 priority={true}
@@ -131,7 +140,7 @@ export default function Hero() {
             <div className="absolute -top-8 -right-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-3 animate-float">
               <div className="flex items-center space-x-2 text-white text-sm font-medium">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span>En línea</span>
+                <span>{t('online')}</span>
               </div>
             </div>
           </div>
@@ -148,15 +157,15 @@ export default function Hero() {
               <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-xl flex items-center justify-center group-hover:from-red-500/40 group-hover:to-red-600/40 transition-all duration-300 group-hover:scale-110">
                 <Image
                   src="/images/cms_drupal.svg"
-                  alt="Desarrollo web"
+                  alt={locale === 'es' ? "Desarrollo web" : "Web development"}
                   width={28}
                   height={28}
                   className="w-7 h-7"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl text-white font-semibold mb-1">Tu propia web</h3>
-                <p className="text-sm text-gray-400">Diseños únicos y funcionales</p>
+                <h3 className="text-lg md:text-xl text-white font-semibold mb-1">{t('services.web.title')}</h3>
+                <p className="text-sm text-gray-400">{t('services.web.description')}</p>
               </div>
               <div className="w-6 h-6 text-gray-400 group-hover:text-red-400 transition-all duration-300 group-hover:translate-x-2 transform">
                 <ArrowRight className="w-full h-full" />
@@ -170,15 +179,15 @@ export default function Hero() {
               <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-xl flex items-center justify-center group-hover:from-red-500/40 group-hover:to-red-600/40 transition-all duration-300 group-hover:scale-110">
                 <Image
                   src="/images/computer_devices_mobile_phone_icon.svg"
-                  alt="Aplicaciones móviles"
+                  alt={locale === 'es' ? "Aplicaciones móviles" : "Web development"}
                   width={28}
                   height={28}
                   className="w-7 h-7"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl text-white font-semibold mb-1">Apps móviles</h3>
-                <p className="text-sm text-gray-400">Nativas e híbridas</p>
+                <h3 className="text-lg md:text-xl text-white font-semibold mb-1">{t('services.mobile.title')}</h3>
+                <p className="text-sm text-gray-400">{t('services.mobile.description')}</p>
               </div>
               <div className="w-6 h-6 text-gray-400 group-hover:text-red-400 transition-all duration-300 group-hover:translate-x-2 transform">
                 <ArrowRight className="w-full h-full" />
@@ -192,15 +201,15 @@ export default function Hero() {
               <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-xl flex items-center justify-center group-hover:from-red-500/40 group-hover:to-red-600/40 transition-all duration-300 group-hover:scale-110">
                 <Image
                   src="/images/computer_technology.svg"
-                  alt="Software personalizado"
+                  alt={locale === 'es' ? "Software personalizado" : "Custom software"}
                   width={28}
                   height={28}
                   className="w-7 h-7"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl text-white font-semibold mb-1">Software a medida</h3>
-                <p className="text-sm text-gray-400">Soluciones personalizadas</p>
+                <h3 className="text-lg md:text-xl text-white font-semibold mb-1">{t('services.software.title')}</h3>
+                <p className="text-sm text-gray-400">{t('services.software.description')}</p>
               </div>
               <div className="w-6 h-6 text-gray-400 group-hover:text-red-400 transition-all duration-300 group-hover:translate-x-2 transform">
                 <ArrowRight className="w-full h-full" />
@@ -216,7 +225,7 @@ export default function Hero() {
           onClick={handleScrollToServices}
           className="flex flex-col items-center space-y-2 text-white/60 hover:text-white transition-colors duration-300 group"
         >
-          <span className="text-sm font-medium">Conoce más</span>
+          <span className="text-sm font-medium">{t('learnMore')}</span>
           <ChevronDown className="w-6 h-6 animate-bounce group-hover:translate-y-1 transition-transform duration-300" />
         </button>
       </div>
