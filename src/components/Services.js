@@ -151,7 +151,7 @@ const Services = () => {
                   </div>
                   
                   {/* CTA Button */}
-                  <Link href={`/services/${service.shortTitle.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Link href={`/${locale}/services/${service.shortTitle.toLowerCase().replace(/\s+/g, '-')}`}>
                     <button className={`w-full bg-gradient-to-r ${service.gradient} hover:bg-gradient-to-r hover:${service.hoverGradient} text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center justify-center space-x-2`}>
                       <span>{t('moreInfo')}</span>
                       <ArrowRight className="w-4 h-4" />

@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 export default function Automatizacion() {
   const t = useTranslations('automationService');
   const params = useParams();
-  const locale = params.locale || 'es'
+  const locale = params.locale || 'es';
   const automationAreas = t.raw('automationAreas');
   const process = t.raw('processAreas');
   const tools = t.raw('toolsAreas');
