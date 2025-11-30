@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Drunic — Corporate Website
 
-## Getting Started
+This repository contains the source code for the corporate website of Drunic, a company specialized in developing modern websites, e-commerce solutions, and custom software. The project is built with Next.js (App Router) and supports multilingual content, a serverless contact form, and modular sections for services and portfolio.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🌐 Multilingual support (EN / ES) using next-intl
+- 📱 Fully responsive, mobile-first layout
+- ⚛️ Reusable React components
+- 📩 Serverless contact form (/api/contact)
+- ⚡ Modern architecture with Next.js App Router
+- 🔍 SEO-optimized structure
+- ☁️ One-click deployment on Vercel
+
+## 🛠️ Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- next-intl
+- Tailwind CSS
+- Node.js 18+
+- Vercel (Recommended hosting)
+
+## 📂 Project Structure
+```
+src/
+ ├─ app/               # Layouts, routes, and pages
+ │   ├─ api/           # Serverless API endpoints
+ │   ├─ (en)/          # English pages
+ │   ├─ (es)/          # Spanish pages
+ │   └─ components/    # Page-specific components
+ ├─ components/        # Global shared components
+ ├─ styles/            # Global CSS
+messages/              # en.json / es.json translations
+public/                # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+git clone https://github.com/Luis93Hub/drunic_V2
+cd drunic_V2
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Local server:
+http://localhost:3000
 
-## Learn More
+## 🔐 Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a .env.local file:
+```
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+FROM_EMAIL=
+```
+These are required for the contact form functionality.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
+1. Vercel (Recommended)
+2. Connect the repository to Vercel
+3. Add environment variables
+4. Deploy automatically from main
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Useful Scripts
+```
+npm run dev      # Development mode
+npm run build    # Production build
+npm start        # Run in production
+```
 
-## Deploy on Vercel
+## 📄 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork the repo
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Contact
+
+For custom development or commercial inquiries:
+
+## Drunic
+📧 contact.drunic@gmail.com
+
+## 🪪 License
+Released under the MIT License.
