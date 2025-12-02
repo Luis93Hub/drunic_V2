@@ -6,6 +6,55 @@
     "contact": "Contact",
     "portfolio": "Portfolio"
   },
+  "faq": {
+    "navigation": {
+      "backHome": "Back to home"
+    },
+    "title": "Frequently Asked Questions",
+    "subtitle": "Essential information before creating or upgrading your website.",
+    "faqsubtitle": "Find answers to common questions about our services and processes.",
+    "faqButton": "Go to FAQ Page",
+    "contactButton": "Go to contact",
+    "emailButton": "Send email",
+    "items": [
+      {
+        "question": "Where can I create my website?",
+        "answer": "At Drunic, we design and develop modern, secure, and SEO-optimized websites for clients worldwide, including Central America and Nicaragua. Contact us to start your project today."
+      },
+      {
+        "question": "Who will build my professional website?",
+        "answer": "A specialized team at Drunic—designers, developers, and project managers—works together to deliver a high-quality, professional website."
+      },
+      {
+        "question": "How long does it take to develop a website?",
+        "answer": "Project timelines depend on complexity: basic sites take 2–3 weeks, professional sites 4–6 weeks, and e-commerce platforms 6–8 weeks."
+      },
+      {
+        "question": "How do I start my web project?",
+        "answer": "Simply contact us through the form to schedule a free consultation and begin planning your website."
+      },
+      {
+        "question": "What technologies do you specialize in?",
+        "answer": "Our core expertise is Drupal CMS for robust, scalable websites and custom software development tailored to specific business needs. Beyond that, we also work with modern frameworks such as Next.js, C#, and other technologies depending on the project requirements."
+      },
+      {
+        "question": "Do you adapt to the technology stack my project needs?",
+        "answer": "Yes. While we primarily build using Drupal and custom software solutions, we can fully adapt to different technologies—including Next.js and other modern tools—when they provide the best fit for your goals, timeline, and product vision."
+      },
+      {
+        "question": "How do you choose the right technology for my project?",
+        "answer": "We analyze your business needs, scalability expectations, and long-term plans. Based on this evaluation, we recommend the most efficient technology, whether that’s Drupal for content-heavy platforms, Next.js for high-performance web apps, or custom desktop solutions using C#."
+      },
+      {
+        "question": "Can you work with a specific technology I prefer?",
+        "answer": "Absolutely. If you already have a preferred tech stack—such as Drupal, Next.js, or C#—we can align your project with that stack as long as it supports the functionality and performance your project requires."
+      },
+      {
+        "question": "Do you offer custom-built software in addition to websites?",
+        "answer": "Yes. Besides CMS and web platforms, we build fully customized software solutions, including desktop applications in C#. We design each solution to fit your workflow, industry, and operational needs."
+      }
+    ]
+  },
   "hero": {
     "badge": "6+ successful projects",
     "title": "BOOST YOUR",

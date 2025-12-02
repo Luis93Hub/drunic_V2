@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import TechnologyStack from '@/components/TechnologyStack';
 import Services from '@/components/Services';
+import FaqButtonSection from '@/components/FaqButtonSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
@@ -40,6 +41,9 @@ export default function Home() {
 
         {/* Services */}
         <Services />
+
+        {/* Faq Button Section */}
+        <FaqButtonSection />
 
         {/* Contact */}
         <Contact />

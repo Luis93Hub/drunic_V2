@@ -6,6 +6,55 @@
     "contact": "Contacto",
     "portfolio": "Portafolio"
   },
+  "faq": {
+    "navigation": {
+      "backHome": "Volver al inicio"
+    },
+    "title": "Preguntas frecuentes",
+    "subtitle": "Información esencial antes de crear o actualizar su sitio web.",
+    "faqsubtitle": "Encuentre respuestas a preguntas comunes sobre nuestros servicios y procesos.",
+    "faqButton": "Ir a la página de preguntas frecuentes",
+    "contactButton": "Ir a contacto",
+    "emailButton": "Enviar email",
+    "items": [
+      {
+        "question": "¿Dónde puedo hacer mi página web?",
+        "answer": "En Drunic, diseñamos y desarrollamos sitios web modernos, seguros y optimizados para SEO para clientes de todo el mundo, incluidos Centroamérica y Nicaragua. Contáctanos para comenzar tu proyecto hoy mismo."
+      },
+      {
+        "question": "¿Quién construirá mi sitio web profesional?",
+        "answer": "Un equipo especializado en Drunic (diseñadores, desarrolladores y gerentes de proyectos) trabaja en conjunto para ofrecer un sitio web profesional de alta calidad."
+      },
+      {
+        "question": "¿Cuánto tiempo toma desarrollar un sitio web?",
+        "answer": "Los plazos del proyecto dependen de la complejidad: los sitios básicos demoran entre 2 y 3 semanas, los sitios profesionales entre 4 y 6 semanas y las plataformas de comercio electrónico entre 6 y 8 semanas."
+      },
+      {
+        "question": "¿Cómo comienzo mi proyecto web?",
+        "answer": "Simplemente contáctenos a través del formulario para programar una consulta gratuita y comenzar a planificar su sitio web."
+      },
+      {
+        "question": "¿En qué tecnologías están especializados?",
+        "answer": "Nuestra principal experiencia se centra en Drupal CMS para sitios web robustos y escalables, además del desarrollo de software a la medida adaptado a las necesidades específicas de cada negocio. También trabajamos con frameworks modernos como Next.js, C# y otras tecnologías según los requerimientos del proyecto."
+      },
+      {
+        "question": "¿Se adaptan a la tecnología que necesita mi proyecto?",
+        "answer": "Sí. Aunque principalmente desarrollamos con Drupal y soluciones de software personalizado, podemos adaptarnos completamente a otras tecnologías —incluyendo Next.js y herramientas modernas— cuando representan la mejor opción para tus objetivos, plazos y visión del producto."
+      },
+      {
+        "question": "¿Cómo eligen la tecnología adecuada para mi proyecto?",
+        "answer": "Analizamos tus necesidades de negocio, la escalabilidad esperada y los planes a largo plazo. Con base en esta evaluación, recomendamos la tecnología más eficiente, ya sea Drupal para plataformas con mucho contenido, Next.js para aplicaciones web de alto rendimiento o soluciones de escritorio personalizadas con C#."
+      },
+      {
+        "question": "¿Pueden trabajar con una tecnología específica que yo prefiera?",
+        "answer": "Por supuesto. Si ya tienes un stack tecnológico preferido—como Drupal, Next.js o C#—podemos alinear tu proyecto con esa tecnología siempre que cumpla con los requisitos de funcionalidad y rendimiento necesarios."
+      },
+      {
+        "question": "¿Ofrecen software completamente personalizado además de sitios web?",
+        "answer": "Sí. Además de CMS y plataformas web, desarrollamos software totalmente personalizado, incluyendo aplicaciones de escritorio en C#. Diseñamos cada solución para ajustarse a tu flujo de trabajo, industria y necesidades operativas."
+      }
+    ]
+  },
   "hero": {
     "badge": "Más de 6 proyectos exitosos",
     "title": "IMPULSA TU",
