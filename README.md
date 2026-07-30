@@ -1,91 +1,191 @@
-# Drunic — Corporate Website
+# Drunic Corporate Website
 
-This repository contains the source code for the corporate website of Drunic, a company specialized in developing modern websites, e-commerce solutions, and custom software. The project is built with Next.js (App Router) and supports multilingual content, a serverless contact form, and modular sections for services and portfolio.
+<div align="center">
 
-## 🚀 Key Features
+# Drunic
 
-- 🌐 Multilingual support (EN / ES) using next-intl
-- 📱 Fully responsive, mobile-first layout
-- ⚛️ Reusable React components
-- 📩 Serverless contact form (/api/contact)
-- ⚡ Modern architecture with Next.js App Router
-- 🔍 SEO-optimized structure
-- ☁️ One-click deployment on Vercel
+**Building Digital Solutions for Modern Businesses**
 
-## 🛠️ Tech Stack
+Official website: https://www.drunic.com
 
-- Next.js (App Router)
-- React
-- TypeScript
-- next-intl
-- Tailwind CSS
-- Node.js 18+
-- Vercel (Recommended hosting)
+Custom Software • Corporate Websites • E-commerce • Business Solutions
 
-## 📂 Project Structure
-```
+</div>
+
+---
+
+# About Drunic
+
+Drunic is a software development company based in Nicaragua, dedicated to creating innovative digital solutions for businesses of all sizes.
+
+Our goal is to help organizations improve productivity, automate business processes, strengthen their online presence, and accelerate digital transformation through modern, reliable, and scalable technology.
+
+We specialize in designing and developing software tailored to each client's unique requirements, combining technical expertise with a strong focus on usability, performance, and long-term maintainability.
+
+---
+
+# Our Services
+
+* 💻 Custom Software Development
+* 🌐 Corporate Website Development
+* 🛒 E-commerce Solutions
+* 📱 Responsive Web Applications
+* ⚙️ Business Management Systems (ERP / CRM)
+* 📊 Inventory & Point of Sale (POS) Systems
+* ☁️ Cloud-Based Solutions
+* 🔧 Software Maintenance & Technical Support
+* 🚀 Performance Optimization
+* 🔍 SEO-Friendly Website Development
+
+---
+
+# About this Repository
+
+This repository contains the source code for the official Drunic corporate website.
+
+The website serves as the company's primary online presence, showcasing our services, portfolio, technologies, and providing a communication channel for potential clients.
+
+This project is intended for internal development and maintenance by the Drunic team.
+
+---
+
+# Core Features
+
+* Modern responsive design
+* Multilingual support (English & Spanish)
+* SEO-optimized architecture
+* Serverless contact form
+* Modular React components
+* High-performance rendering with Next.js
+* Scalable project structure
+* Optimized for Vercel deployment
+
+---
+
+# Technology Stack
+
+* Next.js (App Router)
+* React
+* TypeScript
+* Tailwind CSS
+* next-intl
+* Node.js
+* Vercel
+
+---
+
+# Project Structure
+
+```text
 src/
- ├─ app/               # Layouts, routes, and pages
- │   ├─ api/           # Serverless API endpoints
- │   ├─ (en)/          # English pages
- │   ├─ (es)/          # Spanish pages
- │   └─ components/    # Page-specific components
- ├─ components/        # Global shared components
- ├─ styles/            # Global CSS
-messages/              # en.json / es.json translations
-public/                # Static assets
+ ├── app/
+ │    ├── api/
+ │    ├── (en)/
+ │    ├── (es)/
+ │    └── components/
+ ├── components/
+ ├── styles/
+messages/
+public/
 ```
 
-## ⚙️ Installation
+---
 
-```
+# Development Setup
+
+Clone the repository:
+
+```bash
 git clone https://github.com/Luis93Hub/drunic_V2
 cd drunic_V2
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Run the development server:
+
+```bash
 npm run dev
 ```
 
-Local server:
-http://localhost:3000
+The application will be available at:
 
-## 🔐 Environment Variables
-
-Create a .env.local file:
 ```
+http://localhost:3000
+```
+
+---
+
+# Environment Variables
+
+Create a `.env.local` file with the following variables:
+
+```env
 SMTP_HOST=
 SMTP_PORT=
 SMTP_USER=
 SMTP_PASS=
 FROM_EMAIL=
 ```
-These are required for the contact form functionality.
 
-## 🚀 Deployment
-1. Vercel (Recommended)
-2. Connect the repository to Vercel
-3. Add environment variables
-4. Deploy automatically from main
+These variables are required for the contact form functionality.
 
-Useful Scripts
-```
-npm run dev      # Development mode
-npm run build    # Production build
-npm start        # Run in production
+---
+
+# Available Scripts
+
+```bash
+npm run dev
+npm run build
+npm run start
 ```
 
-## 📄 Contributing
+---
 
-1. Fork the repo
-2. Create a feature branch
-3. Commit your changes
-4. Open a Pull Request
+# Deployment
 
-## 📞 Contact
+The project is optimized for deployment on **Vercel**.
 
-For custom development or commercial inquiries:
+Deployment steps:
 
-## Drunic
-📧 contact.drunic@gmail.com
+1. Connect the repository to Vercel.
+2. Configure the required environment variables.
+3. Deploy from the `main` branch.
 
-## 🪪 License
-Released under the MIT License.
+---
+
+# Our Mission
+
+To empower businesses through innovative software solutions that improve efficiency, automate operations, and support sustainable growth.
+
+---
+
+# Our Vision
+
+To become one of the leading software development companies in Central America by delivering reliable, high-quality, and innovative digital solutions.
+
+---
+
+# Contact
+
+**Drunic**
+
+Website
+https://www.drunic.com
+
+Email
+[contact.drunic@gmail.com](mailto:contact.drunic@gmail.com)
+
+---
+
+# License
+
+This repository contains proprietary software developed by Drunic.
+
+Unless otherwise specified, all rights are reserved.
+
+Unauthorized copying, distribution, or modification of this software is prohibited.
