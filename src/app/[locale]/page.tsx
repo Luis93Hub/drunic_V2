@@ -20,7 +20,8 @@ export default function Home() {
               src={`/hero-background.jpg`}
               alt='hero-background'
               fill
-              priority={true}
+              loading="eager"
+              fetchPriority="low"
               className='object-fit'
              />
             <div className='absolute inset-0 bg-black/75'></div>

@@ -93,7 +93,8 @@ export default function Hero() {
                 alt={locale === 'es' ? "Desarrollo web y tecnología digital" : "Web development and digital technology"}
                 width={500}
                 height={500}
-                priority={true}
+                preload={true}
+                fetchPriority="high"
                 className="w-full h-auto drop-shadow-2xl filter group-hover:drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] transition-all duration-500"
               />
             </div>
