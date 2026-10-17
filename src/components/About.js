@@ -103,9 +103,9 @@ export default function About() {
                 src='/images/about/about-1.png'
                 width={500}
                 height={500}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 alt={locale === 'es' ? "Equipo trabajando en desarrollo de software" : "Team working on software development"}
                 className="w-full h-auto rounded-xl"
-                priority
               />
             </div>
           </div>
@@ -210,6 +210,7 @@ export default function About() {
                 src='/images/about/about-2.png'
                 width={500}
                 height={500}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 alt={locale === 'es' ? "Desarrollo de soluciones digitales" : "Digital solutions development"}
                 className="w-full h-auto rounded-xl transform group-hover:scale-[1.02] transition-transform duration-500"
               />
