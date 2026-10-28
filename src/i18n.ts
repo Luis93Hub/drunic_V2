@@ -8,8 +8,8 @@ export const defaultLocale = 'es' as const;
 
 export type Locale = typeof locales[number];
 
-export default getRequestConfig(async ({ locale }) => {
-  const currentLocale = locale ?? defaultLocale;
+export default getRequestConfig(async ({ locale, requestLocale }) => {
+  const currentLocale = locale ?? (await requestLocale) ?? defaultLocale;
 
   // Validar que el locale existe
   if (!locales.includes(currentLocale as Locale)) notFound();

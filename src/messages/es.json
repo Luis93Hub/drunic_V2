@@ -57,33 +57,50 @@
   },
   "hero": {
     "badge": "Más de 6 proyectos exitosos",
-    "title": "IMPULSA TU",
-    "titleHighlight": "NEGOCIO",
+    "title": "Tu próximo paso digital,",
+    "titleHighlight": "bien construido.",
     "subtitle": "con tecnología hecha a tu medida",
-    "description": "Creamos {web}, {apps} y {solutions} que transforman ideas en resultados medibles.",
+    "description": "Diseñamos sitios web, desarrollamos software a medida y automatizamos procesos para que tu negocio trabaje mejor.",
     "web": "páginas web",
     "apps": "aplicaciones",
     "solutions": "soluciones digitales",
     "satisfiedClients": "Clientes satisfechos",
     "successRate": "Tasa de éxito",
-    "startProject": "Comenzar proyecto",
-    "viewPortfolio": "Ver portafolio",
+    "startProject": "Hablemos de tu proyecto",
+    "viewPortfolio": "Ver proyectos",
     "trustUs": "Confían en nosotros:",
     "companies": "empresas",
     "online": "En línea",
-    "learnMore": "Conoce más",
+    "learnMore": "Explora nuestros servicios",
     "services": {
       "web": {
         "title": "Tu propia web",
         "description": "Diseños únicos y funcionales"
       },
       "mobile": {
-        "title": "Apps móviles", 
+        "title": "Apps móviles",
         "description": "Nativas e híbridas"
       },
       "software": {
         "title": "Software a medida",
         "description": "Soluciones personalizadas"
+      }
+    },
+    "eyebrow": "Drunic · Desarrollo digital",
+    "servicesLabel": "Lo que podemos construir contigo",
+    "footerNote": "Diseño, desarrollo y atención a cada detalle.",
+    "offerings": {
+      "web": {
+        "title": "Sitios web",
+        "description": "Una presencia digital clara, rápida y pensada para tus clientes."
+      },
+      "software": {
+        "title": "Software a medida",
+        "description": "Herramientas diseñadas alrededor de tu forma de trabajar."
+      },
+      "automation": {
+        "title": "Automatización",
+        "description": "Menos tareas repetitivas. Más tiempo para tu negocio."
       }
     }
   },
