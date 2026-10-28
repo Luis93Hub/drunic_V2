@@ -4,14 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ConctactForm from '../../../components/ContactForm';
 import Footer from '../../../components/Footer';
-import { useParams } from 'next/navigation';
-import { Phone, Mail, MapPin, Facebook, Instagram, Send, Linkedin, CheckCircle, XCircle, ArrowLeft, Clock, Users, Award } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Send, Linkedin, ArrowLeft, Clock, Users, Award } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
  const ContactPage = () => {
   const t = useTranslations('contactpage');
-  const params = useParams();
-  const locale = params.locale || 'es';
 
   return (
     <div className="min-h-screen bg-black">
