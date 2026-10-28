@@ -1,6 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
 import { locales, defaultLocale } from './i18n';
-import { NextResponse } from 'next/server';
 
 export const proxy = createMiddleware({
   // Lista de todos los locales soportados

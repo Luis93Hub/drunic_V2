@@ -1,12 +1,21 @@
 import { Resend } from "resend";
 import {  NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+})[character]);
 
 export async function POST(request) { 
   try {
     const body = await request.json();
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      return NextResponse.json({ error: 'Datos inválidos' }, { status: 400 });
+    }
     const { name, email, phone, company, service, message } = body;
+    if ([name, email, message].some((value) => typeof value !== 'string') ||
+        [phone, company, service].some((value) => value != null && typeof value !== 'string')) {
+      return NextResponse.json({ error: 'Datos inválidos' }, { status: 400 });
+    }
 
     // Validate required fields
     if (!name || !email || !message ) {
@@ -25,8 +34,16 @@ export async function POST(request) {
       );
     }
 
-    // Send email using Resend
-    const data = await resend.emails.send({
+    // Initialize at request time so missing runtime configuration cannot break builds.
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'El servicio de contacto no está disponible temporalmente' },
+        { status: 503 }
+      );
+    }
+    const resend = new Resend(apiKey);
+    const { data, error: sendError } = await resend.emails.send({
       from: 'Drunic <onboarding@resend.dev>',
       to: ['contact.drunic@gmail.com'],
       subject: `🚀 Nuevo proyecto - ${name}`,
@@ -55,36 +72,36 @@ export async function POST(request) {
             
             <div class="content">
               <div class="field">
-                <strong>👤 Cliente:</strong> ${name}
+                <strong>👤 Cliente:</strong> ${escapeHtml(name)}
               </div>
               
               <div class="field">
                 <strong>📧 Email:</strong> 
-                <a href="mailto:${email}" style="color: #ef4444;">${email}</a>
+                <a href="mailto:${escapeHtml(email)}" style="color: #ef4444;">${escapeHtml(email)}</a>
               </div>
               
               ${phone ? `
                 <div class="field">
                   <strong>📱 Teléfono:</strong> 
-                  <a href="tel:${phone}" style="color: #ef4444;">${phone}</a>
+                  <a href="tel:${escapeHtml(phone)}" style="color: #ef4444;">${escapeHtml(phone)}</a>
                 </div>
               ` : ''}
               
               ${company ? `
                 <div class="field">
-                  <strong>🏢 Empresa:</strong> ${company}
+                  <strong>🏢 Empresa:</strong> ${escapeHtml(company)}
                 </div>
               ` : ''}
               
               ${service ? `
                 <div class="field">
-                  <strong>🛠️ Servicio solicitado:</strong> ${service}
+                  <strong>🛠️ Servicio solicitado:</strong> ${escapeHtml(service)}
                 </div>
               ` : ''}
               
               <div class="message-box">
                 <strong style="color: #ef4444;">💬 Mensaje:</strong>
-                <p style="margin-top: 10px; white-space: pre-line;">${message}</p>
+                <p style="margin-top: 10px; white-space: pre-line;">${escapeHtml(message)}</p>
               </div>
               
               <div class="footer">
@@ -99,7 +116,13 @@ export async function POST(request) {
       replyTo: email,
     });
 
-    console.log('✅ Email enviado:', data);
+    if (sendError) {
+      console.error('Error enviando email:', sendError.name);
+      return NextResponse.json(
+        { error: 'No se pudo enviar el mensaje. Inténtalo más tarde' },
+        { status: 502 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
@@ -112,8 +135,7 @@ export async function POST(request) {
 
     return NextResponse.json(
       {
-        error: 'Error interno del servidor',
-        details: error.message
+        error: 'Error interno del servidor'
       },
       {status: 500}
     );

@@ -2,12 +2,9 @@
 import { useState } from "react";
 import { CheckCircle, XCircle, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
 
 export default function ContactForm() {
   const t = useTranslations('contact');
-  const params = useParams();
-  const locale = params.locale || 'es';
 
   const [formData, setFormData] = useState({
     name: "",

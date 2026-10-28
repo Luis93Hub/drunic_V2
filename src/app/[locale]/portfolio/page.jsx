@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Code, Palette, Smartphone, Globe, Zap, Users, ArrowRight, Star, Calendar, Tag, X } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Code, Palette, Smartphone, Globe, Zap, Users, ArrowRight, Star, Calendar, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 

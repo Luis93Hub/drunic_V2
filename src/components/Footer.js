@@ -4,12 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Facebook, Instagram, Send, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
 
 export default function Footer() {
   const t = useTranslations('footer');
-  const params = useParams();
-  const locale = params.locale || 'es';
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">

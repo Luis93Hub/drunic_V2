@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import FAQSection from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import { ArrowLeft } from 'lucide-react';
