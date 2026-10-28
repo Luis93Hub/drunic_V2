@@ -59,7 +59,7 @@ export default function Automatizacion() {
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                {t('title')}
+                {t('title')}{' '}
                 <span className="block text-red-200">{t('titleHighlight')}</span>
               </h1>
               
@@ -85,7 +85,7 @@ export default function Automatizacion() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-center mb-6">
                   <Zap className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">{t('results.title')}</h3>
+                  <h2 className="text-2xl font-bold mb-4">{t('results.title')}</h2>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
@@ -244,7 +244,7 @@ export default function Automatizacion() {
             {tools.map((tool, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 text-center">
                 <div className="text-4xl mb-4">{tool.logo}</div>
-                <h4 className="font-semibold text-gray-900 mb-2">{tool.name}</h4>
+                <h3 className="font-semibold text-gray-900 mb-2">{tool.name}</h3>
                 <p className="text-sm text-gray-600">{tool.use}</p>
               </div>
             ))}

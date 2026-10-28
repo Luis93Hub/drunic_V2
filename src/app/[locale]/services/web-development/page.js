@@ -58,7 +58,7 @@ export default function DesarrolloWeb() {
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                {t('title_main')}
+                {t('title_main')}{' '}
                 <span className="block text-blue-200">{t('title_highlight')}</span>
               </h1>
               

@@ -59,7 +59,7 @@ export default function SoftwareAMedida() {
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                {t('title')}
+                {t('title')}{' '}
                 <span className="block text-green-200">{t('titleHighlight')}</span>
               </h1>
               
@@ -84,7 +84,7 @@ export default function SoftwareAMedida() {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-4">{t('why_title')}</h3>
+                  <h2 className="text-2xl font-bold mb-4">{t('why_title')}</h2>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -336,9 +336,9 @@ export default function SoftwareAMedida() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pricingFactors.map((factor, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {factor.factor}
-                </h4>
+                </h3>
                 <p className="text-gray-600 text-sm mb-4">
                   {factor.description}
                 </p>
