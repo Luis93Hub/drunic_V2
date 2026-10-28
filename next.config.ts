@@ -5,7 +5,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin('./next-intl.config.ts');
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Allow the LAN address used to preview the site during development.
+  allowedDevOrigins: ['10.53.126.18'],
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

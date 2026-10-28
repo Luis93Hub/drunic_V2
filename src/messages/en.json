@@ -57,21 +57,21 @@
   },
   "hero": {
     "badge": "6+ successful projects",
-    "title": "BOOST YOUR",
-    "titleHighlight": "BUSINESS",
+    "title": "Your next digital step,",
+    "titleHighlight": "built with care.",
     "subtitle": "with custom-built technology",
-    "description": "We create {web}, {apps} and {solutions} that transform ideas into measurable results.",
+    "description": "We design websites, build custom software, and automate processes to help your business work better.",
     "web": "websites",
     "apps": "applications",
     "solutions": "digital solutions",
     "satisfiedClients": "Satisfied clients",
     "successRate": "Success rate",
-    "startProject": "Start project",
-    "viewPortfolio": "View portfolio",
+    "startProject": "Let’s talk about your project",
+    "viewPortfolio": "View projects",
     "trustUs": "Trust us:",
     "companies": "companies",
     "online": "Online",
-    "learnMore": "Learn more",
+    "learnMore": "Explore our services",
     "services": {
       "web": {
         "title": "Your own website",
@@ -84,6 +84,23 @@
       "software": {
         "title": "Custom software",
         "description": "Personalized solutions"
+      }
+    },
+    "eyebrow": "Drunic · Digital development",
+    "servicesLabel": "What we can build together",
+    "footerNote": "Design, development, and attention to every detail.",
+    "offerings": {
+      "web": {
+        "title": "Websites",
+        "description": "A clear, fast digital presence designed for your customers."
+      },
+      "software": {
+        "title": "Custom software",
+        "description": "Tools built around the way you work."
+      },
+      "automation": {
+        "title": "Automation",
+        "description": "Fewer repetitive tasks. More time for your business."
       }
     }
   },

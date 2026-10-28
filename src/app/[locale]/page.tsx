@@ -8,26 +8,12 @@ import Services from '@/components/Services';
 import FaqButtonSection from '@/components/FaqButtonSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
 
 export default function Home() {
   return (
     <main>
       <div className='min-h-screen'>
         <div className='relative'>
-          <div className='absolute inset-0 -z-10'>
-            <Image
-              src={`/hero-background.jpg`}
-              alt='hero-background'
-              fill
-              sizes="(max-width: 768px) 133vh, 100vw"
-              loading="eager"
-              fetchPriority="low"
-              className='object-cover'
-             />
-            <div className='absolute inset-0 bg-black/75'></div>
-          </div>
-
           {/* Navigation */}
           <Navigation />
           
