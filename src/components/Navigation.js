@@ -18,7 +18,7 @@ export default function Navigation() {
   const locale = params.locale || 'es';
 
   const menuItems = [
-    { href: '#home', label: t('home') },
+    { href: '#inicio', label: t('home') },
     { href: '#about', label: t('about') },
     { href: '#services', label: t('services') },
     { href: `/${locale}/portfolio`, label: t('portfolio'), external: true }
@@ -51,7 +51,7 @@ export default function Navigation() {
   };
 
   const renderLinks = (mobile = false) => menuItems.map((item) => {
-    const active = !item.external && activeSection === item.href.slice(1);
+    const active = !item.external && activeSection === (item.href === '#inicio' ? 'home' : item.href.slice(1));
     const className = `flex min-h-10 items-center gap-2 rounded-md px-3 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${active ? 'bg-white/[0.06] text-white' : 'text-zinc-400 hover:bg-white/[0.04] hover:text-white'} ${mobile ? 'w-full py-3' : ''}`;
     return (
       <li key={item.href}>

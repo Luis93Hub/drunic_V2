@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, useId } from "react";
 import { CheckCircle, XCircle, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
   const t = useTranslations('contact');
+  const formId = useId();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -82,34 +83,38 @@ export default function ContactForm() {
       {/* Row 1 */}
       <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-white text-sm font-medium mb-3">
+          <label htmlFor={`${formId}-name`} className="block text-zinc-300 text-sm font-medium mb-2">
             {t('form.name')} *
           </label>
           <input
             type="text"
+            id={`${formId}-name`}
             name="name"
+            autoComplete="name"
             onChange={handleChange}
             value={formData.name}
             placeholder={t('form.namePlaceholder')}
             required
             disabled={isSubmitting}
-            className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
 
         <div>
-          <label className="block text-white text-sm font-medium mb-3">
+          <label htmlFor={`${formId}-email`} className="block text-zinc-300 text-sm font-medium mb-2">
             {t('form.email')} *
           </label>
           <input
             type="email"
+            id={`${formId}-email`}
             name="email"
+            autoComplete="email"
             onChange={handleChange}
             value={formData.email}
             placeholder={t('form.emailPlaceholder')}
             required
             disabled={isSubmitting}
-            className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
       </div>
@@ -117,47 +122,52 @@ export default function ContactForm() {
       {/* Row 2 */}
       <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-white text-sm font-medium mb-3">
+          <label htmlFor={`${formId}-phone`} className="block text-zinc-300 text-sm font-medium mb-2">
             {t('form.phone')}
           </label>
           <input
             type="tel"
+            id={`${formId}-phone`}
             name="phone"
+            autoComplete="tel"
             onChange={handleChange}
             value={formData.phone}
             placeholder={t('form.phonePlaceholder')}
             disabled={isSubmitting}
-            className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
 
         <div>
-          <label className="block text-white text-sm font-medium mb-3">
+          <label htmlFor={`${formId}-company`} className="block text-zinc-300 text-sm font-medium mb-2">
             {t('form.company')}
           </label>
           <input
             type="text"
+            id={`${formId}-company`}
             name="company"
+            autoComplete="organization"
             onChange={handleChange}
             value={formData.company}
             placeholder={t('form.companyPlaceholder')}
             disabled={isSubmitting}
-            className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
       </div>
 
       {/* Service Select */}
       <div>
-        <label className="block text-white text-sm font-medium mb-3">
+        <label htmlFor={`${formId}-service`} className="block text-zinc-300 text-sm font-medium mb-2">
           {t('form.service')}
         </label>
         <select
+          id={`${formId}-service`}
           name="service"
           onChange={handleChange}
           value={formData.service}
           disabled={isSubmitting}
-          className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 appearance-none cursor-pointer"
+          className="w-full px-4 py-3 bg-[#202126] border border-white/15 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zinc-400 cursor-pointer"
         >
           <option value="" className="bg-gray-900">{t('form.servicePlaceholder')}</option>
           {services.map((service) => (
@@ -170,18 +180,19 @@ export default function ContactForm() {
 
       {/* Message */}
       <div>
-        <label className="block text-white text-sm font-medium mb-3">
+        <label htmlFor={`${formId}-message`} className="block text-zinc-300 text-sm font-medium mb-2">
           {t('form.message')} *
         </label>
         <textarea
+          id={`${formId}-message`}
           name="message"
           value={formData.message}
           onChange={handleChange}
           placeholder={t('form.messagePlaceholder')}
           required
-          rows={6}
+          rows={5}
           disabled={isSubmitting}
-          className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 resize-none"
+          className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors resize-y"
         />
       </div>
 
@@ -189,15 +200,11 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full py-5 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl ${
-          isSubmitting 
-            ? 'bg-gray-600 cursor-not-allowed' 
-            : 'bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:from-red-600 hover:via-red-700 hover:to-red-800 shadow-lg'
-        } text-white`}
+        className="w-full rounded-md bg-zinc-100 px-6 py-3.5 text-sm font-semibold text-zinc-900 transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white disabled:cursor-wait disabled:opacity-50"
       >
         {isSubmitting ? (
           <div className="flex items-center justify-center space-x-3">
-            <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            <div className="w-6 h-6 border-2 border-zinc-400 border-t-zinc-900 rounded-full animate-spin"></div>
             <span>{t('form.submitting')}</span>
           </div>
         ) : (
@@ -210,7 +217,7 @@ export default function ContactForm() {
 
       {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="bg-green-500/20 border border-green-400/50 text-green-100 px-6 py-4 rounded-xl text-center animate-fadeIn">
+        <div role="status" className="bg-green-500/20 border border-green-400/50 text-green-100 px-6 py-4 rounded-xl text-center ">
           <div className="flex items-center justify-center space-x-2">
             <CheckCircle className='w-6 h-6 text-green-400' />
             <span className="font-semibold">{t("form.success.title")}</span>
@@ -220,7 +227,7 @@ export default function ContactForm() {
       )}
       
       {submitStatus === 'error' && (
-        <div className="bg-red-500/20 border border-red-400/50 text-red-100 px-6 py-4 rounded-xl text-center animate-fadeIn">
+        <div role="alert" className="bg-red-500/20 border border-red-400/50 text-red-100 px-6 py-4 rounded-xl text-center ">
           <div className="flex items-center justify-center space-x-2">
             <XCircle className='w-6 h-6 text-green-400' />
             <span className="font-semibold">{t('form.error.title')}</span>

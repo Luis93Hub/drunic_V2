@@ -1,4 +1,96 @@
 {
+  "homepage": {
+    "services": {
+      "label": "Services",
+      "title": "Technology built around what your business needs.",
+      "description": "A website to present your company, an application for your operations, or processes that need less manual work. Let’s find where to start.",
+      "explore": "Explore {service}",
+      "items": [
+        {
+          "title": "Web development",
+          "description": "Website design and development for companies in Nicaragua and abroad, with attention to content, navigation, and performance.",
+          "features": [
+            "Design for every screen",
+            "SEO-conscious structure",
+            "Manageable websites and integrations"
+          ]
+        },
+        {
+          "title": "Custom software",
+          "description": "Tools that fit the way you work. We translate your operational needs into specific features.",
+          "features": [
+            "Applications for your business",
+            "System and API integrations",
+            "Features shaped around your process"
+          ]
+        },
+        {
+          "title": "Automation",
+          "description": "Fewer manual steps between your tools. We identify repetitive tasks and design workflows to simplify them.",
+          "features": [
+            "Connected workflows",
+            "Data and tool integrations",
+            "Fewer repetitive tasks"
+          ]
+        }
+      ]
+    },
+    "process": {
+      "title": "A clear process, from our first conversation.",
+      "items": [
+        {
+          "title": "Understand",
+          "description": "We discuss your business, your users, and the problem you need to solve."
+        },
+        {
+          "title": "Define",
+          "description": "We agree on scope, priorities, and deliverables before development."
+        },
+        {
+          "title": "Build",
+          "description": "We design and develop the solution with reviews throughout the project."
+        },
+        {
+          "title": "Launch",
+          "description": "We check how it works and coordinate the production launch."
+        }
+      ]
+    },
+    "technology": {
+      "label": "Technology foundation",
+      "title": "Tools chosen with purpose.",
+      "description": "We work with Drupal and Symfony to build manageable websites, applications, and integrations. The choice depends on each project’s scope and requirements.",
+      "items": [
+        "Content management for corporate websites and platforms that need to organize and publish information.",
+        "Applications, business logic, and integrations built with a modular PHP framework."
+      ]
+    },
+    "faq": {
+      "label": "Before we start",
+      "title": "Questions worth discussing.",
+      "more": "See all questions",
+      "items": [
+        {
+          "question": "Do you work with companies outside Nicaragua?",
+          "answer": "Yes. We can communicate in Spanish or English and coordinate your project remotely. Together, we agree on communication channels and review arrangements."
+        },
+        {
+          "question": "How much does a website or custom application cost?",
+          "answer": "It depends on scope, features, integrations, and content. Tell us what you need so we can prepare a proposal for your project."
+        },
+        {
+          "question": "Can you improve an existing website or system?",
+          "answer": "We can review its current state and the changes you need. We first assess the technology and scope to determine how to approach the improvements."
+        }
+      ]
+    },
+    "contact": {
+      "label": "Let’s talk about your project",
+      "title": "Your next step starts with a conversation.",
+      "description": "Tell us about your company, what you want to improve, and what you have in mind. We’ll review your request to discuss the scope.",
+      "note": "From Nicaragua · Local and international projects · Spanish and English"
+    }
+  },
   "navigation": {
     "home": "Home",
     "about": "About",
@@ -105,6 +197,47 @@
     }
   },
   "about": {
+    "studio": {
+      "eyebrow": "Who we are",
+      "title": "Web and software development from Nicaragua,",
+      "highlight": "with a global outlook.",
+      "description": "At Drunic, we design websites, build custom software, and automate business processes for companies in Nicaragua and international clients.",
+      "approach": "We start with how your business works to define a useful solution, with a clear structure and attention to detail.",
+      "contact": "Let’s discuss your project",
+      "explore": "Explore the service",
+      "methodLabel": "How we work",
+      "methodTitle": "Clear conversations. Thoughtful decisions.",
+      "location": "From Nicaragua · For local and international projects",
+      "languages": "Let’s talk in Spanish or English",
+      "offerings": {
+        "web": {
+          "title": "Web design and development",
+          "description": "Responsive websites that present your business clearly and help customers get in touch."
+        },
+        "software": {
+          "title": "Custom software",
+          "description": "Applications and integrations built around your processes, your users, and your goals."
+        },
+        "automation": {
+          "title": "Process automation",
+          "description": "We connect tools and simplify repetitive tasks to improve your business operations."
+        }
+      },
+      "principles": {
+        "communication": {
+          "title": "Direct communication",
+          "description": "Understanding your context and agreeing on priorities comes first."
+        },
+        "craft": {
+          "title": "Purposeful development",
+          "description": "Every feature addresses a specific need in your business."
+        },
+        "reach": {
+          "title": "Remote collaboration",
+          "description": "A conversation in Spanish or English to shape your project, wherever you are."
+        }
+      }
+    },
     "title": "Who we are?",
     "description": "We are a software development company committed to excellence. We design and implement high-impact digital solutions, combining innovation, quality and technological experience.",
     "mission": {

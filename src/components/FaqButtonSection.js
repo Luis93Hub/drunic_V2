@@ -1,28 +1,15 @@
-'use client';
+import Link from 'next/link';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { ArrowUpRight } from 'lucide-react';
 
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
-
-export default function FaqButtonSection() {
-  const t = useTranslations('faq');
-  const params = useParams();
-  const locale = params.locale || 'es';
-
+export default async function FaqButtonSection() {
+  const t = await getTranslations('homepage');
+  const locale = await getLocale();
   return (
-    <section className="py-12 bg-gray-100 text-center">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          {t('title')}
-        </h2>
-        <p className="text-lg text-gray-700 mb-8">
-          {t('faqsubtitle')}
-        </p>
-        <Link href={`/${locale}/faq`}>
-          <button className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full font-semibold text-lg hover:from-red-600 hover:to-red-700 transition-colors transition-all duration-300">
-            {t('faqButton')}
-          </button>
-        </Link>
+    <section aria-labelledby="faq-title" className="bg-[#f5f4f1] px-6 pb-20 text-zinc-900 sm:px-8 lg:px-16">
+      <div className="mx-auto grid max-w-6xl gap-10 border-t border-zinc-300 pt-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div><p className="mb-5 text-xs tracking-[0.16em] uppercase text-zinc-500">{t('faq.label')}</p><h2 id="faq-title" className="text-3xl font-medium tracking-tight">{t('faq.title')}</h2><Link href={`/${locale}/faq`} className="mt-6 inline-flex min-h-11 items-center gap-3 text-sm font-semibold underline decoration-zinc-400 underline-offset-4 hover:text-red-700">{t('faq.more')}<ArrowUpRight size={16} aria-hidden="true" /></Link></div>
+        <div>{[0, 1, 2].map((i) => <details key={i} className="group border-b border-zinc-300 py-5 first:border-t"><summary className="cursor-pointer text-base font-medium leading-7 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900">{t(`faq.items.${i}.question`)}</summary><p className="mt-4 text-sm leading-7 text-zinc-600">{t(`faq.items.${i}.answer`)}</p></details>)}</div>
       </div>
     </section>
   );

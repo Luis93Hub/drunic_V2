@@ -1,4 +1,96 @@
 {
+  "homepage": {
+    "services": {
+      "label": "Servicios",
+      "title": "Tecnología que responde a lo que tu negocio necesita.",
+      "description": "Una web para presentar tu empresa, una aplicación para tu operación o procesos que necesitan menos trabajo manual. Definamos por dónde empezar.",
+      "explore": "Explorar {service}",
+      "items": [
+        {
+          "title": "Desarrollo web",
+          "description": "Diseño y desarrollo de sitios web para empresas de Nicaragua y del exterior, con atención al contenido, la navegación y el rendimiento.",
+          "features": [
+            "Diseño adaptable a cada pantalla",
+            "Estructura preparada para SEO",
+            "Sitios administrables e integraciones"
+          ]
+        },
+        {
+          "title": "Software a medida",
+          "description": "Herramientas que se ajustan a tu forma de trabajar. Convertimos necesidades de tu operación en funcionalidades concretas.",
+          "features": [
+            "Aplicaciones para tu negocio",
+            "Conexión entre sistemas y APIs",
+            "Funciones definidas según tu proceso"
+          ]
+        },
+        {
+          "title": "Automatización",
+          "description": "Menos pasos manuales entre tus herramientas. Identificamos tareas repetitivas y diseñamos flujos para simplificarlas.",
+          "features": [
+            "Flujos de trabajo conectados",
+            "Integración de datos y herramientas",
+            "Reducción de tareas repetitivas"
+          ]
+        }
+      ]
+    },
+    "process": {
+      "title": "Un proceso claro, desde la primera conversación.",
+      "items": [
+        {
+          "title": "Entendemos",
+          "description": "Conversamos sobre tu negocio, tus usuarios y el problema que necesitas resolver."
+        },
+        {
+          "title": "Definimos",
+          "description": "Acordamos alcance, prioridades y entregables antes de desarrollar."
+        },
+        {
+          "title": "Construimos",
+          "description": "Diseñamos y desarrollamos la solución con revisiones durante el proyecto."
+        },
+        {
+          "title": "Lanzamos",
+          "description": "Verificamos el funcionamiento y coordinamos la puesta en producción."
+        }
+      ]
+    },
+    "technology": {
+      "label": "Base tecnológica",
+      "title": "Herramientas elegidas con criterio.",
+      "description": "Trabajamos con Drupal y Symfony para construir sitios administrables, aplicaciones e integraciones. La elección depende del alcance y los requisitos de cada proyecto.",
+      "items": [
+        "Gestión de contenidos para sitios corporativos y plataformas que necesitan organizar y publicar información.",
+        "Desarrollo de aplicaciones, lógica de negocio e integraciones mediante un framework PHP modular."
+      ]
+    },
+    "faq": {
+      "label": "Antes de empezar",
+      "title": "Preguntas que vale la pena conversar.",
+      "more": "Ver todas las preguntas",
+      "items": [
+        {
+          "question": "¿Trabajan con empresas fuera de Nicaragua?",
+          "answer": "Sí. Podemos conversar en español o inglés y coordinar el proyecto a distancia. Definimos contigo los canales de comunicación y la dinámica de revisión."
+        },
+        {
+          "question": "¿Cuánto cuesta un sitio web o software a medida?",
+          "answer": "Depende del alcance, las funciones, las integraciones y el contenido. Cuéntanos qué necesitas para preparar una propuesta acorde al proyecto."
+        },
+        {
+          "question": "¿Pueden mejorar un sitio o sistema existente?",
+          "answer": "Podemos revisar su estado y los cambios que necesitas. Primero evaluamos la tecnología y el alcance para determinar cómo abordar la mejora."
+        }
+      ]
+    },
+    "contact": {
+      "label": "Hablemos de tu proyecto",
+      "title": "El siguiente paso empieza con una conversación.",
+      "description": "Cuéntanos qué hace tu empresa, qué necesitas mejorar y qué tienes en mente. Revisaremos tu solicitud para conversar sobre el alcance.",
+      "note": "Desde Nicaragua · Proyectos locales e internacionales · Español e inglés"
+    }
+  },
   "navigation": {
     "home": "Inicio",
     "about": "Nosotros",
@@ -105,6 +197,47 @@
     }
   },
   "about": {
+    "studio": {
+      "eyebrow": "Quiénes somos",
+      "title": "Desarrollo web y software desde Nicaragua,",
+      "highlight": "con visión global.",
+      "description": "En Drunic diseñamos sitios web, desarrollamos software a medida y automatizamos procesos para empresas de Nicaragua y clientes internacionales.",
+      "approach": "Partimos de cómo funciona tu negocio para definir una solución útil, con una estructura clara y atención al detalle.",
+      "contact": "Conversemos sobre tu proyecto",
+      "explore": "Conocer el servicio",
+      "methodLabel": "Nuestra forma de trabajar",
+      "methodTitle": "Cercanía en cada conversación. Criterio en cada decisión.",
+      "location": "Desde Nicaragua · Para proyectos locales e internacionales",
+      "languages": "Conversemos en español o inglés",
+      "offerings": {
+        "web": {
+          "title": "Diseño y desarrollo web",
+          "description": "Sitios responsivos que presentan tu negocio con claridad y facilitan el contacto con tus clientes."
+        },
+        "software": {
+          "title": "Software a medida",
+          "description": "Aplicaciones e integraciones adaptadas a tus procesos, tus usuarios y tus objetivos."
+        },
+        "automation": {
+          "title": "Automatización de procesos",
+          "description": "Conectamos herramientas y simplificamos tareas repetitivas para mejorar la operación de tu empresa."
+        }
+      },
+      "principles": {
+        "communication": {
+          "title": "Comunicación directa",
+          "description": "Entender tu contexto y acordar prioridades es el punto de partida."
+        },
+        "craft": {
+          "title": "Desarrollo con propósito",
+          "description": "Cada funcionalidad responde a una necesidad concreta de tu negocio."
+        },
+        "reach": {
+          "title": "Colaboración a distancia",
+          "description": "Una conversación en español o inglés para dar forma a tu proyecto, estés donde estés."
+        }
+      }
+    },
     "title": "¿Quiénes somos?",
     "description": "Somos una empresa de desarrollo de software comprometida con la excelencia. Diseñamos e implementamos soluciones digitales de alto impacto, combinando innovación, calidad y experiencia tecnológica.",
     "mission": {

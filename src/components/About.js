@@ -1,283 +1,80 @@
-'use client';
+import Link from 'next/link';
+import { getTranslations, getLocale } from 'next-intl/server';
+import { ArrowRight, ArrowUpRight, Globe2, Layers3, MessageSquare } from 'lucide-react';
+import styles from './About.module.css';
 
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
-import { Target, Users, Lightbulb, Award, ArrowRight, CheckCircle } from "lucide-react";
+const offerings = [
+  { key: 'web', href: 'web-development', number: '01' },
+  { key: 'software', href: 'custom-software', number: '02' },
+  { key: 'automation', href: 'automation', number: '03' },
+];
+const principles = [
+  { key: 'communication', icon: MessageSquare },
+  { key: 'craft', icon: Layers3 },
+  { key: 'reach', icon: Globe2 },
+];
 
-export default function About() {
-  const t = useTranslations('about');
-  const params = useParams();
-  const locale = params.locale || 'es';
-
-  const values = [
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: t('values.value1.title'),
-      description: t('values.value1.description')
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: t('values.value2.title'),
-      description: t('values.value2.description')
-    },
-    {
-      icon: <Lightbulb className="w-6 h-6" />,
-      title: t('values.value3.title'),
-      description: t('values.value3.description')
-    },
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: t('values.value4.title'),
-      description: t('values.value4.description')
-    }
-  ];
-
-  const achievements = [
-    { number: "6+", 
-      label: t('stats.item1.label'), 
-      icon: "🚀" 
-    },
-    { number: "3+", 
-      label: t('stats.item2.label'), 
-      icon: "📅" 
-    },
-    { number: "100%", 
-      label: t('stats.item3.label'), 
-      icon: "⭐" 
-    },
-    { number: "24h", 
-      label: t('stats.item4.label'), 
-      icon: "⚡" 
-    }
-  ];
-
-  const capabilities = [
-    t('capabilities.item1'),
-    t('capabilities.item2'),
-    t('capabilities.item3'),
-    t('capabilities.item4'),
-    t('capabilities.item5'),
-    t('capabilities.item6'),
-  ];
+export default async function About() {
+  const t = await getTranslations('about');
+  const locale = await getLocale();
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white to-gray-50 text-black relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-red-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-red-500/3 rounded-full blur-3xl"></div>
-      
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {t('title')}
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto rounded-full mb-8"></div>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            {t('description')}
+    <section id="about" aria-labelledby="about-title" className={`${styles.section} scroll-mt-18 px-6 py-20 text-white sm:px-8 sm:py-28 lg:px-16`}>
+      <div className={styles.lines} aria-hidden="true" />
+      <div className="relative mx-auto max-w-6xl">
+        <div className="mb-10 flex items-center justify-between gap-5 border-b border-white/15 pb-5">
+          <p className="flex items-center gap-3 text-xs font-medium tracking-[0.18em] uppercase text-zinc-300">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-300" aria-hidden="true" />{t('studio.eyebrow')}
           </p>
+          <span className="font-mono text-xs text-zinc-400" aria-hidden="true">01 / DRUNIC</span>
         </div>
 
-        {/* Mission Statement */}
-        <div className="bg-gradient-to-r from-red-50 via-red-25 to-red-50 border border-red-100 rounded-2xl p-8 mb-20 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-600"></div>
-          <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              {t('mission.title')}
-            </h3>
-            <p className="text-xl text-gray-800 font-medium leading-relaxed">
-              {t('mission.description')}
-            </p>
-          </div>
-        </div>
-
-        {/* First section - Left image, right content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Image */}
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl"></div>
-            <div className="relative bg-white rounded-2xl p-4 shadow-lg group-hover:shadow-2xl transition-all duration-500">
-              <Image
-                src='/images/about/about-1.png'
-                width={500}
-                height={500}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                alt={locale === 'es' ? "Equipo trabajando en desarrollo de software" : "Team working on software development"}
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                {t('experience.title')}
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                {t('experience.description')}
-              </p>
-            </div>
-
-            {/* Capabilities list */}
-            <div className="space-y-3">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">{t('capabilities.title')}</h4>
-              {capabilities.slice(0,3).map((capability, index) => (
-                <div key={index} className="flex items-center space-x-3 group">
-                  <div className="w-2 h-2 bg-red-500 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                    {capability}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <button className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              <span>{t('buttons.viewServices')}</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+        <div className="grid gap-8 lg:grid-cols-[1.25fr_1fr] lg:gap-20">
+          <h2 id="about-title" className="max-w-2xl text-[clamp(2.25rem,4.5vw,4rem)] leading-[1.12] font-medium tracking-[-0.04em]">
+            {t('studio.title')}{' '}<span className="text-rose-200">{t('studio.highlight')}</span>
+          </h2>
+          <div className="lg:pt-2">
+            <p className="text-base leading-8 text-zinc-200 sm:text-lg">{t('studio.description')}</p>
+            <p className="mt-5 text-sm leading-7 text-zinc-400">{t('studio.approach')}</p>
+            <Link href={`/${locale}/contact`} className="mt-7 inline-flex min-h-11 items-center gap-5 rounded-sm border-b border-rose-300/50 text-sm font-medium text-white transition-colors hover:text-rose-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              {t('studio.contact')}<ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
           </div>
         </div>
 
-        {/* Values section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('values.title')}
-            </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('values.subtitle')}
-            </p>
-          </div>
+        <div className="mt-14 grid overflow-hidden rounded-xl border border-white/15 bg-black/15 md:mt-20 md:grid-cols-3">
+          {offerings.map(({ key, href, number }) => (
+            <Link key={key} href={`/${locale}/services/${href}`} className={`${styles.service} group flex min-w-0 flex-col p-7 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white lg:p-9`}>
+              <div className="mb-10 flex items-center justify-between text-zinc-400">
+                <span className="font-mono text-xs">{number}</span>
+                <ArrowUpRight size={19} className="transition-colors group-hover:text-rose-200" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-medium tracking-tight sm:text-2xl">{t(`studio.offerings.${key}.title`)}</h3>
+              <p className="mt-4 flex-1 text-sm leading-7 text-zinc-300">{t(`studio.offerings.${key}.description`)}</p>
+              <span className="mt-7 inline-flex items-center gap-2 text-xs font-medium text-rose-200">{t('studio.explore')}<ArrowRight size={14} aria-hidden="true" /></span>
+            </Link>
+          ))}
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <div 
-                key={index}
-                className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-200 hover:-translate-y-2"
-              >
-                <div className="w-12 h-12 bg-red-100 group-hover:bg-red-500 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300">
-                  <div className="text-red-600 group-hover:text-white transition-colors duration-300">
-                    {value.icon}
-                  </div>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-red-600 transition-colors duration-300">
-                  {value.title}
-                </h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {value.description}
-                </p>
+        <div className="mt-14 grid gap-10 lg:mt-20 lg:grid-cols-[0.8fr_2fr] lg:gap-16">
+          <div>
+            <p className="mb-4 text-xs tracking-[0.16em] uppercase text-zinc-400">{t('studio.methodLabel')}</p>
+            <h3 className="max-w-xs text-2xl leading-snug font-medium tracking-tight">{t('studio.methodTitle')}</h3>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-3">
+            {principles.map(({ key, icon: Icon }) => (
+              <div key={key} className="border-t border-white/15 pt-5">
+                <Icon size={20} className="mb-5 text-rose-200" strokeWidth={1.5} aria-hidden="true" />
+                <h4 className="text-sm font-semibold text-zinc-100">{t(`studio.principles.${key}.title`)}</h4>
+                <p className="mt-3 text-sm leading-7 text-zinc-400">{t(`studio.principles.${key}.description`)}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Second section - Right image, left content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                {t('solutions.title')}
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                {t('solutions.description')}
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {t('solutions.purpose')}
-              </p>
-            </div>
-
-            {/* Additional capabilities */}
-            <div className="space-y-3">
-              {capabilities.slice(3).map((capability, index) => (
-                <div key={index} className="flex items-center space-x-3 group">
-                  <CheckCircle className="w-5 h-5 text-red-500 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                    {capability}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="order-first lg:order-last relative group">
-            <div className="absolute -inset-4 bg-gradient-to-l from-red-500/20 to-red-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl"></div>
-            <div className="relative bg-white rounded-2xl p-4 shadow-lg group-hover:shadow-2xl transition-all duration-500">
-              <Image
-                src='/images/about/about-2.png'
-                width={500}
-                height={500}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                alt={locale === 'es' ? "Desarrollo de soluciones digitales" : "Digital solutions development"}
-                className="w-full h-auto rounded-xl transform group-hover:scale-[1.02] transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Stats section */}
-        <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-40 h-40 bg-red-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-red-500/10 rounded-full blur-2xl"></div>
-          
-          <div className="relative">
-            <div className="text-center mb-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                {t('stats.title')}
-              </h3>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                {t('stats.subtitle')}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {achievements.map((achievement, index) => (
-                <div 
-                  key={index}
-                  className="text-center group"
-                >
-                  <div className="text-4xl mb-2 group-hover:scale-125 transition-transform duration-300">
-                    {achievement.icon}
-                  </div>
-                  <div className="text-3xl md:text-4xl font-bold text-red-400 mb-2 group-hover:text-red-300 transition-colors duration-300">
-                    {achievement.number}
-                  </div>
-                  <div className="text-sm md:text-base text-gray-300">
-                    {achievement.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-20">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
-            {t('cta.title')}
-          </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            {t('cta.description')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              <span>{t('cta.startProject')}</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-300 hover:border-red-500 text-gray-700 hover:text-red-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <span>{t('cta.viewServices')}</span>
-            </a>
-          </div>
+        <div className="mt-14 flex flex-col justify-between gap-4 border-t border-white/15 pt-6 text-xs leading-6 text-zinc-400 sm:flex-row lg:mt-20">
+          <p>{t('studio.location')}</p>
+          <p>{t('studio.languages')}</p>
         </div>
       </div>
     </section>

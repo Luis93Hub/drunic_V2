@@ -1,8 +1,5 @@
-'use client';
-
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const services = [
@@ -11,9 +8,9 @@ const services = [
   { key: 'automation', href: 'automation', number: '03' },
 ];
 
-export default function Hero() {
-  const t = useTranslations('hero');
-  const { locale = 'es' } = useParams();
+export default async function Hero() {
+  const t = await getTranslations('hero');
+  const locale = await getLocale();
 
   return (
     <section id="inicio" className="flex min-h-svh flex-col bg-[#111214] px-6 pt-28 pb-6 text-white sm:px-8 lg:px-16">
