@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { ArrowRight, ArrowUpRight, Globe2, Layers3, MessageSquare } from 'lucide-react';
-import styles from './About.module.css';
 
 const offerings = [
   { key: 'web', href: 'web-development', number: '01' },
@@ -19,8 +18,8 @@ export default async function About() {
   const locale = await getLocale();
 
   return (
-    <section id="about" aria-labelledby="about-title" className={`${styles.section} scroll-mt-18 px-6 py-20 text-white sm:px-8 sm:py-28 lg:px-16`}>
-      <div className={styles.lines} aria-hidden="true" />
+    <section id="about" aria-labelledby="about-title" className={`drunic-about scroll-mt-18 px-6 py-20 text-white sm:px-8 sm:py-28 lg:px-16`}>
+      <div className="drunic-about-lines" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl">
         <div className="mb-10 flex items-center justify-between gap-5 border-b border-white/15 pb-5">
           <p className="flex items-center gap-3 text-xs font-medium tracking-[0.18em] uppercase text-zinc-300">
@@ -44,7 +43,7 @@ export default async function About() {
 
         <div className="mt-14 grid overflow-hidden rounded-xl border border-white/15 bg-black/15 md:mt-20 md:grid-cols-3">
           {offerings.map(({ key, href, number }) => (
-            <Link key={key} href={`/${locale}/services/${href}`} className={`${styles.service} group flex min-w-0 flex-col p-7 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white lg:p-9`}>
+            <Link key={key} href={`/${locale}/services/${href}`} className={`drunic-about-service group flex min-w-0 flex-col p-7 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white lg:p-9`}>
               <div className="mb-10 flex items-center justify-between text-zinc-400">
                 <span className="font-mono text-xs">{number}</span>
                 <ArrowUpRight size={19} className="transition-colors group-hover:text-rose-200" aria-hidden="true" />
