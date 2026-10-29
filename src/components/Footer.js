@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href={`/${locale}`} className="inline-flex items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label={locale === 'es' ? 'Drunic · Inicio' : 'Drunic · Home'}>
               <Image src="/logo.png" alt="" width={32} height={32} className="h-8 w-8 object-contain" />
-              <span className="text-xl font-semibold tracking-tight">Drunic<span className="text-zinc-500">.</span></span>
+              <span className="text-xl font-semibold tracking-tight">Drunic<span className="text-zinc-400">.</span></span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-7 text-zinc-400">{t('company.description')}</p>
           </div>
@@ -61,11 +61,11 @@ export default function Footer() {
             <address className="space-y-4 text-sm not-italic">
               <a href="mailto:contact.drunic@gmail.com" className={`inline-flex min-h-9 items-center gap-2 break-all ${linkStyle}`}><Mail size={16} className="shrink-0" aria-hidden="true" />contact.drunic@gmail.com</a>
               <div>
-                <p className="mb-1 text-xs text-zinc-500">{t('phone')}</p>
+                <p className="mb-1 text-xs text-zinc-400">{t('phone')}</p>
                 <a href="tel:+50557517432" className={`inline-flex min-h-9 items-center ${linkStyle}`}>+505 5751 7432</a>
               </div>
               <div>
-                <p className="mb-2 text-xs text-zinc-500">{t('location')}</p>
+                <p className="mb-2 text-xs text-zinc-400">{t('location')}</p>
                 <p className="text-zinc-400">Nicaragua</p>
               </div>
             </address>
@@ -73,9 +73,9 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col-reverse justify-between gap-5 border-t border-white/10 py-6 sm:flex-row sm:items-center">
-          <p className="text-xs leading-6 text-zinc-500">&copy; {new Date().getFullYear()} Drunic. {t('copyright')}</p>
+          <p className="text-xs leading-6 text-zinc-400">&copy; {new Date().getFullYear()} Drunic. {t('copyright')}</p>
           <div className="flex items-center gap-2">
-            <span className="mr-2 text-xs text-zinc-500">{t('followUs')}</span>
+            <span className="mr-2 text-xs text-zinc-400">{t('followUs')}</span>
             {socialLinks.map(({ name, href, icon: Icon }) => (
               <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={name} className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-zinc-400 transition-colors hover:border-white/25 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                 <Icon size={16} aria-hidden="true" />

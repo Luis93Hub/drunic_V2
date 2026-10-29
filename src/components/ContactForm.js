@@ -96,7 +96,7 @@ export default function ContactForm() {
             placeholder={t('form.namePlaceholder')}
             required
             disabled={isSubmitting}
-            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
 
@@ -114,7 +114,7 @@ export default function ContactForm() {
             placeholder={t('form.emailPlaceholder')}
             required
             disabled={isSubmitting}
-            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
       </div>
@@ -134,7 +134,7 @@ export default function ContactForm() {
             value={formData.phone}
             placeholder={t('form.phonePlaceholder')}
             disabled={isSubmitting}
-            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
 
@@ -151,7 +151,7 @@ export default function ContactForm() {
             value={formData.company}
             placeholder={t('form.companyPlaceholder')}
             disabled={isSubmitting}
-            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors"
           />
         </div>
       </div>
@@ -192,7 +192,7 @@ export default function ContactForm() {
           required
           rows={5}
           disabled={isSubmitting}
-          className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors resize-y"
+          className="w-full px-4 py-3 bg-white/[0.03] border border-white/15 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-transparent transition-colors resize-y"
         />
       </div>
 

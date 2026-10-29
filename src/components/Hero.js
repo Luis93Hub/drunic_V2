@@ -35,20 +35,20 @@ export default async function Hero() {
             </div>
           </div>
           <div className="border-t border-white/20">
-            <p className="py-5 text-xs tracking-[0.16em] uppercase text-zinc-500">{t('servicesLabel')}</p>
+            <p className="py-5 text-xs tracking-[0.16em] uppercase text-zinc-400">{t('servicesLabel')}</p>
             {services.map(({ key, href, number }) => (
               <Link key={key} href={`/${locale}/services/${href}`} className="group flex items-start gap-5 border-b border-white/10 py-6 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-400">
-                <span className="pt-1 font-mono text-xs text-zinc-500">{number}</span>
+                <span className="pt-1 font-mono text-xs text-zinc-400">{number}</span>
                 <div className="flex-1">
                   <h2 className="text-xl font-medium tracking-tight transition-colors group-hover:text-red-400 sm:text-2xl">{t(`offerings.${key}.title`)}</h2>
                   <p className="mt-2 max-w-xs text-sm leading-6 text-zinc-400">{t(`offerings.${key}.description`)}</p>
                 </div>
-                <ArrowUpRight className="mt-1 shrink-0 text-zinc-500 transition-colors group-hover:text-red-400" size={20} aria-hidden="true" />
+                <ArrowUpRight className="mt-1 shrink-0 text-zinc-400 transition-colors group-hover:text-red-400" size={20} aria-hidden="true" />
               </Link>
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-xs text-zinc-500 sm:flex-row">
+        <div className="flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-xs text-zinc-400 sm:flex-row">
           <span>{t('footerNote')}</span>
           <a href="#services" className="inline-flex items-center gap-2 text-zinc-400 transition-colors hover:text-white">{t('learnMore')} <ArrowRight size={14} aria-hidden="true" /></a>
         </div>
