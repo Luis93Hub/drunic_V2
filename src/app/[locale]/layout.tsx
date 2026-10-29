@@ -1,8 +1,17 @@
+import { Montserrat } from 'next/font/google';
+import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, type Locale } from '@/i18n';
 import type { Metadata } from 'next';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-montserrat',
+});
 
 type Props = {
   children: React.ReactNode;
@@ -98,9 +107,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   const clientMessages = Object.fromEntries(clientNamespaces.map((namespace) => [namespace, messages[namespace]]));
 
   return (
-
+    <html lang={locale}>
+      <body className={`${montserrat.className} ${montserrat.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={clientMessages}>
           {children}
         </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

@@ -74,7 +74,7 @@ export default function Navigation() {
         <div className="flex h-18 items-center justify-between gap-6">
           <a href="#inicio" onClick={(event) => handleSmoothScroll(event, '#home')} className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label={locale === 'es' ? 'Drunic · Inicio' : 'Drunic · Home'}>
             <Image src="/logo.png" alt="" width={32} height={32} className="h-8 w-8 object-contain" />
-            <span className="text-xl font-semibold tracking-tight text-white">Drunic<span className="text-zinc-500">.</span></span>
+            <span className="text-xl font-semibold tracking-tight text-white">Drunic<span className="text-zinc-400">.</span></span>
           </a>
           <nav className="hidden flex-1 lg:block" aria-label={locale === 'es' ? 'Navegación principal' : 'Main navigation'}>
             <ul className="flex items-center gap-1">{renderLinks()}</ul>
