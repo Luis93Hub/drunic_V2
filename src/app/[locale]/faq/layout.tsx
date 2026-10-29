@@ -8,11 +8,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const isSpanish = locale === 'es';
   const title = isSpanish
-    ? 'Preguntas frecuentes | Drunic'
-    : 'Frequently Asked Questions | Drunic';
+    ? 'Preguntas sobre software, apps y páginas web en Nicaragua | Drunic'
+    : 'Software, Apps & Web Development FAQ | Drunic Nicaragua';
   const description = isSpanish
-    ? 'Encuentra respuestas a preguntas comunes sobre los servicios y procesos de Drunic.'
-    : 'Find answers to common questions about Drunic services and processes.';
+    ? 'Resuelve dudas sobre costos, plazos, sistemas a medida, apps, pagos y mantenimiento. Una guía para iniciar tu proyecto digital con Drunic en Nicaragua.'
+    : 'Answers about costs, timelines, custom systems, apps, payments and maintenance. Plan your digital project with Drunic in Nicaragua and internationally.';
   const url = `https://drunic.com/${locale}/faq`;
   const image = '/hero-background.jpg';
 

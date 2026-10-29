@@ -99,53 +99,116 @@
     "portfolio": "Portfolio"
   },
   "faq": {
-    "navigation": {
-      "backHome": "Back to home"
-    },
-    "title": "Frequently Asked Questions",
-    "subtitle": "Essential information before creating or upgrading your website.",
-    "faqsubtitle": "Find answers to common questions about our services and processes.",
-    "faqButton": "Go to FAQ Page",
-    "contactButton": "Go to contact",
-    "emailButton": "Send email",
-    "items": [
-      {
-        "question": "Where can I create my website?",
-        "answer": "At Drunic, we design and develop modern, secure, and SEO-optimized websites for clients worldwide, including Central America and Nicaragua. Contact us to start your project today."
-      },
-      {
-        "question": "Who will build my professional website?",
-        "answer": "A specialized team at Drunic—designers, developers, and project managers—works together to deliver a high-quality, professional website."
-      },
-      {
-        "question": "How long does it take to develop a website?",
-        "answer": "Project timelines depend on complexity: basic sites take 2–3 weeks, professional sites 4–6 weeks, and e-commerce platforms 6–8 weeks."
-      },
-      {
-        "question": "How do I start my web project?",
-        "answer": "Simply contact us through the form to schedule a free consultation and begin planning your website."
-      },
-      {
-        "question": "What technologies do you specialize in?",
-        "answer": "Our core expertise is Drupal CMS for robust, scalable websites and custom software development tailored to specific business needs. Beyond that, we also work with modern frameworks such as Next.js, C#, and other technologies depending on the project requirements."
-      },
-      {
-        "question": "Do you adapt to the technology stack my project needs?",
-        "answer": "Yes. While we primarily build using Drupal and custom software solutions, we can fully adapt to different technologies—including Next.js and other modern tools—when they provide the best fit for your goals, timeline, and product vision."
-      },
-      {
-        "question": "How do you choose the right technology for my project?",
-        "answer": "We analyze your business needs, scalability expectations, and long-term plans. Based on this evaluation, we recommend the most efficient technology, whether that’s Drupal for content-heavy platforms, Next.js for high-performance web apps, or custom desktop solutions using C#."
-      },
-      {
-        "question": "Can you work with a specific technology I prefer?",
-        "answer": "Absolutely. If you already have a preferred tech stack—such as Drupal, Next.js, or C#—we can align your project with that stack as long as it supports the functionality and performance your project requires."
-      },
-      {
-        "question": "Do you offer custom-built software in addition to websites?",
-        "answer": "Yes. Besides CMS and web platforms, we build fully customized software solutions, including desktop applications in C#. We design each solution to fit your workflow, industry, and operational needs."
+    "guide": {
+      "home": "Home",
+      "breadcrumb": "Frequently asked questions",
+      "breadcrumbLabel": "Breadcrumb",
+      "skip": "Skip to content",
+      "eyebrow": "Before we build",
+      "title": "Questions about software, apps and websites.",
+      "description": "Planning a business system, a new app or a better website? Start here. Clear answers to help you plan a project in Nicaragua or from abroad.",
+      "browse": "Explore questions",
+      "talk": "Discuss my project",
+      "reach": "From Nicaragua · Local and international projects · Spanish and English",
+      "contents": "Explore by topic",
+      "helpTitle": "Is your situation different?",
+      "helpDescription": "Tell us how your business works and what you want to improve. You do not need to have all the technical details worked out.",
+      "helpLink": "Let’s discuss your idea",
+      "categories": {
+        "planning": {
+          "title": "Budget and getting started",
+          "description": "What shapes your investment, project scope and timeline.",
+          "serviceLink": "Explore custom software",
+          "items": [
+            {
+              "question": "How much does a business system or website cost in Nicaragua?",
+              "answer": "Cost depends on features, design, users, integrations and content. An informational website has a different scope from an inventory system or an app with payments. Before quoting, we define what development includes and which expenses recur. The proposal should specify the currency, applicable taxes and payment terms."
+            },
+            {
+              "question": "What do I need to request a software or app quote?",
+              "answer": "Describe your business, the problem you want to solve and who will use the solution. Examples of current processes, essential features and an idea of budget and target date are helpful. Start with a summary without sensitive information; do not submit passwords or customer databases through the contact form."
+            },
+            {
+              "question": "How long does it take to develop a website or custom system?",
+              "answer": "Timing depends on scope and the availability of content, reviews and integrations. An informational website generally involves less work than a platform with roles, reports and payments. We agree on stages and deliverables after reviewing requirements; we cannot commit to a delivery date without understanding the project."
+            },
+            {
+              "question": "Can I start with a small version and add features later?",
+              "answer": "Yes. We can define an initial version with essential features, often called a minimum viable product or MVP. It lets you test the core workflow with users before investing in additional functionality. Later stages can be prioritized based on results, architecture and available budget."
+            }
+          ]
+        },
+        "software": {
+          "title": "Business systems and apps",
+          "description": "Choosing a solution that fits your operations and users.",
+          "serviceLink": "Explore custom development",
+          "items": [
+            {
+              "question": "Can you build an inventory, sales, booking or customer management system?",
+              "answer": "These are needs we can assess for custom development. We first review your processes, such as products and stock, branches, permissions, orders, appointments or reporting. This helps identify the necessary features. Invoicing or other regulated documents require a specific scope review and do not imply automatic certification."
+            },
+            {
+              "question": "Does my business need a mobile app or a web application?",
+              "answer": "It depends on how customers or staff will use it. A web application runs in a phone or computer browser. A mobile app may be appropriate for device-specific features or app store distribution. We review those requirements before recommending an approach; App Store or Google Play publication requires accounts, reviews and potentially external fees."
+            },
+            {
+              "question": "Can my system connect to Excel, WhatsApp or other tools?",
+              "answer": "We can assess spreadsheet imports and integrations with APIs or external services. Feasibility depends on formats, documentation and available permissions. WhatsApp and other platforms may require business accounts, approval and usage fees. These conditions are reviewed before an integration is included in the scope."
+            },
+            {
+              "question": "Can you improve or replace an existing system?",
+              "answer": "We first review the technology, documentation, authorized access to the code and data export options. This helps determine whether to improve the system or build a replacement in stages. Migration should include backups, data tests and a transition plan; original information should not be overwritten without verification."
+            }
+          ]
+        },
+        "web": {
+          "title": "Websites, sales and visibility",
+          "description": "Domains, hosting, payments and a digital presence for local and international customers.",
+          "serviceLink": "Explore web development",
+          "items": [
+            {
+              "question": "Why do I need a website if my business already uses Facebook or Instagram?",
+              "answer": "Social platforms help people discover your business and contact you. A website lets you organize your services, publish your own information, receive inquiries and offer features beyond a social post. It can complement social media and WhatsApp. Whether you need one depends on your goals; a website alone does not guarantee sales."
+            },
+            {
+              "question": "Are the domain and hosting included in development?",
+              "answer": "They should be itemized in the proposal. The domain is your website address, while hosting is where it runs. Both can have renewals, limits and additional charges, as can business email. If you already have these services, we review compatibility before recommending changes and agree on who manages the accounts."
+            },
+            {
+              "question": "Can I accept online payments from Nicaragua and other countries?",
+              "answer": "Integration depends on the bank or payment provider and your business account. Availability in Nicaragua, currencies, merchant requirements, fees and technical documentation need to be reviewed. We can assess an integration, but merchant approval rests with the provider. Card information should be processed through its authorized mechanisms."
+            },
+            {
+              "question": "Will my website appear on Google and attract international customers?",
+              "answer": "Clear structure, useful content, good performance and pages in your customers’ languages help search engines understand your website. We can prepare that technical foundation and Search Console tracking. Google determines indexing and rankings; we cannot guarantee a first-place result or a number of inquiries or sales."
+            }
+          ]
+        },
+        "delivery": {
+          "title": "Delivery, support and collaboration",
+          "description": "What to agree on for access, maintenance, data and remote work.",
+          "serviceLink": "Explore custom software services",
+          "items": [
+            {
+              "question": "Who will own the code, domain and project accounts?",
+              "answer": "Ownership and usage rights should be documented in the proposal or contract. This should cover source code, repositories, documentation, access and third-party licenses. Domain and external service accounts also need a defined owner. Do not assume that a third-party license allows all of its rights to be transferred."
+            },
+            {
+              "question": "What happens after launch? Is maintenance included?",
+              "answer": "Before work begins, we agree on deliverables and how post-launch issues are handled. Maintenance may include updates, backups and reviews; new features may need a separate scope. Coverage, hours, response times and costs should be defined. Not every development project includes ongoing support or round-the-clock availability."
+            },
+            {
+              "question": "How is my company and customer information protected?",
+              "answer": "Requirements should be reviewed based on the information the system handles. They may include user permissions, encrypted connections, backups, credential management and updates. Security also depends on operations and external providers; no system can promise zero risk. Avoid sharing confidential information before agreeing on an appropriate channel and necessary access."
+            },
+            {
+              "question": "Do you only work in Managua, or also in other cities and countries?",
+              "answer": "Drunic works from Nicaragua and can coordinate remote projects with businesses across the country and international clients. We can communicate in Spanish or English, share progress and arrange remote reviews. Hours, responsibilities, deliverables and communication channels are defined for each project; you do not need to be in Managua to start a conversation."
+            }
+          ]
+        }
       }
-    ]
+    }
   },
   "hero": {
     "badge": "6+ successful projects",

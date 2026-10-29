@@ -99,53 +99,116 @@
     "portfolio": "Portafolio"
   },
   "faq": {
-    "navigation": {
-      "backHome": "Volver al inicio"
-    },
-    "title": "Preguntas frecuentes",
-    "subtitle": "Información esencial antes de crear o actualizar su sitio web.",
-    "faqsubtitle": "Encuentre respuestas a preguntas comunes sobre nuestros servicios y procesos.",
-    "faqButton": "Ir a la página de preguntas frecuentes",
-    "contactButton": "Ir a contacto",
-    "emailButton": "Enviar email",
-    "items": [
-      {
-        "question": "¿Dónde puedo hacer mi página web?",
-        "answer": "En Drunic, diseñamos y desarrollamos sitios web modernos, seguros y optimizados para SEO para clientes de todo el mundo, incluidos Centroamérica y Nicaragua. Contáctanos para comenzar tu proyecto hoy mismo."
-      },
-      {
-        "question": "¿Quién construirá mi sitio web profesional?",
-        "answer": "Un equipo especializado en Drunic (diseñadores, desarrolladores y gerentes de proyectos) trabaja en conjunto para ofrecer un sitio web profesional de alta calidad."
-      },
-      {
-        "question": "¿Cuánto tiempo toma desarrollar un sitio web?",
-        "answer": "Los plazos del proyecto dependen de la complejidad: los sitios básicos demoran entre 2 y 3 semanas, los sitios profesionales entre 4 y 6 semanas y las plataformas de comercio electrónico entre 6 y 8 semanas."
-      },
-      {
-        "question": "¿Cómo comienzo mi proyecto web?",
-        "answer": "Simplemente contáctenos a través del formulario para programar una consulta gratuita y comenzar a planificar su sitio web."
-      },
-      {
-        "question": "¿En qué tecnologías están especializados?",
-        "answer": "Nuestra principal experiencia se centra en Drupal CMS para sitios web robustos y escalables, además del desarrollo de software a la medida adaptado a las necesidades específicas de cada negocio. También trabajamos con frameworks modernos como Next.js, C# y otras tecnologías según los requerimientos del proyecto."
-      },
-      {
-        "question": "¿Se adaptan a la tecnología que necesita mi proyecto?",
-        "answer": "Sí. Aunque principalmente desarrollamos con Drupal y soluciones de software personalizado, podemos adaptarnos completamente a otras tecnologías —incluyendo Next.js y herramientas modernas— cuando representan la mejor opción para tus objetivos, plazos y visión del producto."
-      },
-      {
-        "question": "¿Cómo eligen la tecnología adecuada para mi proyecto?",
-        "answer": "Analizamos tus necesidades de negocio, la escalabilidad esperada y los planes a largo plazo. Con base en esta evaluación, recomendamos la tecnología más eficiente, ya sea Drupal para plataformas con mucho contenido, Next.js para aplicaciones web de alto rendimiento o soluciones de escritorio personalizadas con C#."
-      },
-      {
-        "question": "¿Pueden trabajar con una tecnología específica que yo prefiera?",
-        "answer": "Por supuesto. Si ya tienes un stack tecnológico preferido—como Drupal, Next.js o C#—podemos alinear tu proyecto con esa tecnología siempre que cumpla con los requisitos de funcionalidad y rendimiento necesarios."
-      },
-      {
-        "question": "¿Ofrecen software completamente personalizado además de sitios web?",
-        "answer": "Sí. Además de CMS y plataformas web, desarrollamos software totalmente personalizado, incluyendo aplicaciones de escritorio en C#. Diseñamos cada solución para ajustarse a tu flujo de trabajo, industria y necesidades operativas."
+    "guide": {
+      "home": "Inicio",
+      "breadcrumb": "Preguntas frecuentes",
+      "breadcrumbLabel": "Ruta de navegación",
+      "skip": "Saltar al contenido",
+      "eyebrow": "Antes de construir",
+      "title": "Preguntas sobre software, apps y desarrollo web.",
+      "description": "Si quieres crear un sistema para tu negocio, lanzar una app o mejorar tu página web, empieza por aquí. Respuestas claras para planificar tu proyecto en Nicaragua o desde el exterior.",
+      "browse": "Explorar preguntas",
+      "talk": "Consultar mi proyecto",
+      "reach": "Desde Nicaragua · Proyectos locales e internacionales · Atención en español e inglés",
+      "contents": "Explora por tema",
+      "helpTitle": "¿Tu caso es diferente?",
+      "helpDescription": "Cuéntanos cómo funciona tu negocio y qué te gustaría mejorar. No necesitas tener definidos todos los detalles técnicos.",
+      "helpLink": "Conversemos de tu idea",
+      "categories": {
+        "planning": {
+          "title": "Presupuesto y primeros pasos",
+          "description": "Qué influye en la inversión, el alcance y los tiempos de tu proyecto.",
+          "serviceLink": "Explorar software a medida",
+          "items": [
+            {
+              "question": "¿Cuánto cuesta desarrollar un sistema o una página web en Nicaragua?",
+              "answer": "El costo depende de las funciones, el diseño, los usuarios, las integraciones y el contenido. Una web informativa tiene un alcance distinto de un sistema de inventario o una app con pagos. Para cotizar, definimos qué incluye el desarrollo y qué gastos son recurrentes. La propuesta debe indicar moneda, impuestos aplicables y condiciones de pago."
+            },
+            {
+              "question": "¿Qué necesito para pedir una cotización de software o una app?",
+              "answer": "Describe qué hace tu negocio, qué problema quieres resolver y quién usará la solución. Ayuda tener ejemplos de tus procesos actuales, las funciones indispensables y una idea de presupuesto y fecha objetivo. Puedes compartir un resumen sin datos sensibles; no envíes contraseñas ni bases de datos de clientes por el formulario."
+            },
+            {
+              "question": "¿Cuánto tiempo toma desarrollar una página web o un sistema a medida?",
+              "answer": "El plazo depende del alcance y de la disponibilidad de contenido, revisiones e integraciones. Un sitio informativo suele requerir menos trabajo que una plataforma con roles, reportes y pagos. Acordamos etapas y entregables después de revisar los requisitos; no fijamos una fecha de entrega sin conocer el proyecto."
+            },
+            {
+              "question": "¿Puedo empezar con una versión pequeña y agregar funciones después?",
+              "answer": "Sí. Podemos definir una primera versión con las funciones esenciales, conocida como producto mínimo viable o MVP. Sirve para probar el flujo principal con usuarios antes de invertir en más funcionalidades. Las etapas siguientes se priorizan según los resultados, la arquitectura y el presupuesto disponible."
+            }
+          ]
+        },
+        "software": {
+          "title": "Sistemas y aplicaciones",
+          "description": "Cómo elegir una solución que se adapte a tu operación y a tus usuarios.",
+          "serviceLink": "Conocer el desarrollo a medida",
+          "items": [
+            {
+              "question": "¿Pueden desarrollar un sistema de inventario, ventas, reservas o gestión de clientes?",
+              "answer": "Son necesidades que podemos evaluar para un desarrollo a medida. Primero revisamos tus procesos: productos y existencias, sucursales, permisos, pedidos, citas o reportes. Eso permite definir las funciones realmente necesarias. Si necesitas facturación u otros documentos regulados, su alcance requiere una revisión específica y no implica una certificación automática."
+            },
+            {
+              "question": "¿Necesito una app móvil o una aplicación web para mi negocio?",
+              "answer": "Depende de cómo la usarán tus clientes o tu equipo. Una aplicación web funciona desde el navegador del teléfono o la computadora. Una app móvil puede ser adecuada si necesitas funciones específicas del dispositivo o distribución en tiendas. Revisamos esos requisitos antes de recomendar una opción; publicar en App Store o Google Play requiere cuentas, revisiones y posibles cargos externos."
+            },
+            {
+              "question": "¿Se puede conectar mi sistema con Excel, WhatsApp u otras herramientas?",
+              "answer": "Podemos evaluar importaciones de hojas de cálculo e integraciones con APIs o servicios externos. La viabilidad depende de los formatos, la documentación y los permisos disponibles. WhatsApp y otras plataformas pueden exigir cuentas comerciales, aprobación y costos por uso. Estas condiciones se revisan antes de incluir una integración en el alcance."
+            },
+            {
+              "question": "¿Pueden mejorar o reemplazar un sistema que ya tengo?",
+              "answer": "Primero revisamos la tecnología, la documentación, el acceso autorizado al código y la posibilidad de exportar los datos. Con esa información evaluamos si conviene mejorar el sistema o construir otro por etapas. Una migración debe incluir respaldos, pruebas de datos y un plan de transición; no se debe sobrescribir la información original sin verificarla."
+            }
+          ]
+        },
+        "web": {
+          "title": "Sitios web, ventas y visibilidad",
+          "description": "Dominio, hosting, cobros y presencia digital para clientes locales e internacionales.",
+          "serviceLink": "Explorar desarrollo web",
+          "items": [
+            {
+              "question": "¿Para qué necesito una página web si mi negocio ya está en Facebook o Instagram?",
+              "answer": "Las redes sociales ayudan a descubrir tu negocio y conversar con clientes. Una web permite organizar servicios, mostrar información propia, recibir consultas y ofrecer funciones que no dependen de una publicación. Puede complementar tus redes y WhatsApp. La necesidad depende de tus objetivos; tener una web por sí sola no garantiza ventas."
+            },
+            {
+              "question": "¿El dominio y el hosting están incluidos en el desarrollo?",
+              "answer": "Deben quedar detallados en la propuesta. El dominio es la dirección de tu sitio y el hosting o alojamiento es donde funciona. Ambos pueden tener renovaciones, límites y costos adicionales, al igual que el correo empresarial. Si ya tienes estos servicios, revisamos su compatibilidad antes de recomendar cambios y acordamos quién administra las cuentas."
+            },
+            {
+              "question": "¿Puedo aceptar pagos en línea de clientes de Nicaragua y otros países?",
+              "answer": "La integración depende del banco o proveedor de pagos y de la cuenta de tu negocio. Hay que revisar disponibilidad en Nicaragua, monedas, requisitos de afiliación, comisiones y documentación técnica. Podemos evaluar la integración, pero la aprobación del comercio corresponde al proveedor. Los datos de tarjeta deben procesarse mediante sus mecanismos autorizados."
+            },
+            {
+              "question": "¿Mi página aparecerá en Google y podrá atraer clientes del exterior?",
+              "answer": "Una estructura clara, contenido útil, buen rendimiento y páginas en los idiomas de tus clientes ayudan a que los buscadores entiendan tu sitio. Podemos preparar esa base técnica y el seguimiento con Search Console. Google decide qué indexa y cómo lo posiciona; no podemos garantizar el primer lugar ni un número de consultas o ventas."
+            }
+          ]
+        },
+        "delivery": {
+          "title": "Entrega, soporte y colaboración",
+          "description": "Qué conviene acordar sobre accesos, mantenimiento, datos y trabajo a distancia.",
+          "serviceLink": "Ver el servicio de software a medida",
+          "items": [
+            {
+              "question": "¿Quién será dueño del código, el dominio y las cuentas del proyecto?",
+              "answer": "La titularidad y los derechos de uso deben quedar por escrito en la propuesta o contrato. Conviene detallar la entrega del código, repositorios, documentación, accesos y licencias de terceros. El dominio y los servicios externos también requieren un responsable definido. No debes asumir que una licencia externa permite transferir todos sus derechos."
+            },
+            {
+              "question": "¿Qué pasa después del lanzamiento? ¿El mantenimiento está incluido?",
+              "answer": "Antes de comenzar, acordamos qué entrega incluye el proyecto y cómo se atienden incidencias posteriores. El mantenimiento puede cubrir actualizaciones, respaldos y revisiones; nuevas funciones pueden requerir otro alcance. Cobertura, horarios, tiempos de atención y costos deben estar definidos. No todos los desarrollos incluyen soporte continuo o disponibilidad permanente."
+            },
+            {
+              "question": "¿Cómo se protege la información de mis clientes y de mi empresa?",
+              "answer": "Los requisitos deben revisarse según los datos que tratará el sistema. Pueden incluir permisos por usuario, conexiones cifradas, respaldos, manejo de credenciales y actualizaciones. La seguridad también depende de la operación y de los proveedores utilizados; ningún sistema puede prometer riesgo cero. Evita compartir información confidencial hasta acordar un canal y los accesos necesarios."
+            },
+            {
+              "question": "¿Trabajan solo en Managua o también con otras ciudades y países?",
+              "answer": "Drunic trabaja desde Nicaragua y puede coordinar proyectos a distancia con empresas del país y clientes internacionales. Podemos conversar en español o inglés, compartir avances y acordar revisiones remotas. Los horarios, responsables, entregables y canales de comunicación se definen para cada proyecto; no necesitas estar en Managua para iniciar la conversación."
+            }
+          ]
+        }
       }
-    ]
+    }
   },
   "hero": {
     "badge": "Más de 6 proyectos exitosos",

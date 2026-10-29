@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -16,6 +16,8 @@ export default function Navigation() {
   const t = useTranslations('navigation');
   const params = useParams();
   const locale = params.locale || 'es';
+  const pathname = usePathname();
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
 
   const menuItems = [
     { href: '#inicio', label: t('home') },
@@ -51,7 +53,7 @@ export default function Navigation() {
   };
 
   const renderLinks = (mobile = false) => menuItems.map((item) => {
-    const active = !item.external && activeSection === (item.href === '#inicio' ? 'home' : item.href.slice(1));
+    const active = isHome && !item.external && activeSection === (item.href === '#inicio' ? 'home' : item.href.slice(1));
     const className = `flex min-h-10 items-center gap-2 rounded-md px-3 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${active ? 'bg-white/[0.06] text-white' : 'text-zinc-400 hover:bg-white/[0.04] hover:text-white'} ${mobile ? 'w-full py-3' : ''}`;
     return (
       <li key={item.href}>
@@ -60,7 +62,7 @@ export default function Navigation() {
             {item.label}<ArrowUpRight size={14} aria-hidden="true" />
           </Link>
         ) : (
-          <a href={item.href} onClick={(event) => handleSmoothScroll(event, item.href)} className={className} aria-current={active ? 'location' : undefined}>
+          <a href={isHome ? item.href : `/${locale}${item.href}`} onClick={(event) => isHome ? handleSmoothScroll(event, item.href) : handleMenuClick()} className={className} aria-current={active ? 'location' : undefined}>
             {item.label}
           </a>
         )}
@@ -72,7 +74,7 @@ export default function Navigation() {
     <header className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#111214]/95 backdrop-blur-md ${isScrolled ? 'shadow-sm' : ''}`}>
       <div className="mx-auto max-w-6xl px-6 sm:px-8 xl:px-0">
         <div className="flex h-18 items-center justify-between gap-6">
-          <a href="#inicio" onClick={(event) => handleSmoothScroll(event, '#home')} className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label={locale === 'es' ? 'Drunic · Inicio' : 'Drunic · Home'}>
+          <a href={isHome ? '#inicio' : `/${locale}`} onClick={(event) => isHome ? handleSmoothScroll(event, '#home') : handleMenuClick()} className="flex shrink-0 items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label={locale === 'es' ? 'Drunic · Inicio' : 'Drunic · Home'}>
             <Image src="/logo.png" alt="" width={32} height={32} className="h-8 w-8 object-contain" />
             <span className="text-xl font-semibold tracking-tight text-white">Drunic<span className="text-zinc-400">.</span></span>
           </a>

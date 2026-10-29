@@ -1,124 +1,59 @@
-'use client';
+import Link from 'next/link';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { ArrowUpRight, Plus } from 'lucide-react';
 
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+const categories = ['planning', 'software', 'web', 'delivery'];
 
-export default function FAQSection() {
-  const t = useTranslations('faq');
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const items = [
-    {
-      question: t('items.0.question'),
-      answer: t('items.0.answer')
-    },
-    {
-      question: t('items.1.question'),
-      answer: t('items.1.answer')
-    },
-    {
-      question: t('items.2.question'),
-      answer: t('items.2.answer')
-    },
-    {
-      question: t('items.3.question'),
-      answer: t('items.3.answer')
-    },
-    {
-      question: t('items.4.question'),
-      answer: t('items.4.answer')
-    },
-    {
-      question: t('items.5.question'),
-      answer: t('items.5.answer')
-    },
-    {
-      question: t('items.6.question'),
-      answer: t('items.6.answer')
-    },
-    {
-      question: t('items.7.question'),
-      answer: t('items.7.answer')
-    },
-    {
-      question: t('items.8.question'),
-      answer: t('items.8.answer')
-    },
-  ];
-
-  const toggle = (index) => setOpenIndex(openIndex === index ? null : index);
-
+export default async function FAQSection() {
+  const t = await getTranslations('faq.guide');
+  const locale = await getLocale();
   return (
-    <section
-      id="faq"
-      className="py-20 bg-white text-black"
-      itemScope
-      itemType="https://schema.org/FAQPage"
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4" itemProp="headline">
-            {t('title')}
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t('subtitle') || ''}</p>
-        </div>
-
-        <div className="max-w-3xl mx-auto">
-          <dl className="space-y-4">
-            {items.map((item, index) => (
-              <div
-                key={index}
-                itemProp="mainEntity"
-                itemScope
-                itemType="https://schema.org/Question"
-                className="border border-gray-100 rounded-xl overflow-hidden"
-              >
-                <dt>
-                  <button
-                    onClick={() => toggle(index)}
-                    aria-expanded={openIndex === index}
-                    className="w-full text-left px-6 py-4 flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-red-500"
-                  >
-                    <span className="text-gray-800 font-semibold" itemProp="name">
-                      {item.question}
-                    </span>
-                    <span className={`ml-4 text-red-500 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}>
-                      ▼
-                    </span>
-                  </button>
-                </dt>
-
-                <dd
-                  itemProp="acceptedAnswer"
-                  itemScope
-                  itemType="https://schema.org/Answer"
-                  className={`px-6 pb-6 transition-all duration-300 ${openIndex === index ? 'max-h-96' : 'max-h-0 overflow-hidden'}`}
-                >
-                  <div itemProp="text" className="text-gray-600">
-                    {item.answer}
-
-                    {index === 3 && (
-                      <div className="mt-4">
-                        <a
-                          href="#contact"
-                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg font-semibold hover:from-red-600 hover:to-red-700 transition-colors"
-                        >
-                          {t('contactButton')}
-                        </a>
-
-                        <a
-                          href="mailto:contact.drunic@gmail.com?subject=Consulta%20sitio%20web"
-                          className="inline-flex items-center px-4 py-2 ml-3 border border-gray-300 rounded-lg text-gray-700 hover:text-red-600 transition-colors"
-                        >
-                          {t('emailButton')}
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </dd>
+    <section id="faq" aria-label={t('contents')} className="bg-[#f5f4f1] px-6 py-14 text-zinc-900 sm:px-8 sm:py-20 lg:px-16">
+      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.7fr_1.6fr] lg:gap-20">
+        <aside className="min-w-0">
+          <div className="lg:sticky lg:top-28">
+            <nav aria-label={t('contents')}>
+              <p className="mb-5 text-xs font-semibold tracking-[0.14em] uppercase text-zinc-600">{t('contents')}</p>
+              <ul className="grid grid-cols-2 gap-2 lg:grid-cols-1">
+                {categories.map((key, i) => (
+                  <li key={key}>
+                    <a href={`#faq-${key}`} className="flex min-h-12 items-center gap-3 rounded-md border border-zinc-300/80 px-3 py-3 text-sm leading-6 transition-colors hover:border-zinc-500 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900">
+                      <span className="font-mono text-xs text-zinc-600">0{i + 1}</span>{t(`categories.${key}.title`)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="mt-8 border-t border-zinc-300 pt-6">
+              <p className="text-base font-semibold">{t('helpTitle')}</p>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">{t('helpDescription')}</p>
+              <a href="#contact" className="mt-4 inline-flex min-h-11 items-center gap-3 text-sm font-semibold underline decoration-zinc-400 underline-offset-4 hover:text-red-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900">{t('helpLink')}<ArrowUpRight size={16} aria-hidden="true" /></a>
+            </div>
+          </div>
+        </aside>
+        <div className="min-w-0 space-y-14 sm:space-y-20">
+          {categories.map((key, i) => (
+            <section key={key} id={`faq-${key}`} aria-labelledby={`faq-${key}-title`}>
+              <div className="mb-6">
+                <p className="mb-3 font-mono text-xs text-zinc-600">0{i + 1}</p>
+                <h2 id={`faq-${key}-title`} className="text-2xl font-medium tracking-tight sm:text-3xl">{t(`categories.${key}.title`)}</h2>
+                <p className="mt-3 text-sm leading-7 text-zinc-600">{t(`categories.${key}.description`)}</p>
               </div>
-            ))}
-          </dl>
+              <div className="border-t border-zinc-300">
+                {[0, 1, 2, 3].map((j) => (
+                  <details key={j} className="group border-b border-zinc-300 open:bg-white/60">
+                    <summary className="cursor-pointer list-none rounded-sm px-3 py-5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 [&::-webkit-details-marker]:hidden">
+                      <h3 className="flex items-start justify-between gap-5 text-base leading-7 font-medium"><span>{t(`categories.${key}.items.${j}.question`)}</span><Plus size={18} className="mt-1 shrink-0 text-zinc-600 transition-transform group-open:rotate-45 motion-reduce:transition-none" aria-hidden="true" /></h3>
+                    </summary>
+                    <div className="px-3 pb-6">
+                      <p className="max-w-2xl text-sm leading-8 text-zinc-600">{t(`categories.${key}.items.${j}.answer`)}</p>
+                      {j === 0 && <Link href={`/${locale}/services/${key === 'web' ? 'web-development' : 'custom-software'}`} className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm font-semibold underline decoration-zinc-400 underline-offset-4 hover:text-red-800">{t(`categories.${key}.serviceLink`)}<ArrowUpRight size={15} aria-hidden="true" /></Link>}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
       </div>
     </section>

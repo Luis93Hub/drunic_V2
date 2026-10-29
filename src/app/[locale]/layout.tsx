@@ -103,7 +103,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   // Server-only sections read their own messages without sending them to the browser.
-  const clientNamespaces = ['navigation', 'footer', 'contact', 'faq', 'contactpage', 'portfolio', 'webDevelopment', 'customSoftware', 'automationService'];
+  const clientNamespaces = ['navigation', 'footer', 'contact', 'contactpage', 'portfolio', 'webDevelopment', 'customSoftware', 'automationService'];
   const clientMessages = Object.fromEntries(clientNamespaces.map((namespace) => [namespace, messages[namespace]]));
 
   return (
