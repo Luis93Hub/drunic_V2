@@ -107,7 +107,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const clientMessages = Object.fromEntries(clientNamespaces.map((namespace) => [namespace, messages[namespace]]));
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${montserrat.className} ${montserrat.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={clientMessages}>
           {children}

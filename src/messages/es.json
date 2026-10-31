@@ -689,6 +689,29 @@
     },
     "projects": [
       {
+        "id": 7,
+        "title": "CB Manager",
+        "category": "webapp",
+        "description": "ERP a medida para centralizar ventas, inventario, clientes y proveedores, junto con la gestión de flota de camiones: mantenimientos, llantas, cambios de aceite y combustible.",
+        "image": null,
+        "technologies": [],
+        "client": "Inversiones CB",
+        "year": "2026",
+        "features": [
+          "Gestión de ventas e inventario",
+          "Administración de clientes y proveedores",
+          "Control de flota de camiones",
+          "Seguimiento de mantenimientos y llantas",
+          "Control de cambios de aceite y combustible"
+        ],
+        "demoUrl": "https://grupodeinversionescb.com/",
+        "codeUrl": null,
+        "featured": true,
+        "projectLabel": "Proyecto destacado",
+        "accessNote": "Plataforma de uso interno. El enlace muestra su presentación pública.",
+        "visitLabel": "Visitar sitio"
+      },
+      {
         "id": 1,
         "title": "E-commerce Moderno",
         "category": "ecommerce",
@@ -769,7 +792,7 @@
         "title": "Sistema de Automatización",
         "category": "automation",
         "description": "Plataforma de automatización de procesos empresariales con integración de APIs externas.",
-        "image": "/images/portfolio/automation.png",
+        "image": null,
         "technologies": ["Python", "Django", "Celery", "Redis"],
         "client": "Manufacturing Co",
         "year": "2023",
@@ -788,7 +811,7 @@
         "title": "Plataforma Educativa",
         "category": "webapp",
         "description": "Sistema de aprendizaje online con videoconferencias, evaluaciones y seguimiento de progreso.",
-        "image": "/images/portfolio/education-platform.png",
+        "image": null,
         "technologies": ["Vue.js", "Laravel", "WebRTC", "MySQL"],
         "client": "EduTech",
         "year": "2023",

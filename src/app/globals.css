@@ -70,3 +70,10 @@ section[id] { scroll-margin-top: 4.5rem; }
 @media (prefers-reduced-motion: reduce) {
   .drunic-about-service { transition: none; }
 }
+
+/* Portfolio controls remain usable with keyboard and touch. */
+.portfolio-page :is(a, button):focus-visible { outline: 3px solid #fca5a5; outline-offset: 4px; }
+.portfolio-page button { min-height: 44px; }
+.portfolio-page dialog::backdrop { background: rgb(0 0 0 / .8); }
+
+.contact-page :is(a, button):focus-visible { outline: 3px solid #ef4444; outline-offset: 4px; }

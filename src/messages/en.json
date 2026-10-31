@@ -691,6 +691,29 @@
     },
     "projects": [
       {
+        "id": 7,
+        "title": "CB Manager",
+        "category": "webapp",
+        "description": "Custom ERP that brings together sales, inventory, customers and suppliers, alongside truck fleet management: maintenance, tires, oil changes and fuel.",
+        "image": null,
+        "technologies": [],
+        "client": "Inversiones CB",
+        "year": "2026",
+        "features": [
+          "Sales and inventory management",
+          "Customer and supplier administration",
+          "Truck fleet management",
+          "Maintenance and tire tracking",
+          "Oil change and fuel tracking"
+        ],
+        "demoUrl": "https://grupodeinversionescb.com/",
+        "codeUrl": null,
+        "featured": true,
+        "projectLabel": "Featured project",
+        "accessNote": "Internal platform. The link opens its public presentation.",
+        "visitLabel": "Visit website"
+      },
+      {
         "id": 1,
         "title": "Modern E-commerce",
         "category": "ecommerce",
@@ -771,7 +794,7 @@
         "title": "Automation System",
         "category": "automation",
         "description": "Business process automation platform with external API integration.",
-        "image": "/images/portfolio/automation.png",
+        "image": null,
         "technologies": ["Python", "Django", "Celery", "Redis"],
         "client": "Manufacturing Co",
         "year": "2023",
@@ -790,7 +813,7 @@
         "title": "Educational Platform",
         "category": "webapp",
         "description": "Online learning system with video classes, tests, and progress tracking.",
-        "image": "/images/portfolio/education-platform.png",
+        "image": null,
         "technologies": ["Vue.js", "Laravel", "WebRTC", "MySQL"],
         "client": "EduTech",
         "year": "2023",
