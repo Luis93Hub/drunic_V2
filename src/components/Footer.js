@@ -3,8 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 
 const socialLinks = [
   { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61579682131905', icon: Facebook },
@@ -16,7 +15,7 @@ const linkStyle = 'rounded-sm text-zinc-400 transition-colors hover:text-white f
 
 export default function Footer() {
   const t = useTranslations('footer');
-  const { locale = 'es' } = useParams();
+  const locale = useLocale();
   const links = [
     { label: t('home'), href: `/${locale}/#inicio` },
     { label: t('services'), href: `/${locale}/#services` },

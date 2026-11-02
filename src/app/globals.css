@@ -77,3 +77,5 @@ section[id] { scroll-margin-top: 4.5rem; }
 .portfolio-page dialog::backdrop { background: rgb(0 0 0 / .8); }
 
 .contact-page :is(a, button):focus-visible { outline: 3px solid #ef4444; outline-offset: 4px; }
+
+.service-page :is(a, summary):focus-visible { outline: 3px solid #ef4444; outline-offset: 4px; }

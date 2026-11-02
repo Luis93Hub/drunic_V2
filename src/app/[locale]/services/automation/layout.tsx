@@ -1,3 +1,4 @@
+import { getService } from '@/lib/service-content';
 import type { Metadata } from 'next';
 
 type Props = {
@@ -8,12 +9,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const isSpanish = locale === 'es';
-  const title = isSpanish
-    ? 'Automatización de procesos empresariales | Drunic'
-    : 'Business Process Automation | Drunic';
-  const description = isSpanish
-    ? 'Automatiza procesos repetitivos para ahorrar tiempo, reducir errores operativos y mejorar la eficiencia de tu empresa.'
-    : 'Automate repetitive processes to save time, reduce operational errors, and improve your business efficiency.';
+  const service = getService('automation', locale);
+  const title = service.seoTitle;
+  const description = service.description;
   const url = `https://drunic.com/${locale}/services/automation`;
   const image = '/hero-background.jpg';
 
@@ -26,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `/${locale}/services/automation`,
       languages: {
+        'x-default': '/en/services/automation',
         es: '/es/services/automation',
         en: '/en/services/automation',
       },
@@ -36,7 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       siteName: 'Drunic',
       images: [{ url: image, width: 1200, height: 630, alt: title }],
-      locale: isSpanish ? 'es_ES' : 'en_US',
+      locale: isSpanish ? 'es_NI' : 'en_US',
+      alternateLocale: isSpanish ? 'en_US' : 'es_NI',
       type: 'website',
     },
     twitter: {
